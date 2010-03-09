@@ -1,0 +1,132 @@
+m255
+K3
+cModel Technology
+valu
+Z0 !s91 D:/mipstest/alu.v
+Z1 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/alu.v|
+valu_shift_md
+Z2 !s91 D:/mipstest/alu_shift_md.v
+Z3 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/alu_shift_md.v|
+vand2
+Z4 !s91 D:/mipstest/utilities.v
+Z5 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/utilities.v|
+vbr_control
+Z6 !s91 D:/mipstest/br_control.v
+Z7 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/br_control.v|
+vbranch_dec
+Z8 !s91 D:/mipstest/branch_dec.v
+Z9 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/branch_dec.v|
+vcmux_2
+R4
+R5
+vcnt_dp
+Z10 !s91 D:/mipstest/datapath.v
+Z11 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/datapath.v|
+vcompare_equal
+R4
+R5
+vcompare_gt_zero
+R4
+R5
+vcompare_lt_zero
+R4
+R5
+vcompare_to_zero
+R4
+R5
+vcontroller
+Z12 !s91 D:/mipstest/control.v
+Z13 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/control.v|
+vdatapath
+R10
+R11
+vdec
+Z14 !s91 D:/mipstest/dec.v
+Z15 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/dec.v|
+vdecoder_1
+R4
+R5
+vdecoder_2
+R4
+R5
+vexe
+Z16 !s91 D:/mipstest/exe.v
+Z17 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/exe.v|
+vextend_sign
+R4
+R5
+vfetch
+Z18 !s91 D:/mipstest/fetch.v
+Z19 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/fetch.v|
+vflip_flop
+R4
+R5
+vflip_flop_enable
+R4
+R5
+vflip_flop_enable_clear
+R4
+R5
+vflip_flop_no_reset
+R4
+R5
+vflip_flop_reset
+R4
+R5
+vforward
+Z20 !s91 D:/mipstest/forward.v
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/forward.v|
+vhazard_detection
+Z22 !s91 D:/mipstest/hazard_detection.v
+Z23 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/hazard_detection.v|
+vincrement
+R4
+R5
+vis_zero
+R4
+R5
+vmaindec
+R12
+R13
+vmdunit
+Z24 !s91 D:/mipstest/multdiv.v
+Z25 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/multdiv.v|
+vmem
+Z26 !s91 D:/mipstest/mem.v
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mem.v|
+vmips
+Z28 !s91 D:/mipstest/mips.v
+Z29 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mips.v|
+vmux_2
+R4
+R5
+vmux_3
+R4
+R5
+vmux_4
+R4
+R5
+vmux_5
+R4
+R5
+vncompare_to_zero
+R4
+R5
+vpriority_encoder_8
+R4
+R5
+vRF
+Z30 !s91 D:/mipstest/RF.v
+Z31 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/RF.v|
+vshift_left_2
+R4
+R5
+vshifter
+Z32 !s91 D:/mipstest/shifter.v
+Z33 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/shifter.v|
+vtri_state_buf
+R4
+R5
+vxor2
+R4
+R5

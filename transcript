@@ -1,0 +1,18 @@
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of mem.v was successful.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of utilities.v was successful.
+# 17 compiles, 0 failed with no errors. 
