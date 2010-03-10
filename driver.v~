@@ -38,7 +38,7 @@ module driver();
   error = $ferror(file_handle,err_str);
   if (error==0) begin
     for(k = 0; k < TEST_SZ*2 ; k = k+1)
-      num_bytes_in_line = $fgets(line_buffer,file_handle);//make fscanf!!!!
+      num_bytes_in_line = $fgets(line_buffer,file_handle);
       ins[k] = line_buffer;
       num_bytes_in_line = $fgets(line_buffer,file_handle);
       outs[k] = line_buffer;
