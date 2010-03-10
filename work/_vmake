@@ -94,9 +94,12 @@ Z25 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/multdiv.
 vmem
 Z26 !s91 D:/mipstest/mem.v
 Z27 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mem.v|
+vmemory
+Z28 !s91 D:/mipstest/memory.v
+Z29 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/memory.v|
 vmips
-Z28 !s91 D:/mipstest/mips.v
-Z29 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mips.v|
+Z30 !s91 D:/mipstest/mips.v
+Z31 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mips.v|
 vmux_2
 R4
 R5
@@ -116,14 +119,17 @@ vpriority_encoder_8
 R4
 R5
 vRF
-Z30 !s91 D:/mipstest/RF.v
-Z31 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/RF.v|
+Z32 !s91 D:/mipstest/RF.v
+Z33 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/RF.v|
 vshift_left_2
 R4
 R5
 vshifter
-Z32 !s91 D:/mipstest/shifter.v
-Z33 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/shifter.v|
+Z34 !s91 D:/mipstest/shifter.v
+Z35 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/shifter.v|
+vtoplevel
+!s91 D:/mipstest/toplevel.v
+!s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/toplevel.v|
 vtri_state_buf
 R4
 R5

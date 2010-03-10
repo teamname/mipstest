@@ -125,19 +125,19 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	dec
 
-} {} {}} D:/mipstest/multdiv.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/multdiv.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module mdunit
-
-Top level modules:
-	mdunit
-
 } {} {}} D:/mipstest/forward.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/forward.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module forward
 
 Top level modules:
 	forward
+
+} {} {}} D:/mipstest/multdiv.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/multdiv.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module mdunit
+
+Top level modules:
+	mdunit
 
 } {} {}} D:/mipstest/mem.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/mem.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
