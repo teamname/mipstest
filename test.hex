@@ -1,0 +1,25 @@
+
+fib.o:     file format elf32-bigmips
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	20020000 	addi	v0,zero,0
+   4:	20030001 	addi	v1,zero,1
+   8:	20050015 	addi	a1,zero,21
+
+0000000c <loop>:
+   c:	00432020 	add	a0,v0,v1
+  10:	00601020 	add	v0,v1,zero
+  14:	00801820 	add	v1,a0,zero
+  18:	10850003 	beq	a0,a1,28 <write>
+  1c:	00000000 	nop
+  20:	1000fffa 	b	c <loop>
+  24:	00000000 	nop
+
+00000028 <write>:
+  28:	ac440007 	sw	a0,7(v0)
+
+0000002c <end>:
+  2c:	1000ffff 	b	2c <end>
+  30:	00000000 	nop

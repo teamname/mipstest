@@ -1,0 +1,16 @@
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(18): [PCDPC] - Port size (13 or 13) does not match connection size (11) for port 'y'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(101): [PCDPC] - Port size (31 or 31) does not match connection size (25) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(101): [PCDPC] - Port size (31 or 31) does not match connection size (25) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(106): [PCDPC] - Port size (7 or 7) does not match connection size (6) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regM
+# ** Warning: (vsim-3015) D:/mipstest/control.v(106): [PCDPC] - Port size (7 or 7) does not match connection size (6) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regM
+# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (3 or 3) does not match connection size (2) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regW
+# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (3 or 3) does not match connection size (2) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regW
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(96): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp

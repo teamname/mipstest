@@ -81,8 +81,6 @@ module datapath(input         clk, reset,
               rw_E, rw_M, rw_W, 
               mem_or_alu_sel_E, mem_or_alu_sel_M, branch_D, jump_reg_D,
               inst_mem_ack, data_mem_ack, hiloaccessD, md_run_E,
-              
-              forwardaD, forwardbD, forwardaE, forwardbE,
               stallF, stall_D, stall_E, stall_M, stall_W, flushD, flush_E, flush_M,
               activeexception);
 
@@ -104,9 +102,9 @@ module datapath(input         clk, reset,
                           alu_out_M, rw_W, write_reg_W, forwardaD, forwardbD,
                           branch_sel_D,
                           
-                          opcode_D, function_D, rs_D, rt_D, 
+                          opcode_D, function_D, rs_D, rt_D, rdD,
                           srca2D, srcb2D, signimmD, pcnextbrFD,
-                          a_eq_b_D, a_eq_z_D, a_gt_z_D, a_lt_z_D, rdD);
+                          a_eq_b_D, a_eq_z_D, a_gt_z_D, a_lt_z_D);
 
   
   flip_flop_enable_clear #(32) r1E(clk,  reset, ~stall_E, flush_E, srca2D, srcaE); 

@@ -70,7 +70,7 @@ module mips(input         clk, reset,
                  is_branch_or_jmp_E,
                  no_valid_op_E, dummyE,
                  halfword_E,
-                 specialregsrcE, hilodisableE,
+                 hilodisableE,
                  hiloaccessD, md_start_E, hilosrcE);
 // data path
   datapath dp(
@@ -84,7 +84,7 @@ module mips(input         clk, reset,
                 is_unsigned, sign_extend_en_M, alu_src_E, reg_dst_E, rw_E, 
                 rw_M, rw_W, alu_out_E, luiE,
                 rd_sel_D, 
-                specialregsrcE, hilodisableE, hiloaccessD, md_start_E, hilosrcE,
+                hiloaccessD, md_start_E, hilosrcE,
                 pc_sle_FD, branch_src_D, alu_cnt_E, 
                 pc_F, alu_out_M,
                 write_data_M, byte_repeat_en_M, 

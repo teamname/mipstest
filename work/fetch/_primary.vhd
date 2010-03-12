@@ -1,10 +1,10 @@
 library verilog;
 use verilog.vl_types.all;
 entity fetch is
-    --generic(
-      --RESET_ADDRESS   : integer type with unrepresentable value!
-      --INTERRUPT_ADDRESS: integer type with unrepresentable value!
-    --);
+    generic(
+        RESET_ADDRESS   : integer := 0;
+        INTERRUPT_ADDRESS: integer := 256
+    );
     port(
         clk             : in     vl_logic;
         reset           : in     vl_logic;

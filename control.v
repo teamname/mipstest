@@ -98,8 +98,7 @@ module controller(input        clk, reset,
                   byteE, halfwordE, of_e, is_branch_or_jmp_E,
                   no_valid_op_E, dummy_E,
                   adesableE, adelableE, 
-                  mdstartE, hilosrcE, hiloselE, hilodisablealushE, 
-                  specialregsrcE});
+                  mdstartE, hilosrcE, hiloselE, hilodisablealushE});
   flip_flop_enable_clear #(7) regM(clk, reset, ~stallM, flushM,
                   {alu_or_mem_E, memwriteE, rw_E, loadsignedE,
                   byteE, halfwordE},

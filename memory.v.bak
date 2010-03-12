@@ -1,10 +1,8 @@
-module memory(input clk, wr_en, input [7:0] addr, input [31:0] data_in, output reg [31:0] mem_out, output reg rd_ack, input test_in, output reg [31:0] test_out);
-  
-   parameter RAM_FILE = "test.mem";
-   parameter RAM_WIDTH = 32;
-   parameter RAM_ADDR_BITS = 10;
+module memory
+   #(parameter RAM_ADDR_BITS = 10, parameter RAM_FILE = "test.mem") 
+(input clk, wr_en, input [RAM_ADDR_BITS - 1: 0] addr, input [31: 0]data_in, output reg [31: 0] mem_out, output reg rd_ack, input [RAM_ADDR_BITS - 1: 0]test_in, output reg [31: 0]test_out);
 
-   reg [RAM_WIDTH-1:0] ram [(2**RAM_ADDR_BITS)-1:0];
+   reg [31:0] ram [(2**RAM_ADDR_BITS)-1:0];
 
 
    //  The following code is only necessary if you wish to initialize the RAM 
@@ -24,5 +22,6 @@ module memory(input clk, wr_en, input [7:0] addr, input [31:0] data_in, output r
    end
    
    always@(test_in) begin
-     test_out = ram[test_in];
+     test_out <= ram[test_in];
+   end
 	endmodule

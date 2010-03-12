@@ -9,8 +9,8 @@ module fetch(input             clk,  reset, stall,
 
   wire [31:0] pcnextF;
 
-  parameter RESET_ADDRESS = 32'hbfc00000;
-  parameter INTERRUPT_ADDRESS = 32'hbfc00100;
+  parameter RESET_ADDRESS = 32'h00000000;
+  parameter INTERRUPT_ADDRESS = 32'h00000100;
   
    
   mux_4 #(32)  pcmux(RESET_ADDRESS, INTERRUPT_ADDRESS,
@@ -18,7 +18,7 @@ module fetch(input             clk,  reset, stall,
 
   
   flip_flop_no_reset #(32) PC(clk, ~stall, pcnextF, pc);
-  assign pc_plus_4 = pc + 32'b100;
+  assign pc_plus_4 = pc  + 4;
 
 
 endmodule
