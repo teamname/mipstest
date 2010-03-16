@@ -14,7 +14,7 @@ module exe(input         clk,  reset, alu_src_E,
 
   
   mux_3 #(32)  forward_a_Emux(src_a_E, data_in, alu_out_M, forward_a_E, src_a);
-  mux_3 #(32)  forward_b_Emux(src_b_E, data_in, alu_out_M, forward_b_E, src_b_out_E);
+  mux_3 #(32)  forward_b_Emux(, data_in, alu_out_M, forward_b_E, src_b_out_E);
 
   
   mux_2 #(32)  srcbmux(src_b_out_E, sign_imm_E, alu_src_E, src_b);

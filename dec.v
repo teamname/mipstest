@@ -16,7 +16,7 @@ module dec(input         clk,  unsignedD,
   assign function_D = inst_D[5:0];
   assign rs_D = inst_D[25:21];
   assign rt_D = inst_D[20:16];
-  assign rdD = inst_D[15:11];
+  assign rd_D = inst_D[15:11];
   
   // register file
   RF     rf(clk,  rw, rs_D, rt_D, write_add,
@@ -29,7 +29,7 @@ module dec(input         clk,  unsignedD,
   extend_sign #(16,32) se(inst_D[15:0], ~unsignedD, sign_imm_D);
 
   // branch address
-  assign branch_target = PC_plus_4_D + {sign_imm_D[29:0], 2'b00};
+  assign branch_target = PC_plus_4_D + {2'b00, sign_imm_D[29:0]};
 
   // comparison flags
   compare_equal aeqbcmp(src_a_D, src_b_D, a_eq_b_D);

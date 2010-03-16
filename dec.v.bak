@@ -16,7 +16,7 @@ module dec(input         clk,  unsignedD,
   assign function_D = inst_D[5:0];
   assign rs_D = inst_D[25:21];
   assign rt_D = inst_D[20:16];
-  assign rdD = inst_D[15:11];
+  assign rd_D = inst_D[15:11];
   
   // register file
   RF     rf(clk,  rw, rs_D, rt_D, write_add,

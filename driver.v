@@ -1,8 +1,8 @@
 `timescale 1ns / 1ps;
 module driver();
   
-  parameter D_ME = "test1.hex"; //data mem
-  parameter I_ME = "test1.hex"; //instr mem
+  parameter D_ME = "fib.txt"; //data mem
+  parameter I_ME = "fib.txt"; //instr mem
   parameter TEST_FILE = "test.txt";
   integer TEST_SZ;
   reg [9:0] inst_in;
@@ -48,11 +48,12 @@ module driver();
   initial begin
     //initials
     rst = 1'b1;
-    data_in = 8'h00;
-    inst_in = 10'h000;
+    data_in = 8'h04;
+    inst_in = 10'h004;
+    #10 inst_in = 10'h008;
   
     
-    #55 rst = 1'b0;
+    #60 rst = 1'b0;
     #100000;
     
     for(k = 0; k < 100; k = k + 1) begin

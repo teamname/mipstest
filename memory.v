@@ -14,7 +14,7 @@ module memory
 
 
    always @(posedge clk) begin
-         rd_ack <= 1'b0;
+         rd_ack <= 1'b1;
          if (wr_en) begin
             ram [addr] <= data_in;
           end

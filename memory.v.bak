@@ -7,8 +7,11 @@ module memory
 
    //  The following code is only necessary if you wish to initialize the RAM 
    //  contents via an external file (use $readmemb for binary data)
-   initial
+   initial begin
       $readmemh(RAM_FILE, ram);
+      rd_ack = 0;
+ end
+
 
    always @(posedge clk) begin
          rd_ack <= 1'b0;

@@ -49,8 +49,8 @@ module hazard_detection(input            clk, reset,
 
 
   
-  assign  activeexception =  memstallexception & 
-                              brstallexception;
+  assign  activeexception =  ~memstallexception & 
+                              ~brstallexception;
 
   assign  stallD = lwstallD | branchstallD | datamissM | multdivDE
                      | instrmissF; 
