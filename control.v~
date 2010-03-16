@@ -86,7 +86,7 @@ module controller(input        clk, reset,
 
     
   flip_flop_enable #(1) regD(clk, reset, ~stallD, {is_branch_or_jmp_F}, {is_branch_or_jmp_D});
-  flip_flop_enable_clear #(30) regE(clk, reset, ~stallE, flushE,
+  flip_flop_enable_clear #(31) regE(clk, reset, ~stallE, flushE,
                   {alu_or_mem_D, memwriteD, alusrcD, regdstD, rw_D, 
                   aluoutsrcD, alushcontrolD, loadsignedD, luiD,
                   byteD, halfwordD, overflowableD, is_branch_or_jmp_D,
@@ -99,12 +99,12 @@ module controller(input        clk, reset,
                   no_valid_op_E, dummy_E,
                   adesableE, adelableE, 
                   mdstartE, hilosrcE, hiloselE, hilodisablealushE});
-  flip_flop_enable_clear #(6) regM(clk, reset, ~stallM, flushM,
+  flip_flop_enable_clear #(7) regM(clk, reset, ~stallM, flushM,
                   {alu_or_mem_E, memwriteE, rw_E, loadsignedE,
                   byteE, halfwordE},
                   {alu_or_mem_M, data_mem_write_M, rw_M, sign_extend_en_M,
                   byte_repaet_M, halfword_repaet_M});
-  flip_flop_enable #(2) regW(clk, reset, ~stallW,
+  flip_flop_enable #(3) regW(clk, reset, ~stallW,
                   {alu_or_mem_M, rw_M},
                   {alu_or_mem_W, rw_W});
 endmodule
