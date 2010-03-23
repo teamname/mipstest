@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps;
 module driver();
   
-  parameter D_ME = "fib.txt"; //data mem
+  parameter D_ME = "data.txt"; //data mem
   parameter I_ME = "fib.txt"; //instr mem
   parameter TEST_FILE = "test.txt";
   integer TEST_SZ;
@@ -22,7 +22,7 @@ module driver();
   //file stuff
   integer file_handle, num_bytes_in_line;
 
-  toplevel #(D_ME, I_ME) DUT (clk, rst, inst_in, data_in, inst_out, data_out); //instantiate module
+  toplevel_s DUT (clk, rst, inst_in, data_in, inst_out, data_out); //instantiate module
   
   always
     forever #10 clk = ~clk; //create clock
@@ -37,32 +37,32 @@ module driver();
       //$display("line: %h %h \n", ins[k-1], outs[k-1]);
     end 
     
-    for(k = TEST_SZ; k < 101; k = k + 1)
-      begin
-        ins[k] = 0;
-        outs[k] = 0;
-      end
       
     end    
     
   initial begin
     //initials
     rst = 1'b1;
-    data_in = 8'h04;
+    data_in = 8'hed;
     inst_in = 10'h004;
-    #10 inst_in = 10'h008;
+    #10 data_in = 8'h00;
   
     
     #60 rst = 1'b0;
     #100000;
-    
-    for(k = 0; k < 100; k = k + 1) begin
-      data_in = k;
+    data_in = 8'h14;
+    #10;
+    data_in = 8'h01;
+    #10;
+    for(k = 0; k < TEST_SZ; k = k + 1) begin
+      data_in = ins[k];
+      #10;
       if(data_out != outs[k])
-        $display("Unexpected output for k = %d, addr: %h, expected: %d, got : %d", k, ins[k], outs[k], data_out);
+        $display("Unexpected output for k = %d, addr: %h, expected: %d, got : %d", k, data_in, outs[k], data_out);
       else
-        $display("Output for k = %d was okay!addr: %h, val: %d", k, k, data_out); 
+        $display("Output for k = %d was okay!addr: %h, val: %d", k, ins[k], data_out); 
     end
+    #10;
     
     $stop;
   end //end initial

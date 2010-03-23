@@ -2,8 +2,10 @@ library verilog;
 use verilog.vl_types.all;
 entity toplevel is
     generic(
-        D_MEM           : string  := "test";
-        I_MEM           : string  := "test"
+        D_MEM           : string  := "data.txt";
+        I_MEM           : string  := "fib.txt";
+        D_W             : integer := 8;
+        I_W             : integer := 10
     );
     port(
         clk             : in     vl_logic;

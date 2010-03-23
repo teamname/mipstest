@@ -10,13 +10,15 @@ module memory
    initial begin
       $readmemh(RAM_FILE, ram);
       rd_ack = 0;
+  $display("using file %s", RAM_FILE);
  end
 
 
    always @(posedge clk) begin
-         rd_ack <= 1'b0;
+         rd_ack <= 1'b1;
          if (wr_en) begin
             ram [addr] <= data_in;
+            mem_out <= 0;
           end
           else begin
             mem_out <= ram[addr];
@@ -25,6 +27,6 @@ module memory
    end
    
    always@(test_in) begin
-     test_out <= ram[test_in];
+     test_out = ram[test_in];
    end
 	endmodule

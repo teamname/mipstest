@@ -84,13 +84,6 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	driver
 
-} {} {}} D:/mipstest/br_control.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/br_control.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module br_control
-
-Top level modules:
-	br_control
-
 } {} {}} D:/mipstest/utilities.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/utilities.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module compare_equal
@@ -146,6 +139,13 @@ Top level modules:
 	tri_state_buf
 	cmux_2
 
+} {} {}} D:/mipstest/br_control.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/br_control.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module br_control
+
+Top level modules:
+	br_control
+
 } {} {}} D:/mipstest/forward.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/forward.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module forward
@@ -180,6 +180,15 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 
 Top level modules:
 	fetch
+
+} {} {}} D:/mipstest/toplevel_synthesis.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/toplevel_synthesis.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module toplevel_s
+-- Compiling module glbl
+
+Top level modules:
+	toplevel_s
+	glbl
 
 } {} {}} D:/mipstest/shifter.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/shifter.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008

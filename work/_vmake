@@ -79,9 +79,12 @@ R5
 vforward
 Z22 !s91 D:/mipstest/forward.v
 Z23 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/forward.v|
+vglbl
+Z24 !s91 D:/mipstest/toplevel_synthesis.v
+Z25 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/toplevel_synthesis.v|
 vhazard_detection
-Z24 !s91 D:/mipstest/hazard_detection.v
-Z25 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/hazard_detection.v|
+Z26 !s91 D:/mipstest/hazard_detection.v
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/hazard_detection.v|
 vincrement
 R4
 R5
@@ -92,17 +95,17 @@ vmaindec
 R12
 R13
 vmdunit
-Z26 !s91 D:/mipstest/multdiv.v
-Z27 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/multdiv.v|
+Z28 !s91 D:/mipstest/multdiv.v
+Z29 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/multdiv.v|
 vmem
-Z28 !s91 D:/mipstest/mem.v
-Z29 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mem.v|
+Z30 !s91 D:/mipstest/mem.v
+Z31 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mem.v|
 vmemory
-Z30 !s91 D:/mipstest/memory.v
-Z31 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/memory.v|
+Z32 !s91 D:/mipstest/memory.v
+Z33 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/memory.v|
 vmips
-Z32 !s91 D:/mipstest/mips.v
-Z33 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mips.v|
+Z34 !s91 D:/mipstest/mips.v
+Z35 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mips.v|
 vmux_2
 R4
 R5
@@ -122,17 +125,20 @@ vpriority_encoder_8
 R4
 R5
 vRF
-Z34 !s91 D:/mipstest/RF.v
-Z35 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/RF.v|
+Z36 !s91 D:/mipstest/RF.v
+Z37 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/RF.v|
 vshift_left_2
 R4
 R5
 vshifter
-Z36 !s91 D:/mipstest/shifter.v
-Z37 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/shifter.v|
+Z38 !s91 D:/mipstest/shifter.v
+Z39 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/shifter.v|
 vtoplevel
-Z38 !s91 D:/mipstest/toplevel.v
-Z39 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/toplevel.v|
+Z40 !s91 D:/mipstest/toplevel.v
+Z41 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/toplevel.v|
+vtoplevel_s
+R24
+R25
 vtri_state_buf
 R4
 R5

@@ -1,6 +1,6 @@
 module memory
    #(parameter RAM_ADDR_BITS = 10, parameter RAM_FILE = "test.mem") 
-(input clk, wr_en, input [RAM_ADDR_BITS - 1: 0] addr, input [31: 0]data_in, output reg [31: 0] mem_out, output reg rd_ack, input [RAM_ADDR_BITS - 1: 0]test_in, output reg [31: 0]test_out);
+(input clk, wr_en, input [RAM_ADDR_BITS - 1: 0] addr, input [31: 0]data_in, output reg [31: 0] mem_out, output reg rd_ack, input [RAM_ADDR_BITS - 1: 0]test_in, output [31: 0]test_out);
 
    reg [31:0] ram [(2**RAM_ADDR_BITS)-1:0];
 
@@ -10,6 +10,7 @@ module memory
    initial begin
       $readmemh(RAM_FILE, ram);
       rd_ack = 0;
+  $display("using file %s", RAM_FILE);
  end
 
 
@@ -17,6 +18,7 @@ module memory
          rd_ack <= 1'b1;
          if (wr_en) begin
             ram [addr] <= data_in;
+            mem_out <= 0;
           end
           else begin
             mem_out <= ram[addr];
@@ -24,7 +26,5 @@ module memory
           end
    end
    
-   always@(test_in) begin
-     test_out <= ram[test_in];
-   end
+  assign test_out = ram[test_in];
 	endmodule

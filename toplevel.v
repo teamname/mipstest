@@ -1,7 +1,9 @@
 module toplevel(input clk, reset, 
                 input [9:0] inst_in, input [7:0] data_in, output [31:0] inst_out, output [31:0] data_out); //test signals
-  parameter D_MEM = "test";
-  parameter I_MEM = "test";
+  parameter D_MEM = "data.txt";
+  parameter I_MEM = "fib.txt";
+  parameter D_W = 8;
+  parameter I_W = 10;
   wire [9:0] instr_addr_in;
   wire [7:0] data_addr_in;
   wire [31:0] instr_addr;
@@ -19,9 +21,9 @@ module toplevel(input clk, reset,
  
   assign data_addr_in = mem_addr[7:0]; 
   
-  memory #(8, D_MEM) data (clk, wr_en, data_addr_in, wr_data, mem_data, mem_ack, data_in, data_outer); 
+  memory #(D_W, D_MEM) data (clk, wr_en, data_addr_in, wr_data, mem_data, mem_ack, data_in, data_outer); 
 
-  memory #(10, I_MEM) instr (clk, 1'b0, instr_addr_in, 32'h0000, instr_data, instr_ack, inst_in, inst_outer);
+  memory #(I_W, I_MEM) instr (clk, 1'b0, instr_addr_in, 32'h0000, instr_data, instr_ack, inst_in, inst_outer);
   
   assign inst_out = inst_outer;
   assign data_out = data_outer;
