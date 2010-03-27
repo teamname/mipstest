@@ -2,6 +2,7 @@ library verilog;
 use verilog.vl_types.all;
 entity alu_shift_md is
     port(
+        dummy           : in     vl_logic;
         funct           : in     vl_logic_vector(5 downto 0);
         rtype           : in     vl_logic;
         use_shifter     : in     vl_logic;

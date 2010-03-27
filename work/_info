@@ -18,10 +18,10 @@ Z2 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
 !s100 56PW>oElFn]inV5MB:B>>0
 !s85 0
 valu_shift_md
-I<dG8GaVzIFPSXk6]1zGmE2
-VYmaH^zCzXk]4Qzi:jDTd60
+I]Xh4eTmLK=IV@H=mH6ekA2
+VO4kEzkHoVkDH9QY56@Mzc3
 Z3 dD:\mipstest
-w1268424544
+w1269721281
 8D:/mipstest/alu_shift_md.v
 FD:/mipstest/alu_shift_md.v
 L0 3
@@ -29,7 +29,7 @@ R1
 r1
 31
 R2
-!s100 _>K@Lz_m3XaNX5=;913o83
+!s100 ^g5jZA@Yg^VbPCVP7IzNK1
 !s85 0
 vand2
 IEUmbIA>>E?Toib<EbUgGm3
@@ -88,18 +88,18 @@ R2
 !s100 A;ed[T0T5Ke:I<QC4XRYE1
 !s85 0
 vcnt_dp
-Ib>Rn7X_k5LaU4=>@TX<fe1
+I@CRBaan5ZRJKUzRD44@N<3
 V?F8HX64<]fk9CEBj6B>XJ2
 R3
-Z7 w1268357179
+Z7 w1269723117
 Z8 8D:/mipstest/datapath.v
 Z9 FD:/mipstest/datapath.v
-L0 146
+L0 157
 R1
 r1
 31
 R2
-!s100 mfEBZhWWiJz@FKo=`@<I@3
+!s100 BcBONRKi[z=m[]c04Hak^0
 !s85 0
 vcompare_equal
 IV_O76b0HAaFNKniU2:OaS1
@@ -158,10 +158,10 @@ R2
 !s100 j3dNa?`YDDRN9UQU@HTf03
 !s85 0
 vcontroller
-IIi=UOzFAD]1lKI?^[eC8a3
-VFCnib`WJj>cS6jOH`6[1O1
+I04]KMTcU3TJ]KAQeYY]H@0
+VmiQz2XC^RiZ0;bF=LXGQZ2
 R3
-Z10 w1268424617
+Z10 w1269721164
 Z11 8D:/mipstest/control.v
 Z12 FD:/mipstest/control.v
 L0 2
@@ -169,11 +169,11 @@ R1
 r1
 31
 R2
-!s100 B0:KL_zhT[SdAzV>A:ehI3
+!s100 HNNL@Uai;NB_8AF<oVR_J0
 !s85 0
 vdatapath
-I2?P>b_<0gfTLLE3P>IMK>1
-V9OgR_IJfQ<5ST_gz<DboF0
+IZBf?JBNc[@4PlOOh1bXeh0
+V?GPTLoLST8;8c1hW3h:4P0
 R3
 R7
 R8
@@ -183,7 +183,7 @@ R1
 r1
 31
 R2
-!s100 JYG1B_YSza=84>WRe1[8m0
+!s100 F8IF4T6O3RGzIjDRH1aQV2
 !s85 0
 vdec
 I^eD7nN@ACh@;6aa64f0_e3
@@ -228,24 +228,24 @@ R2
 !s100 Ij]2MCQ0HSiVz:]V`<zCB0
 !s85 0
 vdriver
+InQ^@i7HfogaOz_2gMaQYa0
 Vob_Id]>ZhdUloIFEK=1YV1
-r1
-31
-IY]o@f0a`:f;XCU`c26;j82
 R3
-w1269381712
+w1269554604
 8D:/mipstest/driver.v
 FD:/mipstest/driver.v
 L0 2
 R1
+r1
+31
 R2
+!s100 O9OEG]i86E6UQ7`91V?NC1
 !s85 0
-!s100 0aTIQ_U0MZJzl@2SiTFf@1
 vexe
-Iba:ZXA5MLnn0KHCMK<70h3
-V6efXfn9VGP732A]442zGM3
+Ih??0JLJ8HhzAPDA6n5P6<1
+V`J>;SgRf^eKa]E<lJ:hH=1
 R3
-w1268778364
+w1269723040
 8D:/mipstest/exe.v
 FD:/mipstest/exe.v
 L0 2
@@ -253,7 +253,7 @@ R1
 r1
 31
 R2
-!s100 T:3LICDC1e45];V8;7o=52
+!s100 3OV55NEWzL?F?A64`4HJL3
 !s85 0
 vextend_sign
 IO<hM3W6OJVR@PD8e>>jT62
@@ -368,6 +368,7 @@ R2
 !s100 T9W6_LGh?l<foj7[>F4Ci1
 !s85 0
 vglbl
+!s100 E;h7D>Tj`E?7CH2dOi<6Z3
 IWBl3_zBQG9UE^Ac@oY19M3
 VnN]4Gon>inod6>M^M2[SV1
 R3
@@ -377,10 +378,9 @@ Z15 FD:/mipstest/toplevel_synthesis.v
 L0 32236
 R1
 r1
+!s85 0
 31
 R2
-!s100 E;h7D>Tj`E?7CH2dOi<6Z3
-!s85 0
 vhazard_detection
 IGC@9JSRLkaXm]0_QX=Uo63
 VNeQ=oegz0`Ykc=XBIZ;I03
@@ -424,33 +424,33 @@ R2
 !s100 1mkK5_T>:GmgX<L1o;<UE0
 !s85 0
 vmaindec
-I0<ZTnAz;eDTc1kKLEF`a;1
-VL>GNJD@^M=dA4UhJzoOQ>2
+I=z1L<NlTX2LOVN0K>`Q=K3
+V:_:m2]m;_Q`M>CKKVXmZP1
 R3
 R10
 R11
 R12
-L0 112
+L0 114
 R1
 r1
 31
 R2
-!s100 `GnTeS9fhD2=W<FFIS]O81
+!s100 c9JPZjP0biUh8X9k6@iE[0
 !s85 0
 vmdunit
-Vo0kkjW=SbCWgzQl[PO?0b2
-r1
-!s85 0
-31
 Iaan75bRcm_7Egj;@SdX7e2
+Vo0kkjW=SbCWgzQl[PO?0b2
 R3
 R4
 8D:/mipstest/multdiv.v
 FD:/mipstest/multdiv.v
 L0 3
 R1
+r1
+31
 R2
 !s100 R5AH1D[lVQb0NGbn_29m72
+!s85 0
 vmem
 InJQ_M51mkXkKekjac7aWd3
 V4a_X6DgAXO^bOId?C<IAV1
@@ -480,10 +480,10 @@ R2
 !s100 7CA8Ub43SfL?2SBYALzHG3
 !s85 0
 vmips
-IHfk>Cl4NcJ99DgP4hVn^j1
-V_ENzA@Vb1YonTU]6h51;n3
+IYZ=zP>WHfV[bLgPm=S0]K3
+VFbH:MR0S5K7BV:Gi37DSk2
 R3
-w1268351967
+w1269723175
 8D:/mipstest/mips.v
 FD:/mipstest/mips.v
 L0 2
@@ -491,7 +491,7 @@ R1
 r1
 31
 R2
-!s100 @_h3ioMXHKR2=U;];GDBT3
+!s100 EdR`N8<g=NFFUoP=NhaZ?3
 !s85 0
 vmux_2
 ICnP;LTC662cHFTb5o9WJ12
@@ -621,10 +621,10 @@ R2
 !s100 7eOcaj68`0l7dfZFKBJn?0
 !s85 0
 vtoplevel
-IN<aY3ILo=^b^Qfm@zWhEM2
-VC1UD?DTkoz7EG]n7mLMd12
+IRiP[KQ:>mhCa0]98;3nD<3
+V29[GVToF;FmkiobAWPfBC1
 R3
-w1269380893
+w1269723189
 8D:/mipstest/toplevel.v
 FD:/mipstest/toplevel.v
 L0 1
@@ -632,22 +632,22 @@ R1
 r1
 31
 R2
-!s100 mEQS>onP`I`64@a[;G2hN2
+!s100 <b_>Bjz=GfMf4J;02CzRI2
 !s85 0
 vtoplevel_s
-V8Ui>9m;<0I_1>D0;>hgRl0
-r1
-31
+!s100 MPP?]hmjcj2GG5docdEN73
 IIgi1h8hA_L;:0eIUij`dd1
+V8Ui>9m;<0I_1>D0;>hgRl0
 R3
 R13
 R14
 R15
 L0 36
 R1
-R2
+r1
 !s85 0
-!s100 MPP?]hmjcj2GG5docdEN73
+31
+R2
 vtri_state_buf
 IReGL]RmnYGQDhzX2C`GH11
 V7PknfG^FPM_hTM4R;KbDP0

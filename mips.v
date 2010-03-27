@@ -8,7 +8,13 @@ module mips(input         clk, reset,
             output [31:0] alu_out_M,  // data memory address
             output [31:0] write_data_M, // write data
             input  [31:0] read_data_M, // rread data
-            input         inst_mem_ack_F, data_mem_ack_M); // acknowledges
+            input         inst_mem_ack_F, data_mem_ack_M, // acknowledges
+            output [9:0] sprite_x, output [8:0] sprite_y, output [4:0] sprite_sel, //vga outputs
+  output sprite_attr, sprite_pos, sprite_vis, bck_ch_active,
+  output font_ch_active, font_clr, font_en,
+  output [10:0] font_addr,
+  output [3:0] font_data,
+  output [1:0] bck); 
 
   wire [5:0]  opcode_D, function_D;
   wire [4:0]  rs_D, rt_D, rd_E; // source & destination addresses
@@ -49,6 +55,7 @@ module mips(input         clk, reset,
               hilosrcE;
 
   wire        activeexception; //exception
+  
    
    // controller
   controller cont(
@@ -71,10 +78,10 @@ module mips(input         clk, reset,
                  no_valid_op_E, dummyE,
                  halfword_E,
                  hilodisableE,
-                 hiloaccessD, md_start_E, hilosrcE);
+                 hiloaccessD, md_start_E, hilosrcE, spriteE, fontE, backgroundE, posE, attrE, visiE);
 // data path
   datapath dp(
-                clk, reset, inst_F, 
+                clk, reset, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, inst_F, 
                 
                 read_data_M, inst_mem_ack_F, data_mem_ack_M, 
                 
@@ -93,7 +100,10 @@ module mips(input         clk, reset,
                 md_run_E, 
                 pc_E, 
                 write_data_W, wr_w, 
-                activeexception);
+                activeexception, sprite_x,  sprite_y, sprite_sel,
+                sprite_attr, sprite_pos, sprite_vis, bck_ch_active,
+                font_ch_active, font_clr, font_en,
+                font_addr, font_data, bck);
 
 endmodule
 

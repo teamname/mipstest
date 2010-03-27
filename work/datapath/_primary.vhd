@@ -4,6 +4,13 @@ entity datapath is
     port(
         clk             : in     vl_logic;
         reset           : in     vl_logic;
+        dummyE          : in     vl_logic;
+        spriteE         : in     vl_logic;
+        fontE           : in     vl_logic;
+        backgroundE     : in     vl_logic;
+        posE            : in     vl_logic;
+        attrE           : in     vl_logic;
+        visiE           : in     vl_logic;
         inst_F          : in     vl_logic_vector(31 downto 0);
         read_data_M     : in     vl_logic_vector(31 downto 0);
         inst_mem_ack    : in     vl_logic;
@@ -55,6 +62,19 @@ entity datapath is
         pc_E            : out    vl_logic_vector(31 downto 0);
         write_data_W    : out    vl_logic_vector(31 downto 0);
         write_reg_W     : out    vl_logic_vector(4 downto 0);
-        activeexception : out    vl_logic
+        activeexception : out    vl_logic;
+        sprite_x        : out    vl_logic_vector(9 downto 0);
+        sprite_y        : out    vl_logic_vector(8 downto 0);
+        sprite_sel      : out    vl_logic_vector(4 downto 0);
+        sprite_attr     : out    vl_logic;
+        sprite_pos      : out    vl_logic;
+        sprite_vis      : out    vl_logic;
+        bck_ch_active   : out    vl_logic;
+        font_ch_active  : out    vl_logic;
+        font_clr        : out    vl_logic;
+        font_en         : out    vl_logic;
+        font_addr       : out    vl_logic_vector(10 downto 0);
+        font_data       : out    vl_logic_vector(3 downto 0);
+        bck             : out    vl_logic_vector(1 downto 0)
     );
 end datapath;

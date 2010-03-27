@@ -20,6 +20,9 @@ entity maindec is
         no_valid_op_D   : out    vl_logic;
         dummy           : out    vl_logic;
         adesableD       : out    vl_logic;
-        adelableD       : out    vl_logic
+        adelableD       : out    vl_logic;
+        spriteD         : out    vl_logic;
+        fontD           : out    vl_logic;
+        backgroundD     : out    vl_logic
     );
 end maindec;

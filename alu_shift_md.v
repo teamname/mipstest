@@ -1,6 +1,6 @@
 `timescale 1 ns / 1 ps
 // ALU, Shifter, and multiply/divide
-module alu_shift_md(input      [5:0] funct,
+module alu_shift_md(input dummy, input      [5:0] funct,
                 input            rtype, use_shifter, 
                 input      [2:0] alu_cnt,
                 output           useshifter,
@@ -10,15 +10,17 @@ module alu_shift_md(input      [5:0] funct,
                 output     [1:0] hilodisable);
 
   reg [12:0] functcontrol;
+  
+  wire [5:0] funct_in;
+  assign funct_in = dummy ? 6'b100100 : funct; //if special instr, make look like AND
 
   mux_2 #(11) alu_mux({9'b0, use_shifter, alu_cnt}, 
                          functcontrol, rtype,
                          {overflowable, hiloread, 
                          hilosel, hilodisable, mdstart, hilosrc, useshifter, 
                          alushcontrol});
-
   always @ ( * )
-      case(funct)
+      case(funct_in)
           // ALU Ops
           6'b100000: functcontrol <= 11'b10000000010; // ADD 
           6'b100001: functcontrol <= 11'b00000000010; // ADDU

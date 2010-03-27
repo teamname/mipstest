@@ -26,10 +26,12 @@ module controller(input        clk, reset,
                   output       rd_src_D, // select rd
                   output [1:0] pc_src, branch_src, // select PC and branch sources
                   output       is_branch_or_jmp_E,
-                  output       no_valid_op_E, dummy_E,
+                  output       no_valid_op_E, 
+                  output dummy_E, //used for vga instruction decoding (alu_shift_md)
                   output       halfwordE,
                   output [1:0] hilodisableE,
-                  output       hiloaccessD, mdstartE, hilosrcE);
+                  output       hiloaccessD, mdstartE, hilosrcE, 
+                  output spriteE, fontE, backgroundE, posE, attrE, visiE); //signals for vga instructions
 
   wire       alu_or_mem_D, memwriteD, alusrcD, mainrw_, luiD, rtypeD,
              regdstD, rw_D, use_shifter, maindecregdstD, 
@@ -46,6 +48,7 @@ module controller(input        clk, reset,
   wire [2:0] alushcontmaindecD, alushcontrolD;
   wire       memwriteE;
   wire       is_branch_or_jmp_F, is_branch_or_jmp_D;
+  wire       posD, attrD, visiD;
 
   assign  rw_D = mainrw_ | linkD ;
   assign  regdstD = maindecregdstD;
@@ -53,7 +56,7 @@ module controller(input        clk, reset,
   assign  is_branch_or_jmp_F = is_branch | is_jump;
   
   assign  hiloaccessD = mdstartD | hiloreadD;
-
+  assign  {posD, attrD, visiD} = functD [2:0]; //used for sprites
   maindec md(opD, alu_or_mem_D, memwriteD, byteD, halfwordD, loadsignedD,
              alusrcD, maindecregdstD, mainrw_, is_unsinged_D, luiD,
              use_shifter, maindecoverflowableD, alushcontmaindecD,
@@ -61,7 +64,7 @@ module controller(input        clk, reset,
              no_valid_op_D, dummy, adesableD, adelableD);
 
   
-  alu_shift_md  ad(functD, rtypeD, use_shifter, alushcontmaindecD, 
+  alu_shift_md  ad(dummy, functD, rtypeD, use_shifter, alushcontmaindecD, 
                useshifterD,
                alushcontrolD, alu_shift_mdoverflowableD,
                mdstartD, hilosrcD, hiloreadD, hiloselD, 
@@ -84,21 +87,20 @@ module controller(input        clk, reset,
   assign  aluoutsrcD = {linkD | hiloreadD,
                           useshifterD | hiloreadD};
 
-    
   flip_flop_enable #(1) regD(clk, reset, ~stallD, {is_branch_or_jmp_F}, {is_branch_or_jmp_D});
-  flip_flop_enable_clear #(30) regE(clk, reset, ~stallE, flushE,
+  flip_flop_enable_clear #(36) regE(clk, reset, ~stallE, flushE,
                   {alu_or_mem_D, memwriteD, alusrcD, regdstD, rw_D, 
                   aluoutsrcD, alushcontrolD, loadsignedD, luiD,
                   byteD, halfwordD, overflowableD, is_branch_or_jmp_D,
                   no_valid_op_D, dummy,
                   adesableD, adelableD, 
-                  mdstartD, hilosrcD, hiloselD, hilodisablealushD}, 
+                  mdstartD, hilosrcD, hiloselD, hilodisablealushD, spriteD, fontD, backgroundD,posD, attrD, visiD}, 
                   {alu_or_mem_E, memwriteE, alu_b_sel, regdstE, rw_E,  
                   alu_shift_md_sel, alu_cnt_E, loadsignedE, luiE, 
                   byteE, halfwordE, of_e, is_branch_or_jmp_E,
                   no_valid_op_E, dummy_E,
                   adesableE, adelableE, 
-                  mdstartE, hilosrcE, hiloselE, hilodisablealushE});
+                  mdstartE, hilosrcE, hiloselE, hilodisablealushE, spriteE, fontE, backgroundE, posE, attrE, visiE});
   flip_flop_enable_clear #(6) regM(clk, reset, ~stallM, flushM,
                   {alu_or_mem_E, memwriteE, rw_E, loadsignedE,
                   byteE, halfwordE},
@@ -116,7 +118,7 @@ module maindec(input  [5:0] op,
                output       is_unsinged_D, lui, useshift, overflowable,
                output [2:0] alushcontrol, 
                output       rtype, no_valid_op_D, dummy,
-               output       adesableD, adelableD);
+               output       adesableD, adelableD, spriteD, fontD, backgroundD);
 
   reg [19:0] controls;
  
@@ -128,6 +130,7 @@ module maindec(input  [5:0] op,
           alu_or_mem_, byte, halfword, loadsignedD,
           useshift, alushcontrol /* 3 bits */, rtype,
           is_unsinged_D, lui, adesableD, adelableD, dummy, no_valid_op_D} = controls;
+ assign {backgroundD, fontD, spriteD} = op[2:0] & op[5:3];
 
   always @ ( * )
     case(op)
@@ -155,6 +158,9 @@ module maindec(input  [5:0] op,
       6'b000101: controls <= 21'b00000000001100000000; //BNE
       6'b000110: controls <= 21'b00000000001100000000; //BLEZ
       6'b000111: controls <= 21'b00000000001100000000; //BGTZ
+      6'b111001: controls <= 20'b01000000001011000010; //sprite
+      6'b111010: controls <= 20'b01000000001011000010; //font
+      6'b111100: controls <= 20'b01000000000000000010; //bkgnd
       default:   controls <= 21'bxxxxxxxxxxxxxxxxxxx1; //??? (exception)
     endcase
 endmodule

@@ -1,17 +1,17 @@
-D:/mipstest/alu_shift_md.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/alu_shift_md.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module alu_shift_md
-
-Top level modules:
-	alu_shift_md
-
-} {} {}} D:/mipstest/datapath.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/datapath.v
+D:/mipstest/datapath.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/datapath.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module datapath
 -- Compiling module cnt_dp
 
 Top level modules:
 	datapath
+
+} {} {}} D:/mipstest/alu_shift_md.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/alu_shift_md.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module alu_shift_md
+
+Top level modules:
+	alu_shift_md
 
 } {} {}} D:/mipstest/hazard_detection.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/hazard_detection.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
@@ -27,13 +27,6 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	RF
 
-} {} {}} D:/mipstest/memory.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/memory.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module memory
-
-Top level modules:
-	memory
-
 } {} {}} D:/mipstest/control.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/control.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module controller
@@ -42,19 +35,19 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	controller
 
+} {} {}} D:/mipstest/memory.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/memory.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module memory
+
+Top level modules:
+	memory
+
 } {} {}} D:/mipstest/branch_dec.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/branch_dec.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module branch_dec
 
 Top level modules:
 	branch_dec
-
-} {} {}} D:/mipstest/alu.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/alu.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module alu
-
-Top level modules:
-	alu
 
 } {} {}} D:/mipstest/exe.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/exe.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
@@ -63,6 +56,13 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	exe
 
+} {} {}} D:/mipstest/alu.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/alu.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module alu
+
+Top level modules:
+	alu
+
 } {} {}} D:/mipstest/toplevel.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/toplevel.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module toplevel
@@ -70,19 +70,19 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	toplevel
 
-} {} {}} D:/mipstest/dec.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/dec.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module dec
-
-Top level modules:
-	dec
-
 } {} {}} D:/mipstest/driver.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/driver.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module driver
 
 Top level modules:
 	driver
+
+} {} {}} D:/mipstest/br_control.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/br_control.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module br_control
+
+Top level modules:
+	br_control
 
 } {} {}} D:/mipstest/utilities.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/utilities.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
@@ -139,19 +139,12 @@ Top level modules:
 	tri_state_buf
 	cmux_2
 
-} {} {}} D:/mipstest/br_control.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/br_control.v
+} {} {}} D:/mipstest/dec.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/dec.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module br_control
+-- Compiling module dec
 
 Top level modules:
-	br_control
-
-} {} {}} D:/mipstest/forward.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/forward.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module forward
-
-Top level modules:
-	forward
+	dec
 
 } {} {}} D:/mipstest/multdiv.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/multdiv.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
@@ -159,6 +152,13 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 
 Top level modules:
 	mdunit
+
+} {} {}} D:/mipstest/forward.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/forward.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module forward
+
+Top level modules:
+	forward
 
 } {} {}} D:/mipstest/mem.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/mem.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008

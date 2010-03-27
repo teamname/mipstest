@@ -50,6 +50,12 @@ entity controller is
         hilodisableE    : out    vl_logic_vector(1 downto 0);
         hiloaccessD     : out    vl_logic;
         mdstartE        : out    vl_logic;
-        hilosrcE        : out    vl_logic
+        hilosrcE        : out    vl_logic;
+        spriteE         : out    vl_logic;
+        fontE           : out    vl_logic;
+        backgroundE     : out    vl_logic;
+        posE            : out    vl_logic;
+        attrE           : out    vl_logic;
+        visiE           : out    vl_logic
     );
 end controller;

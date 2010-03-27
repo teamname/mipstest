@@ -1,5 +1,5 @@
 `timescale 1 ns / 1 ps
-module datapath(input         clk, reset,
+module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,posE, attrE, visiE,
                 input  [31:0] inst_F, read_data_M, 
                 input         inst_mem_ack, data_mem_ack, 
                 input         mem_or_alu_sel_E, mem_or_alu_sel_M, mem_or_alu_sel_W, 
@@ -26,7 +26,14 @@ module datapath(input         clk, reset,
                 output [31:0] pc_E,
                 output [31:0] write_data_W,
                 output [4:0]  write_reg_W,
-                output        activeexception);
+                output        activeexception,
+                output [9:0] sprite_x, output [8:0] sprite_y, output [4:0] sprite_sel, 
+  output sprite_attr, sprite_pos, sprite_vis, bck_ch_active,
+  output font_ch_active, font_clr, font_en,
+  output [10:0] font_addr,
+  output [3:0] font_data,
+  output [1:0] bck);
+
 
   wire        forwardaD, forwardbD;
   wire [1:0]  forwardaE, forwardbE;
@@ -49,6 +56,7 @@ module datapath(input         clk, reset,
   wire        rteqwrEM, rteqwrEW, rteqrsED, rteqrtED;
   wire        rseqwrd_E, rteqwrd_E;
   wire [4:0]  rdD;
+  
   
   cnt_dp cnt_dp(
                       clk, reset,
@@ -113,14 +121,17 @@ module datapath(input         clk, reset,
   flip_flop_enable_clear #(32) r9E(clk,  reset, ~stall_E, flush_E, pcD, pc_E);
   
   exe exe(
-                            clk, reset, alu_src_sel_E, 
+                            clk, reset, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, rd_E, 
                             luiE, mdstartE, 
                             alu_out_E,
                             forwardaE, forwardbE, 
                             alu_cnt_E, 
                             srcaE, srcbE, resultW, alu_out_M, signimmE, pc_E, 
                         
-                            srcb2E, aluoutE, of_E, md_run_E);
+                            srcb2E, aluoutE, of_E, md_run_E, 
+                            sprite_x, sprite_y, sprite_sel, sprite_attr, 
+                            sprite_pos, sprite_vis, font_addr, font_data, font_en, bck, bck_ch_active, 
+                            font_ch_active, font_clr);
 
   
   flip_flop_enable_clear #(32) r1M(clk,  reset, ~stall_M, flush_M, srcb2E, writedataM);
@@ -185,3 +196,4 @@ module cnt_dp(input         clk, reset,
   flip_flop_enable #(5)  r3W(clk, reset, ~stall_W, writeregM, write_reg_W);
   
 endmodule
+
