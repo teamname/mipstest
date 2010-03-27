@@ -23,7 +23,7 @@ module driver();
   //file stuff
   integer file_handle, num_bytes_in_line;
 
-  toplevel_s DUT (clk, rst, inst_in, data_in, inst_out, data_out); //instantiate module
+  toplevel DUT (clk, rst, inst_in, data_in, inst_out, data_out); //instantiate module
   
   always
     forever #10 clk = ~clk; //create clock

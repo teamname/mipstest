@@ -70,19 +70,12 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	toplevel
 
-} {} {}} D:/mipstest/driver.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/driver.v
+} {} {}} D:/mipstest/dec.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/dec.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module driver
+-- Compiling module dec
 
 Top level modules:
-	driver
-
-} {} {}} D:/mipstest/br_control.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/br_control.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module br_control
-
-Top level modules:
-	br_control
+	dec
 
 } {} {}} D:/mipstest/utilities.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/utilities.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
@@ -139,19 +132,19 @@ Top level modules:
 	tri_state_buf
 	cmux_2
 
-} {} {}} D:/mipstest/dec.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/dec.v
+} {} {}} D:/mipstest/driver.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/driver.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module dec
+-- Compiling module driver
 
 Top level modules:
-	dec
+	driver
 
-} {} {}} D:/mipstest/multdiv.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/multdiv.v
+} {} {}} D:/mipstest/br_control.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/br_control.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module mdunit
+-- Compiling module br_control
 
 Top level modules:
-	mdunit
+	br_control
 
 } {} {}} D:/mipstest/forward.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/forward.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
@@ -159,6 +152,13 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 
 Top level modules:
 	forward
+
+} {} {}} D:/mipstest/multdiv.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/multdiv.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module mdunit
+
+Top level modules:
+	mdunit
 
 } {} {}} D:/mipstest/mem.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/mem.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008

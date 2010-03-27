@@ -1,7 +1,7 @@
 `timescale 1 ns / 1 ps
-module exe(input         clk,  reset, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, input [4:0] rd_E
+module exe(input         clk,  reset, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, input [4:0] rd_E, 
            
-                                  luiE, md_start_E,  
+                    input              luiE, md_start_E,  
                     input  [1:0]  alu_out_sel,
                                   forward_a_E, forward_b_E, 
                     input  [2:0]  alu_cnt_E, 
@@ -10,7 +10,7 @@ module exe(input         clk,  reset, dummyE, spriteE, fontE, backgroundE, posE,
                     output        of_E,  
                                   md_run_E,
                     output [9:0] sprite_x, output [8:0] sprite_y,
-                output [5:0] sprite_sel, output sprite_attr, output sprite_pos, output sprite_vis,
+                output [4:0] sprite_sel, output sprite_attr, output sprite_pos, output sprite_vis,
                 output [10:0] font_addr, output[3:0] font_data, output font_en, 
                 output [1:0] bck, output bck_ch_active, font_ch_active, font_clr);
 

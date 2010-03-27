@@ -26,10 +26,12 @@ module controller(input        clk, reset,
                   output       rd_src_D, // select rd
                   output [1:0] pc_src, branch_src, // select PC and branch sources
                   output       is_branch_or_jmp_E,
-                  output       no_valid_op_E, dummy_E,
+                  output       no_valid_op_E, 
+                  output dummy_E, //used for vga instruction decoding (alu_shift_md)
                   output       halfwordE,
                   output [1:0] hilodisableE,
-                  output       hiloaccessD, mdstartE, hilosrcE, spriteE, fontE, backgroundE, posE, attrE, visiE);
+                  output       hiloaccessD, mdstartE, hilosrcE, 
+                  output spriteE, fontE, backgroundE, posE, attrE, visiE); //signals for vga instructions
 
   wire       alu_or_mem_D, memwriteD, alusrcD, mainrw_, luiD, rtypeD,
              regdstD, rw_D, use_shifter, maindecregdstD, 
@@ -54,7 +56,7 @@ module controller(input        clk, reset,
   assign  is_branch_or_jmp_F = is_branch | is_jump;
   
   assign  hiloaccessD = mdstartD | hiloreadD;
-  assign  {posD, attrD, visiD} = functD [2:0];
+  assign  {posD, attrD, visiD} = functD [2:0]; //used for sprites
   maindec md(opD, alu_or_mem_D, memwriteD, byteD, halfwordD, loadsignedD,
              alusrcD, maindecregdstD, mainrw_, is_unsinged_D, luiD,
              use_shifter, maindecoverflowableD, alushcontmaindecD,

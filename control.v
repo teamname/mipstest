@@ -61,7 +61,7 @@ module controller(input        clk, reset,
              alusrcD, maindecregdstD, mainrw_, is_unsinged_D, luiD,
              use_shifter, maindecoverflowableD, alushcontmaindecD,
              rtypeD,
-             no_valid_op_D, dummy, adesableD, adelableD);
+             no_valid_op_D, dummy, adesableD, adelableD,spriteD, fontD, backgroundD);
 
   
   alu_shift_md  ad(dummy, functD, rtypeD, use_shifter, alushcontmaindecD, 

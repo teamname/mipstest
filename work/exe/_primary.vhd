@@ -30,7 +30,7 @@ entity exe is
         md_run_E        : out    vl_logic;
         sprite_x        : out    vl_logic_vector(9 downto 0);
         sprite_y        : out    vl_logic_vector(8 downto 0);
-        sprite_sel      : out    vl_logic_vector(5 downto 0);
+        sprite_sel      : out    vl_logic_vector(4 downto 0);
         sprite_attr     : out    vl_logic;
         sprite_pos      : out    vl_logic;
         sprite_vis      : out    vl_logic;
