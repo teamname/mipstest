@@ -56,6 +56,8 @@ entity controller is
         backgroundE     : out    vl_logic;
         posE            : out    vl_logic;
         attrE           : out    vl_logic;
-        visiE           : out    vl_logic
+        visiE           : out    vl_logic;
+        cnt_int         : out    vl_logic;
+        rti             : out    vl_logic
     );
 end controller;

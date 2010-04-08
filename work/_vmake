@@ -37,12 +37,15 @@ R5
 vcontroller
 Z12 !s91 H:/course/spring2010/ece554-group2/git/mipstest/control.v
 Z13 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/control.v|
+vcounter
+Z14 !s91 H:/course/spring2010/ece554-group2/git/mipstest/cnt.v
+Z15 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/cnt.v|
 vdatapath
 R10
 R11
 vdec
-Z14 !s91 H:/course/spring2010/ece554-group2/git/mipstest/dec.v
-Z15 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/dec.v|
+Z16 !s91 H:/course/spring2010/ece554-group2/git/mipstest/dec.v
+Z17 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/dec.v|
 vdecoder_1
 R4
 R5
@@ -50,17 +53,17 @@ vdecoder_2
 R4
 R5
 vdriver
-Z16 !s91 H:/course/spring2010/ece554-group2/git/mipstest/driver.v
-Z17 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/driver.v|
+Z18 !s91 H:/course/spring2010/ece554-group2/git/mipstest/driver.v
+Z19 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/driver.v|
 vexe
-Z18 !s91 H:/course/spring2010/ece554-group2/git/mipstest/exe.v
-Z19 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/exe.v|
+Z20 !s91 H:/course/spring2010/ece554-group2/git/mipstest/exe.v
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/exe.v|
 vextend_sign
 R4
 R5
 vfetch
-Z20 !s91 H:/course/spring2010/ece554-group2/git/mipstest/fetch.v
-Z21 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/fetch.v|
+Z22 !s91 H:/course/spring2010/ece554-group2/git/mipstest/fetch.v
+Z23 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/fetch.v|
 vflip_flop
 R4
 R5
@@ -77,14 +80,14 @@ vflip_flop_reset
 R4
 R5
 vforward
-Z22 !s91 H:/course/spring2010/ece554-group2/git/mipstest/forward.v
-Z23 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/forward.v|
+Z24 !s91 H:/course/spring2010/ece554-group2/git/mipstest/forward.v
+Z25 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/forward.v|
 vglbl
-Z24 !s91 D:/mipstest/toplevel_synthesis.v
-Z25 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/toplevel_synthesis.v|
+Z26 !s91 D:/mipstest/toplevel_synthesis.v
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/toplevel_synthesis.v|
 vhazard_detection
-Z26 !s91 H:/course/spring2010/ece554-group2/git/mipstest/hazard_detection.v
-Z27 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/hazard_detection.v|
+Z28 !s91 H:/course/spring2010/ece554-group2/git/mipstest/hazard_detection.v
+Z29 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/hazard_detection.v|
 vincrement
 R4
 R5
@@ -95,17 +98,17 @@ vmaindec
 R12
 R13
 vmdunit
-Z28 !s91 H:/course/spring2010/ece554-group2/git/mipstest/multdiv.v
-Z29 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/multdiv.v|
+Z30 !s91 H:/course/spring2010/ece554-group2/git/mipstest/multdiv.v
+Z31 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/multdiv.v|
 vmem
-Z30 !s91 H:/course/spring2010/ece554-group2/git/mipstest/mem.v
-Z31 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/mem.v|
+Z32 !s91 H:/course/spring2010/ece554-group2/git/mipstest/mem.v
+Z33 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/mem.v|
 vmemory
-Z32 !s91 H:/course/spring2010/ece554-group2/git/mipstest/memory.v
-Z33 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/memory.v|
+Z34 !s91 H:/course/spring2010/ece554-group2/git/mipstest/memory.v
+Z35 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/memory.v|
 vmips
-Z34 !s91 H:/course/spring2010/ece554-group2/git/mipstest/mips.v
-Z35 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/mips.v|
+Z36 !s91 H:/course/spring2010/ece554-group2/git/mipstest/mips.v
+Z37 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/mips.v|
 vmux_2
 R4
 R5
@@ -125,20 +128,20 @@ vpriority_encoder_8
 R4
 R5
 vRF
-Z36 !s91 H:/course/spring2010/ece554-group2/git/mipstest/RF.v
-Z37 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/RF.v|
+Z38 !s91 H:/course/spring2010/ece554-group2/git/mipstest/RF.v
+Z39 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/RF.v|
 vshift_left_2
 R4
 R5
 vshifter
-Z38 !s91 H:/course/spring2010/ece554-group2/git/mipstest/shifter.v
-Z39 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/shifter.v|
+Z40 !s91 H:/course/spring2010/ece554-group2/git/mipstest/shifter.v
+Z41 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/shifter.v|
 vtoplevel
-Z40 !s91 H:/course/spring2010/ece554-group2/git/mipstest/toplevel.v
-Z41 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/toplevel.v|
+Z42 !s91 H:/course/spring2010/ece554-group2/git/mipstest/toplevel.v
+Z43 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|H:/course/spring2010/ece554-group2/git/mipstest/toplevel.v|
 vtoplevel_s
-R24
-R25
+R26
+R27
 vtri_state_buf
 R4
 R5

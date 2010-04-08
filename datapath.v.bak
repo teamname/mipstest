@@ -32,12 +32,15 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
   output font_ch_active, font_clr, font_en,
   output [10:0] font_addr,
   output [3:0] font_data,
-  output [1:0] bck);
+  output [1:0] bck,
+  input cnt_int_en, rti,
+  input [2:0] interrupts);
 
 
   wire        forwardaD, forwardbD;
   wire [1:0]  forwardaE, forwardbE;
   wire        stallF, flushD;
+  wire cnt_int;
   
  
   wire [31:0] writedataM;
@@ -94,7 +97,7 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
 
 
   fetch fetch(
-                        clk, reset, stallF, pc_sel_FD, pcnextbrFD,
+                        clk, reset, stallF, pc_sel_FD, pcnextbrFD, {cnt_int,interrupts}, rti,
                         
                         pc_F, pcplus4F);
 
@@ -121,7 +124,7 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
   flip_flop_enable_clear #(32) r9E(clk,  reset, ~stall_E, flush_E, pcD, pc_E);
   
   exe exe(
-                            clk, reset, //dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, rd_E, 
+                            clk, reset, alu_src_sel_E, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, rd_E, 
                             luiE, mdstartE, 
                             alu_out_E,
                             forwardaE, forwardbE, 
@@ -143,7 +146,10 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
                           writedataM, read_data_M, alu_out_M, 
                           // outputs
                           write_data_M, readdata2M, byte_en_M);
-
+  counter counter ( clk, reset,
+                    cnt_int_en, 
+                    val1,
+                    c_int);
  
   flip_flop_enable #(32) r1W(clk,  reset, ~stall_W, alu_out_M, aluoutW);
   flip_flop_enable #(32) r2W(clk,  reset, ~stall_W, readdata2M, readdataW);

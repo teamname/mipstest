@@ -31,7 +31,9 @@ module controller(input        clk, reset,
                   output       halfwordE,
                   output [1:0] hilodisableE,
                   output       hiloaccessD, mdstartE, hilosrcE, 
-                  output spriteE, fontE, backgroundE, posE, attrE, visiE); //signals for vga instructions
+                  output spriteE, fontE, backgroundE, posE, attrE, visiE,//signals for vga instructions//signals for vga instructions
+                  output cnt_int, // counter interrupt
+                  output rti); // return from interrupt
 
   wire       alu_or_mem_D, memwriteD, alusrcD, mainrw_, luiD, rtypeD,
              regdstD, rw_D, use_shifter, maindecregdstD, 
@@ -135,9 +137,16 @@ module maindec(input  [5:0] op,
  assign spriteD = op[0] & (op[5] & op[4] & op[3]);
  assign backgroundD = op[2] & (op[5] & op[4] & op[3]);
  assign fontD = op[1] & (op[5] & op[4] & op[3]);
+ 
+//110000 rti
+ assign rti = op[5] & op[4] & !op[3] & !op[2] & !op[1] & !op[0];
+//110001 counter interrupt
+ assign cnt_int =  op[5] & op[4] & !op[3] & !op[2] & !op[1] & op[0];
+
   always @ ( * )
     case(op)
       6'b000000: controls <= 21'b11000000001011000000; //R-type
+      6'b110001: controls <= 21'b00000000001011000000; //counter interrupt
       6'b000001: controls <= 21'b01000000000100000000; //Opcode 1 (branches)
       6'b100000: controls <= 21'b10010110100100000000; //LB (assume big endian)
       6'b100001: controls <= 21'b10010101100100000100; //LH

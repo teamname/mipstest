@@ -75,6 +75,9 @@ entity datapath is
         font_en         : out    vl_logic;
         font_addr       : out    vl_logic_vector(10 downto 0);
         font_data       : out    vl_logic_vector(3 downto 0);
-        bck             : out    vl_logic_vector(1 downto 0)
+        bck             : out    vl_logic_vector(1 downto 0);
+        cnt_int_en      : in     vl_logic;
+        rti             : in     vl_logic;
+        interrupts      : in     vl_logic_vector(2 downto 0)
     );
 end datapath;
