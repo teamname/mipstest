@@ -27,7 +27,7 @@ entity controller is
         halfword_repaet_M: out    vl_logic;
         is_branch       : out    vl_logic;
         alu_b_sel       : out    vl_logic;
-        is_unsinged_D   : out    vl_logic;
+        is_unsigned_D   : out    vl_logic;
         sign_extend_en_M: out    vl_logic;
         regdstE         : out    vl_logic;
         rw_E            : out    vl_logic;
@@ -57,6 +57,8 @@ entity controller is
         posE            : out    vl_logic;
         attrE           : out    vl_logic;
         visiE           : out    vl_logic;
+        randomD         : out    vl_logic;
+        usezeroD        : out    vl_logic;
         cnt_int         : out    vl_logic;
         rti             : out    vl_logic
     );

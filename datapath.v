@@ -1,5 +1,5 @@
 `timescale 1 ns / 1 ps
-module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,posE, attrE, visiE,
+module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,posE, attrE, visiE, randomD, usezeroD,
                 input  [31:0] inst_F, read_data_M, 
                 input         inst_mem_ack, data_mem_ack, 
                 input         mem_or_alu_sel_E, mem_or_alu_sel_M, mem_or_alu_sel_W, 
@@ -32,15 +32,12 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
   output font_ch_active, font_clr, font_en,
   output [10:0] font_addr,
   output [3:0] font_data,
-  output [1:0] bck,
-  input cnt_int_en, rti,
-  input [2:0] interrupts);
+  output [1:0] bck, input cnt_int_en, rti, input [2:0] interrupts);
 
 
   wire        forwardaD, forwardbD;
   wire [1:0]  forwardaE, forwardbE;
   wire        stallF, flushD;
-  wire cnt_int;
   
  
   wire [31:0] writedataM;
@@ -60,6 +57,7 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
   wire        rseqwrd_E, rteqwrd_E;
   wire [4:0]  rdD;
   
+  wire cnt_int;
   
   cnt_dp cnt_dp(
                       clk, reset,
@@ -97,8 +95,8 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
 
 
   fetch fetch(
-                        clk, reset, stallF, pc_sel_FD, pcnextbrFD, {cnt_int,interrupts}, rti,
-                        
+                        clk, reset, stallF, pc_sel_FD, pcnextbrFD,
+                        {cnt_int,interrupts}, rti,
                         pc_F, pcplus4F);
 
   
@@ -108,10 +106,10 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
   flip_flop_enable #(32) r4D(clk,  reset, ~stall_D, pcplus4F, pcplus4D);
 
   dec dec(
-                          clk,  unsigned_D, 
+                          clk, reset, unsigned_D, 
                           instrD, pcplus4D, resultW, 
                           alu_out_M, rw_W, write_reg_W, forwardaD, forwardbD,
-                          branch_sel_D,
+                          branch_sel_D, randomD, usezeroD,
                           
                           opcode_D, function_D, rs_D, rt_D, rdD,
                           srca2D, srcb2D, signimmD, pcnextbrFD,
@@ -146,10 +144,8 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
                           writedataM, read_data_M, alu_out_M, 
                           // outputs
                           write_data_M, readdata2M, byte_en_M);
-  counter counter ( clk, reset,
-                    cnt_int_en, 
-                    srcaE,
-                    cnt_int);
+
+counter counter ( clk, reset, cnt_int_en, srcaE, cnt_int);
  
   flip_flop_enable #(32) r1W(clk,  reset, ~stall_W, alu_out_M, aluoutW);
   flip_flop_enable #(32) r2W(clk,  reset, ~stall_W, readdata2M, readdataW);

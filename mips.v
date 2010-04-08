@@ -2,7 +2,7 @@
 module mips(input         clk, reset,
             output [31:0] pc_F, // PC to Instruction Memory
             input  [31:0] inst_F, // Instruction from Instruction Memory
-            
+
             
             output        mem_write_M, // write enable for data memory
             output [31:0] alu_out_M,  // data memory address
@@ -14,8 +14,7 @@ module mips(input         clk, reset,
   output font_ch_active, font_clr, font_en,
   output [10:0] font_addr,
   output [3:0] font_data,
-  output [1:0] bck,
-  input [2:0] interrupts); 
+  output [1:0] bck, input [2:0] interrupts); 
 
   wire [5:0]  opcode_D, function_D;
   wire [4:0]  rs_D, rt_D, rd_E; // source & destination addresses
@@ -57,7 +56,6 @@ module mips(input         clk, reset,
 
   wire        activeexception; //exception
   wire cnt_int, rti;
-  
    
    // controller
   controller cont(
@@ -80,11 +78,11 @@ module mips(input         clk, reset,
                  no_valid_op_E, dummyE,
                  halfword_E,
                  hilodisableE,
-                 hiloaccessD, md_start_E, hilosrcE, spriteE, fontE, backgroundE, posE, attrE, visiE,
-                 cnt_int, rti);
+                 hiloaccessD, md_start_E, hilosrcE, spriteE, fontE, backgroundE, posE, attrE, visiE, randomD, usezeroD, cnt_int, rti);
 // data path
   datapath dp(
-                clk, reset, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, inst_F, 
+                clk, reset, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, randomD, usezeroD,
+                inst_F, 
                 
                 read_data_M, inst_mem_ack_F, data_mem_ack_M, 
                 
@@ -106,7 +104,7 @@ module mips(input         clk, reset,
                 activeexception, sprite_x,  sprite_y, sprite_sel,
                 sprite_attr, sprite_pos, sprite_vis, bck_ch_active,
                 font_ch_active, font_clr, font_en,
-                font_addr, font_data, bck, cnt_int, rti, interrupts);
+                font_addr, font_data, bck,  cnt_int, rti, interrupts);
 
 endmodule
 

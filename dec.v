@@ -1,34 +1,39 @@
 `timescale 1 ns / 1 ps
-module dec(input         clk,  unsignedD,
+module dec(input         clk, reset,  unsignedD,
                    input  [31:0] inst_D, PC_plus_4_D, data_in, alu_out_M, 
                    input         rw, 
                    input  [4:0]  write_add,
                    input         forward_a_D, forward_b_D,
-                   input  [1:0]  branch_src,
+                   input  [1:0]  branch_src, 
+                   input randomD, usezeroD,
                    output [5:0]  opcode_D, function_D,
                    output [4:0]  rs_D, rt_D, rd_D,
                    output [31:0] src_a_D, src_b_D, sign_imm_D, next_br_D,
                    output        a_eq_b_D, a_eq_z_D, a_gt_z_D, a_lt_z_D);
 
-  wire [31:0] src_a_1, src_b_1, branch_target;
+  wire [31:0] src_a_1, src_b_1, branch_target, src_a_prerand_D, sign_imm, random_imm_D;
+  wire [15:0] random;
   
-  assign opcode_D = inst_D[31:26];
-  assign function_D = inst_D[5:0];
+  assign opcode_D = inst_D[31:26];  assign function_D = inst_D[5:0];
   assign rs_D = inst_D[25:21];
   assign rt_D = inst_D[20:16];
   assign rd_D = inst_D[15:11];
+  assign random_imm_D = {16'b0, random}; 
+  
+  //random number
+  lfsr_counter randcnt (clk,reset,random);
   
   // register file
   RF     rf(clk,  rw, rs_D, rt_D, write_add,
                  data_in, src_a_1, src_b_1);
   //forward?
-  mux_2 #(32)  forward_a_Dmux(src_a_1, alu_out_M, forward_a_D, src_a_D);
+  mux_2 #(32)  forward_a_Dmux(src_a_1, alu_out_M, forward_a_D, src_a_prerand_D);
   mux_2 #(32)  forward_b_Dmux(src_b_1, alu_out_M, forward_b_D, src_b_D);
   
-  //sign extension
-  extend_sign #(16,32) se(inst_D[15:0], ~unsignedD, sign_imm_D);
-
-  // branch address
+  //sign extension and random number code
+  extend_sign #(16,32) se(inst_D[15:0], ~unsignedD, sign_imm);
+  mux_2 #(32) random_immed_mux (sign_imm, random_imm_D, randomD, sign_imm_D);
+  mux_2 #(32) addtozero (src_a_prerand_D, 32'b0, usezeroD, src_a_D);  // branch address
   assign branch_target = PC_plus_4_D + {2'b00, sign_imm_D[29:0]};
 
   // comparison flags

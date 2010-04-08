@@ -11,7 +11,7 @@ entity maindec is
         alusrc          : out    vl_logic;
         regdst          : out    vl_logic;
         \rw_\           : out    vl_logic;
-        is_unsinged_D   : out    vl_logic;
+        is_unsigned     : out    vl_logic;
         lui             : out    vl_logic;
         useshift        : out    vl_logic;
         overflowable    : out    vl_logic;
@@ -23,6 +23,7 @@ entity maindec is
         adelableD       : out    vl_logic;
         spriteD         : out    vl_logic;
         fontD           : out    vl_logic;
-        backgroundD     : out    vl_logic
+        backgroundD     : out    vl_logic;
+        randomD         : out    vl_logic
     );
 end maindec;

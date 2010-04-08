@@ -2,7 +2,7 @@
 module driver();
   
   parameter D_ME = "data.txt"; //data mem
-  parameter I_ME = "test_001.dat"; //instr mem
+  parameter I_ME = "fib.txt"; //instr mem
   parameter TEST_FILE = "test.txt"; //address in hex <SPACE> 
   //expected value in decimal
   integer TEST_SZ;

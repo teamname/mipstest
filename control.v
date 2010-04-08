@@ -12,7 +12,7 @@ module controller(input        clk, reset,
                   output       byte_repaet_M, halfword_repaet_M, // repeat bytes or halfwords
                   output       is_branch, // inst. is branch
                                alu_b_sel, // select alu second operand
-                               is_unsinged_D, // data is unsigned
+                               is_unsigned_D, // data is unsigned
                   output       sign_extend_en_M, // sign extend
                   output       regdstE, // select reg destination
                                rw_E, rw_M, rw_W, // register write
@@ -31,9 +31,8 @@ module controller(input        clk, reset,
                   output       halfwordE,
                   output [1:0] hilodisableE,
                   output       hiloaccessD, mdstartE, hilosrcE, 
-                  output spriteE, fontE, backgroundE, posE, attrE, visiE,//signals for vga instructions//signals for vga instructions
-                  output cnt_int, // counter interrupt
-                  output rti); // return from interrupt
+                  output spriteE, fontE, backgroundE, posE, attrE, visiE, //signals for vga instructions
+                  output randomD, usezeroD, cnt_int, rti);  //signals for random, interrupts
 
   wire       alu_or_mem_D, memwriteD, alusrcD, mainrw_, luiD, rtypeD,
              regdstD, rw_D, use_shifter, maindecregdstD, 
@@ -58,14 +57,16 @@ module controller(input        clk, reset,
   assign  is_branch_or_jmp_F = is_branch | is_jump;
   
   assign  hiloaccessD = mdstartD | hiloreadD;
-  assign  posD = (opD[5] & opD[4] & opD[3]) & functD [2];
-  assign attrD = (opD[5] & opD[4] & opD[3]) & functD [1];
-  assign visiD = (opD[5] & opD[4] & opD[3]) & functD [0]; //used for sprites
+  assign  posD = dummy & functD [2];
+  assign attrD = dummy & functD [1];
+  assign visiD = dummy & functD [0]; //used for sprites
+  assign usezeroD = randomD & functD [0];
+
   maindec md(opD, alu_or_mem_D, memwriteD, byteD, halfwordD, loadsignedD,
-             alusrcD, maindecregdstD, mainrw_, is_unsinged_D, luiD,
+             alusrcD, maindecregdstD, mainrw_, is_unsigned, luiD,
              use_shifter, maindecoverflowableD, alushcontmaindecD,
              rtypeD,
-             no_valid_op_D, dummy, adesableD, adelableD,spriteD, fontD, backgroundD);
+             no_valid_op_D, dummy, adesableD, adelableD,spriteD, fontD, backgroundD, randomD);
 
   
   alu_shift_md  ad(dummy, functD, rtypeD, use_shifter, alushcontmaindecD, 
@@ -119,10 +120,10 @@ module maindec(input  [5:0] op,
                output       alu_or_mem_, memwrite, byte, halfword, loadsignedD,
                output       alusrc,
                output       regdst, rw_, 
-               output       is_unsinged_D, lui, useshift, overflowable,
+               output       is_unsigned, lui, useshift, overflowable,
                output [2:0] alushcontrol, 
                output       rtype, no_valid_op_D, dummy,
-               output       adesableD, adelableD, spriteD, fontD, backgroundD);
+               output       adesableD, adelableD, spriteD, fontD, backgroundD, randomD);
 
   reg [19:0] controls;
  
@@ -133,16 +134,13 @@ module maindec(input  [5:0] op,
           memwrite,
           alu_or_mem_, byte, halfword, loadsignedD,
           useshift, alushcontrol /* 3 bits */, rtype,
-          is_unsinged_D, lui, adesableD, adelableD, dummy, no_valid_op_D} = controls;
- assign spriteD = op[0] & (op[5] & op[4] & op[3]);
- assign backgroundD = op[2] & (op[5] & op[4] & op[3]);
- assign fontD = op[1] & (op[5] & op[4] & op[3]);
- 
-//110000 rti
- assign rti = op[5] & op[4] & !op[3] & !op[2] & !op[1] & !op[0];
-//110001 counter interrupt
- assign cnt_int =  op[5] & op[4] & !op[3] & !op[2] & !op[1] & op[0];
-
+          is_unsigned_D, lui, adesableD, adelableD, dummy, no_valid_op_D} = controls;
+ assign spriteD = op[0] & dummy;
+ assign backgroundD = op[2] & dummy;
+ assign fontD = op[1] & dummy;
+ assign randomD = (op[5:3] == 3'b111 && op[1:0] == 2'b11) ? 1'b1 : 1'b0;
+ assign rti = op[5] & op[4] & !op[3] & !op[2] & !op[1] & !op[0]; //op: 110000 ret from interrupt
+ assign cnt_int =  op[5] & op[4] & !op[3] & !op[2] & !op[1] & op[0]; //op : 110001 counter interrupt
   always @ ( * )
     case(op)
       6'b000000: controls <= 21'b11000000001011000000; //R-type
@@ -173,6 +171,7 @@ module maindec(input  [5:0] op,
       6'b111001: controls <= 20'b01000000001011000010; //sprite
       6'b111010: controls <= 20'b01000000001011000010; //font
       6'b111100: controls <= 20'b01000000000000000010; //bkgnd
+      6'b111011: controls <= 20'b10010000000100000000; //add random number gen 16bits (addiu)
       default:   controls <= 21'bxxxxxxxxxxxxxxxxxxx1; //??? (exception)
     endcase
 endmodule

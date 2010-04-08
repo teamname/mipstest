@@ -11,6 +11,8 @@ entity datapath is
         posE            : in     vl_logic;
         attrE           : in     vl_logic;
         visiE           : in     vl_logic;
+        randomD         : in     vl_logic;
+        usezeroD        : in     vl_logic;
         inst_F          : in     vl_logic_vector(31 downto 0);
         read_data_M     : in     vl_logic_vector(31 downto 0);
         inst_mem_ack    : in     vl_logic;

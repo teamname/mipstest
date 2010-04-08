@@ -1,13 +1,13 @@
 `timescale 1 ns / 1 ps
-module fetch(input             clk,  reset, stall,
-                  input  [1:0]      pc_sel,
-                  input  [31:0]     pc_branch,
-                  input  [3:0]  interrupts,
+module fetch(input clk, reset, stall,
+                  input [1:0] pc_sel,
+                  input [31:0] pc_branch,
+                  input [3:0] interrupts,
                   input rti,
 
-                  output [31:0]     pc, 
+                  output [31:0] pc,
 
-                  output  [31:0]     pc_plus_4);
+                  output [31:0] pc_plus_4);
 
   wire [31:0] pcnextF1, pcnextF2, pcnextF;
   wire [31:0] epc;
@@ -16,21 +16,21 @@ module fetch(input             clk,  reset, stall,
 
   parameter RESET_ADDRESS = 32'h00000000;
   parameter INTERRUPT_ADDRESS1 = 32'h00000100;
-  parameter INTERRUPT_ADDRESS2 = 32'h00000100;  
+  parameter INTERRUPT_ADDRESS2 = 32'h00000100;
   parameter INTERRUPT_ADDRESS3 = 32'h00000100;
-  parameter INTERRUPT_ADDRESS4 = 32'h00000100;  
+  parameter INTERRUPT_ADDRESS4 = 32'h00000100;
   
-  assign int_en  = (|interrupts) & sr;
+  assign int_en = (|interrupts) & sr;
   
    
-  mux_4 #(32)  pcmux(RESET_ADDRESS, INTERRUPT_ADDRESS,
-                    pc_plus_4, pc_branch, pc_sel, pcnextF1); 
-  
+mux_4 #(32) pcmux(RESET_ADDRESS, INTERRUPT_ADDRESS,
+                    pc_plus_4, pc_branch, pc_sel, pcnextF1);
+ 
 
-  assign pcnextF2 = !int_en ? pcnextF1 : 
-                  (interrupts[0] ? INTERRUPT_ADDRESS1 : 
-                  (interrupts[1] ? INTERRUPT_ADDRESS2 : 
-                  (interrupts[2] ? INTERRUPT_ADDRESS3 : 
+  assign pcnextF2 = !int_en ? pcnextF1 :
+                  (interrupts[0] ? INTERRUPT_ADDRESS1 :
+                  (interrupts[1] ? INTERRUPT_ADDRESS2 :
+                  (interrupts[2] ? INTERRUPT_ADDRESS3 :
                   INTERRUPT_ADDRESS4 )));
   
   assign pcnextF = rti ? epc : pcnextF2;
@@ -44,11 +44,11 @@ module fetch(input             clk,  reset, stall,
       sr = 1'b1;
     else
       if(int_en)
-        sr =  1'b0;
+        sr = 1'b0;
       else
         sr = sr;
   
-   assign  pc_plus_4 = pc  + 1;
+   assign pc_plus_4 = pc + 1;
 
 
 endmodule
