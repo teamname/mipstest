@@ -121,7 +121,7 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
   flip_flop_enable_clear #(32) r9E(clk,  reset, ~stall_E, flush_E, pcD, pc_E);
   
   exe exe(
-                            clk, reset, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, rd_E, 
+                            clk, reset, alu_src_sel_E, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, rd_E, 
                             luiE, mdstartE, 
                             alu_out_E,
                             forwardaE, forwardbE, 

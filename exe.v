@@ -1,5 +1,5 @@
 `timescale 1 ns / 1 ps
-module exe(input         clk,  reset, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, input [4:0] rd_E, 
+module exe(input         clk,  reset, alu_src_E, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, input [4:0] rd_E, 
            
                     input              luiE, md_start_E,  
                     input  [1:0]  alu_out_sel,

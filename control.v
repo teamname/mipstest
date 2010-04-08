@@ -56,7 +56,9 @@ module controller(input        clk, reset,
   assign  is_branch_or_jmp_F = is_branch | is_jump;
   
   assign  hiloaccessD = mdstartD | hiloreadD;
-  assign  {posD, attrD, visiD} = functD [2:0]; //used for sprites
+  assign  posD = (opD[5] & opD[4] & opD[3]) & functD [2];
+  assign attrD = (opD[5] & opD[4] & opD[3]) & functD [1];
+  assign visiD = (opD[5] & opD[4] & opD[3]) & functD [0]; //used for sprites
   maindec md(opD, alu_or_mem_D, memwriteD, byteD, halfwordD, loadsignedD,
              alusrcD, maindecregdstD, mainrw_, is_unsinged_D, luiD,
              use_shifter, maindecoverflowableD, alushcontmaindecD,
@@ -130,8 +132,9 @@ module maindec(input  [5:0] op,
           alu_or_mem_, byte, halfword, loadsignedD,
           useshift, alushcontrol /* 3 bits */, rtype,
           is_unsinged_D, lui, adesableD, adelableD, dummy, no_valid_op_D} = controls;
- assign {backgroundD, fontD, spriteD} = op[2:0] & op[5:3];
-
+ assign spriteD = op[0] & (op[5] & op[4] & op[3]);
+ assign backgroundD = op[2] & (op[5] & op[4] & op[3]);
+ assign fontD = op[1] & (op[5] & op[4] & op[3]);
   always @ ( * )
     case(op)
       6'b000000: controls <= 21'b11000000001011000000; //R-type

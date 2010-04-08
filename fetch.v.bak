@@ -18,8 +18,8 @@ module fetch(input             clk,  reset, stall,
 
   
   flip_flop_enable #(32) PC(clk,reset, ~stall, pcnextF, pc);
-  always@(posedge clk)
-     pc_plus_4 = pc  + 4;
+ // always@(posedge clk)
+   assign  pc_plus_4 = pc  + 1;
 
 
 endmodule

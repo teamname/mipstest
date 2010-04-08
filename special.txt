@@ -1,0 +1,18 @@
+
+special.out:     file format elf32-bigmips
+
+Disassembly of section .text:
+
+00000000 <main>:
+   0:	20020032 	addi	v0,zero,50
+   4:	00021040 	sll	v0,v0,0x1
+   8:	34420001 	ori	v0,v0,0x1
+   c:	2005002a 	addi	a1,zero,42
+  10:	00052840 	sll	a1,a1,0x1
+  14:	34a50001 	ori	a1,a1,0x1
+  18:	ac050001 	sw	a1,1(zero)
+  1c:	ac020000 	sw	v0,0(zero)
+  20:	20040019 	addi	a0,zero,25
+  24:	20060005 	addi	a2,zero,5
+  28:	000631c0 	sll	a2,a2,0x7
+  2c:	00000000 	nop

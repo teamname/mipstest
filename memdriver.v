@@ -18,3 +18,5 @@ tin = 10'h004;
 din = 0;
 wr_en = 0;
 #20 adr = 10'h005;
+end
+endmodule

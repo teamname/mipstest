@@ -9,6 +9,13 @@ module driver();
   reg [9:0] inst_in;
   reg [7:0] data_in;
   wire [31:0] inst_out, data_out;
+  wire [9:0] spx;
+  wire [8:0] spy;
+  wire [4:0] spsel;
+  wire spattr, sppos, spvis, bgch, ftch, ftcl, ften;
+  wire [10:0] ftaddr;
+  wire [3:0] ftdat;
+  wire [1:0] bg;
   reg clk;
   reg rst;
   
@@ -23,7 +30,8 @@ module driver();
   //file stuff
   integer file_handle, num_bytes_in_line;
 
-  toplevel DUT (clk, rst, inst_in, data_in, inst_out, data_out); //instantiate module
+  toplevel #(D_ME, I_ME, 8, 10) DUT (clk, rst, inst_in, data_in, inst_out, data_out, spx, spy, spsel, spattr,
+                sppos, spvis, bgch, ftch, ftcl, ften, ftaddr, ftdat, bg); //instantiate module
   
   always
     forever #10 clk = ~clk; //create clock

@@ -1,0 +1,663 @@
+m255
+K3
+13
+Z0 cModel Technology
+Z1 dC:\modeltech_6.4\examples
+T_opt
+Z2 ViWhO<7dWT5iQzXmQ]j>:00
+Z3 04 6 4 work driver fast 0
+Z4 =1-001aa0275347-4bbb9212-333-568
+Z5 o-quiet -auto_acc_if_foreign -work work +acc
+Z6 OE;O;6.4;39
+T_opt1
+Z7 VE?AOVhL97;J_;SWT`oL^;3
+R3
+Z8 =1-001e4fe1a047-4bbe0109-df-8a0
+Z9 o-quiet -auto_acc_if_foreign -work work
+Z10 tExplicit 1
+Z11 OE;O;6.3;37
+T_opt2
+Z12 VGdozEihcikbm:4Fzihd6J3
+Z13 04 3 4 work exe fast 0
+Z14 =1-001e4fe1a047-4bbe0158-42-c84
+R9
+R10
+R11
+valu
+Z15 I^6MYQd3fVeDN`HVRGL<5Q3
+Z16 VcfdZP[Ro74e7@EbEiVh]a0
+Z17 dH:\course\spring2010\ece554-group2\git\mipstest
+Z18 w1270490496
+Z19 8H:/course/spring2010/ece554-group2/git/mipstest/alu.v
+Z20 FH:/course/spring2010/ece554-group2/git/mipstest/alu.v
+L0 2
+Z21 OE;L;6.3;37
+r1
+31
+Z22 o-work work -nocovercells -L mtiAvm -L mtiOvm -L mtiUPF
+!s85 0
+valu_shift_md
+Z23 I]Xh4eTmLK=IV@H=mH6ekA2
+Z24 VO4kEzkHoVkDH9QY56@Mzc3
+R17
+R18
+Z25 8H:/course/spring2010/ece554-group2/git/mipstest/alu_shift_md.v
+Z26 FH:/course/spring2010/ece554-group2/git/mipstest/alu_shift_md.v
+L0 3
+R21
+r1
+31
+R22
+!s85 0
+vand2
+Z27 IEUmbIA>>E?Toib<EbUgGm3
+Z28 Vcco@>oV9MHm_R0CM_ENF10
+R17
+R18
+Z29 8H:/course/spring2010/ece554-group2/git/mipstest/utilities.v
+Z30 FH:/course/spring2010/ece554-group2/git/mipstest/utilities.v
+Z31 L0 183
+R21
+r1
+31
+R22
+!s85 0
+vbr_control
+Z32 IWHmO0lP^9:I4V[Tdn;BBY3
+Z33 VBNQo`4<IODUhfCB^5m35L3
+R17
+R18
+Z34 8H:/course/spring2010/ece554-group2/git/mipstest/br_control.v
+Z35 FH:/course/spring2010/ece554-group2/git/mipstest/br_control.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vbranch_dec
+Z36 In^l33W_A^:kE2Jo]?<UJ11
+Z37 VL6cCnW=hJV6bhW=<_gGfU2
+R17
+R18
+Z38 8H:/course/spring2010/ece554-group2/git/mipstest/branch_dec.v
+Z39 FH:/course/spring2010/ece554-group2/git/mipstest/branch_dec.v
+L0 3
+R21
+r1
+31
+R22
+!s85 0
+vcmux_2
+Z40 IN;YmAR1mnFGGF?oO;Rdo`0
+Z41 VbXjoRNA8GOFe:^eKO__0g2
+R17
+R18
+R29
+R30
+Z42 L0 239
+R21
+r1
+31
+R22
+!s85 0
+vcnt_dp
+Z43 I@CRBaan5ZRJKUzRD44@N<3
+Z44 V?F8HX64<]fk9CEBj6B>XJ2
+R17
+R18
+Z45 8H:/course/spring2010/ece554-group2/git/mipstest/datapath.v
+Z46 FH:/course/spring2010/ece554-group2/git/mipstest/datapath.v
+Z47 L0 157
+R21
+r1
+31
+R22
+!s85 0
+vcompare_equal
+Z48 IV_O76b0HAaFNKniU2:OaS1
+Z49 Vd`VF?IHdFGTUBch8`d<`b2
+R17
+R18
+R29
+R30
+L0 5
+R21
+r1
+31
+R22
+!s85 0
+vcompare_gt_zero
+Z50 IS0UE3IkJ0iceYAN5hYME>3
+Z51 VI^@Eh<1:P;SP>ZaEJ_Col3
+R17
+R18
+R29
+R30
+L0 26
+R21
+r1
+31
+R22
+!s85 0
+vcompare_lt_zero
+Z52 IldjRdC6PaAz]URSRiPbA30
+Z53 Vf<M:8XaC3GRnm4@K;mQDn2
+R17
+R18
+R29
+R30
+L0 33
+R21
+r1
+31
+R22
+!s85 0
+vcompare_to_zero
+Z54 IlhNO=d>ohVKMRe=aBH[4V3
+Z55 VU1b::g_<8T@cejDiI6cM13
+R17
+R18
+R29
+R30
+L0 12
+R21
+r1
+31
+R22
+!s85 0
+vcontroller
+Z56 IYgfN8VmkmM;P8>WQfUVP[2
+Z57 VmiQz2XC^RiZ0;bF=LXGQZ2
+R17
+R18
+Z58 8H:/course/spring2010/ece554-group2/git/mipstest/control.v
+Z59 FH:/course/spring2010/ece554-group2/git/mipstest/control.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vdatapath
+Z60 I2^Z5zV09Vje3B2JH;8gXa1
+Z61 V?GPTLoLST8;8c1hW3h:4P0
+R17
+R18
+R45
+R46
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vdec
+Z62 I^eD7nN@ACh@;6aa64f0_e3
+Z63 V=E_^GYcI;8UFk82j56f4D1
+R17
+R18
+Z64 8H:/course/spring2010/ece554-group2/git/mipstest/dec.v
+Z65 FH:/course/spring2010/ece554-group2/git/mipstest/dec.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vdecoder_1
+Z66 IzOCOaIFP2IcGD3RE5^?jV0
+Z67 Vzh9:V2R1R_b>icgQ=j:Jb1
+R17
+R18
+R29
+R30
+Z68 L0 178
+R21
+r1
+31
+R22
+!s85 0
+vdecoder_2
+Z69 I>6=kW87NLo@C9dn@Z7Pn10
+Z70 V6AW>9APl5O0`K16nk7W`e1
+R17
+R18
+R29
+R30
+Z71 L0 171
+R21
+r1
+31
+R22
+!s85 0
+vdriver
+Z72 IVV9^U7MZlTMK:jETo1a`Y2
+Z73 V^[KPX<Q?M95bF6dN=_zGA2
+R17
+Z74 w1270583805
+Z75 8H:/course/spring2010/ece554-group2/git/mipstest/driver.v
+Z76 FH:/course/spring2010/ece554-group2/git/mipstest/driver.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vexe
+Z77 I[H:Z<[`6?_T;@FY>AIRg`0
+Z78 VANI7N6<7?g3Mie9_`g8;S2
+R17
+Z79 w1270743063
+Z80 8H:/course/spring2010/ece554-group2/git/mipstest/exe.v
+Z81 FH:/course/spring2010/ece554-group2/git/mipstest/exe.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vextend_sign
+Z82 IO<hM3W6OJVR@PD8e>>jT62
+Z83 V^?1VGGd<<>:B:gV>i4;Di0
+R17
+R18
+R29
+R30
+L0 48
+R21
+r1
+31
+R22
+!s85 0
+vfetch
+Z84 I;Y6SaX116XTAk:8Yk:=961
+Z85 Vc:g1]L;]=gH=AcPX^AUUW3
+R17
+R18
+Z86 8H:/course/spring2010/ece554-group2/git/mipstest/fetch.v
+Z87 FH:/course/spring2010/ece554-group2/git/mipstest/fetch.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vflip_flop
+Z88 IhBfgOkh4Tk=WICh7I2lAN2
+Z89 VVz<ShH[INg_KDI]6:1XTU1
+R17
+R18
+R29
+R30
+L0 60
+R21
+r1
+31
+R22
+!s85 0
+vflip_flop_enable
+Z90 IF45i0GGOG1SZVMXmU0`O[0
+Z91 VGAIzXN:1OLjShHeOElSFG0
+R17
+R18
+R29
+R30
+L0 89
+R21
+r1
+31
+R22
+!s85 0
+vflip_flop_enable_clear
+Z92 Ia;k6a>[PT_e@T7]zD1M5X0
+Z93 Vza:_dPK6KEf9da[^m=[M=2
+R17
+R18
+R29
+R30
+L0 74
+R21
+r1
+31
+R22
+!s85 0
+vflip_flop_no_reset
+Z94 I3T09AnOA[fU^DF_2AZaz=1
+Z95 V]8N:W?_`ER9D]KIGcc_Gn2
+R17
+R18
+R29
+R30
+Z96 L0 104
+R21
+r1
+31
+R22
+!s85 0
+vflip_flop_reset
+Z97 IQQ=9;>[KZn=OTbnb;zJ450
+Z98 V9Bg@:Y:mmkD6KmeKZa^Zc1
+R17
+R18
+R29
+R30
+Z99 L0 119
+R21
+r1
+31
+R22
+!s85 0
+vforward
+Z100 IezbcZ`zLmeSVI<Ma63ld93
+Z101 VE?58AkcZ8mfAI85f>Fd5W1
+R17
+R18
+Z102 8H:/course/spring2010/ece554-group2/git/mipstest/forward.v
+Z103 FH:/course/spring2010/ece554-group2/git/mipstest/forward.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vglbl
+Z104 IWBl3_zBQG9UE^Ac@oY19M3
+Z105 VnN]4Gon>inod6>M^M2[SV1
+Z106 dC:\Documents and Settings\Geoff\Desktop\jake\mipstest
+Z107 w1269388882
+Z108 8C:/Documents and Settings/Geoff/Desktop/jake/mipstest/toplevel_synthesis.v
+Z109 FC:/Documents and Settings/Geoff/Desktop/jake/mipstest/toplevel_synthesis.v
+Z110 L0 32236
+Z111 OE;L;6.3f;37
+r1
+31
+R22
+!s85 0
+vhazard_detection
+Z112 IGC@9JSRLkaXm]0_QX=Uo63
+Z113 VNeQ=oegz0`Ykc=XBIZ;I03
+R17
+R18
+Z114 8H:/course/spring2010/ece554-group2/git/mipstest/hazard_detection.v
+Z115 FH:/course/spring2010/ece554-group2/git/mipstest/hazard_detection.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vincrement
+Z116 IzaKm]nB9^`@[_Z7^FY`O[0
+Z117 VSnnE[KHP^8IRgM^;_d]1n0
+R17
+R18
+R29
+R30
+Z118 L0 197
+R21
+r1
+31
+R22
+!s85 0
+vis_zero
+Z119 IgWdmhJOjPg4THik]_1T8d2
+Z120 V8LmDeGg<NhHEA@M8EHOZh1
+R17
+R18
+R29
+R30
+Z121 L0 205
+R21
+r1
+31
+R22
+!s85 0
+vmaindec
+Z122 I?mHULF5RjFgYboh?IOLW@1
+Z123 V:_:m2]m;_Q`M>CKKVXmZP1
+R17
+R18
+R58
+R59
+Z124 L0 116
+R21
+r1
+31
+R22
+!s85 0
+vmdunit
+Z125 Iaan75bRcm_7Egj;@SdX7e2
+Z126 Vo0kkjW=SbCWgzQl[PO?0b2
+R17
+R18
+Z127 8H:/course/spring2010/ece554-group2/git/mipstest/multdiv.v
+Z128 FH:/course/spring2010/ece554-group2/git/mipstest/multdiv.v
+L0 3
+R21
+r1
+31
+R22
+!s85 0
+vmem
+Z129 InJQ_M51mkXkKekjac7aWd3
+Z130 V4a_X6DgAXO^bOId?C<IAV1
+R17
+R18
+Z131 8H:/course/spring2010/ece554-group2/git/mipstest/mem.v
+Z132 FH:/course/spring2010/ece554-group2/git/mipstest/mem.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vmemory
+Z133 I<cY6A54`F`IRZiP2e8QE_3
+Z134 V=BIeEYNBABRPnTYojPE<N2
+R17
+R18
+Z135 8H:/course/spring2010/ece554-group2/git/mipstest/memory.v
+Z136 FH:/course/spring2010/ece554-group2/git/mipstest/memory.v
+L0 1
+R21
+r1
+31
+R22
+!s85 0
+vmips
+Z137 IYZ=zP>WHfV[bLgPm=S0]K3
+Z138 VFbH:MR0S5K7BV:Gi37DSk2
+R17
+R18
+Z139 8H:/course/spring2010/ece554-group2/git/mipstest/mips.v
+Z140 FH:/course/spring2010/ece554-group2/git/mipstest/mips.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vmux_2
+Z141 ICnP;LTC662cHFTb5o9WJ12
+Z142 VVWT`7YfO?Ti5kd_BVHVEi2
+R17
+R18
+R29
+R30
+Z143 L0 134
+R21
+r1
+31
+R22
+!s85 0
+vmux_3
+Z144 I^zHMo3BJ[g=_dC16heheX3
+Z145 V?gBk1niF;T7^LDj2PXBVK3
+R17
+R18
+R29
+R30
+Z146 L0 142
+R21
+r1
+31
+R22
+!s85 0
+vmux_4
+Z147 I_c^=fNnAlRigfG0R0NfJ?1
+Z148 V0`V?2;=1<5NPA2`BFiT3[2
+R17
+R18
+R29
+R30
+Z149 L0 150
+R21
+r1
+31
+R22
+!s85 0
+vmux_5
+Z150 IaM[^HIPlDZV6?9<XfVHaG1
+Z151 VVBHcWb91F34Lg`ZUCDdEh2
+R17
+R18
+R29
+R30
+Z152 L0 159
+R21
+r1
+31
+R22
+!s85 0
+vncompare_to_zero
+Z153 I=G:OKG6[`8=clGlk;k>Sc0
+Z154 V1mHZYeZZH64eL79jOJ3Pb3
+R17
+R18
+R29
+R30
+L0 19
+R21
+r1
+31
+R22
+!s85 0
+vpriority_encoder_8
+Z155 IR[Fm>]A49<:3ToB_j?Q@60
+Z156 V^MWFTde;c1^EJNmEjEP`c2
+R17
+R18
+R29
+R30
+Z157 L0 212
+R21
+r1
+31
+R22
+!s85 0
+vramtest
+Z158 IbL6>BAUj50]g6;@eP6Of:0
+Z159 V0F[PQK^Q?JDEd0DPWBgc80
+R106
+Z160 w1270422460
+Z161 8C:/Documents and Settings/Geoff/Desktop/jake/mipstest/memdriver.v
+Z162 FC:/Documents and Settings/Geoff/Desktop/jake/mipstest/memdriver.v
+L0 1
+R111
+r1
+31
+R22
+!s85 0
+vRF
+Z163 IQIY>Hb`aG@=[aF]B=in;92
+Z164 VdkXBc]4b^C33O9i:6`]BH2
+R17
+R18
+Z165 8H:/course/spring2010/ece554-group2/git/mipstest/RF.v
+Z166 FH:/course/spring2010/ece554-group2/git/mipstest/RF.v
+L0 2
+R21
+r1
+31
+R22
+n@r@f
+!s85 0
+vshift_left_2
+Z167 I=NzKT`eGSoAYbQ3dj57lk2
+Z168 V3H8H5I2eW9YE@YBX6cOj13
+R17
+R18
+R29
+R30
+L0 40
+R21
+r1
+31
+R22
+!s85 0
+vshifter
+Z169 ImFfW;Xgza4USSkdOgQz=02
+Z170 VjezKcA=oSfOMT2hK<kPTQ1
+R17
+R18
+Z171 8H:/course/spring2010/ece554-group2/git/mipstest/shifter.v
+Z172 FH:/course/spring2010/ece554-group2/git/mipstest/shifter.v
+L0 2
+R21
+r1
+31
+R22
+!s85 0
+vtoplevel
+Z173 IRiP[KQ:>mhCa0]98;3nD<3
+Z174 V29[GVToF;FmkiobAWPfBC1
+R17
+R18
+Z175 8H:/course/spring2010/ece554-group2/git/mipstest/toplevel.v
+Z176 FH:/course/spring2010/ece554-group2/git/mipstest/toplevel.v
+L0 1
+R21
+r1
+31
+R22
+!s85 0
+vtoplevel_s
+Z177 IIgi1h8hA_L;:0eIUij`dd1
+Z178 V8Ui>9m;<0I_1>D0;>hgRl0
+R106
+R107
+R108
+R109
+L0 36
+R111
+r1
+31
+R22
+!s85 0
+vtri_state_buf
+Z179 IReGL]RmnYGQDhzX2C`GH11
+Z180 V7PknfG^FPM_hTM4R;KbDP0
+R17
+R18
+R29
+R30
+Z181 L0 229
+R21
+r1
+31
+R22
+!s85 0
+vxor2
+Z182 I:?Y0I<Fb3j1FUoL<NJK4W2
+Z183 V`76V36G^f2WmEN4a0RN:=3
+R17
+R18
+R29
+R30
+Z184 L0 190
+R21
+r1
+31
+R22
+!s85 0

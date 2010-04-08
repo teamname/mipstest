@@ -5,7 +5,7 @@ module fetch(input             clk,  reset, stall,
 
                   output [31:0]     pc, 
 
-                  output reg [31:0]     pc_plus_4);
+                  output  [31:0]     pc_plus_4);
 
   wire [31:0] pcnextF;
 
@@ -18,8 +18,8 @@ module fetch(input             clk,  reset, stall,
 
   
   flip_flop_enable #(32) PC(clk,reset, ~stall, pcnextF, pc);
-  always@(posedge clk)
-     pc_plus_4 = pc  + 1;
+ // always@(posedge clk)
+   assign  pc_plus_4 = pc  + 1;
 
 
 endmodule

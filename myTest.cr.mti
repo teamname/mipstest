@@ -1,0 +1,191 @@
+H:/course/spring2010/ece554-group2/git/mipstest/shifter.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/shifter.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module shifter
+
+Top level modules:
+	shifter
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/alu_shift_md.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/alu_shift_md.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module alu_shift_md
+
+Top level modules:
+	alu_shift_md
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/datapath.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/datapath.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module datapath
+-- Compiling module cnt_dp
+
+Top level modules:
+	datapath
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/RF.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/RF.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module RF
+
+Top level modules:
+	RF
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/hazard_detection.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/hazard_detection.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module hazard_detection
+
+Top level modules:
+	hazard_detection
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/memory.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/memory.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module memory
+
+Top level modules:
+	memory
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/branch_dec.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/branch_dec.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module branch_dec
+
+Top level modules:
+	branch_dec
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/control.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/control.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module controller
+-- Compiling module maindec
+
+Top level modules:
+	controller
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/alu.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/alu.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/exe.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/exe.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module exe
+
+Top level modules:
+	exe
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/toplevel.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/toplevel.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module toplevel
+
+Top level modules:
+	toplevel
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/utilities.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/utilities.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module compare_equal
+-- Compiling module compare_to_zero
+-- Compiling module ncompare_to_zero
+-- Compiling module compare_gt_zero
+-- Compiling module compare_lt_zero
+-- Compiling module shift_left_2
+-- Compiling module extend_sign
+-- Compiling module flip_flop
+-- Compiling module flip_flop_enable_clear
+-- Compiling module flip_flop_enable
+-- Compiling module flip_flop_no_reset
+-- Compiling module flip_flop_reset
+-- Compiling module mux_2
+-- Compiling module mux_3
+-- Compiling module mux_4
+-- Compiling module mux_5
+-- Compiling module decoder_2
+-- Compiling module decoder_1
+-- Compiling module and2
+-- Compiling module xor2
+-- Compiling module increment
+-- Compiling module is_zero
+-- Compiling module priority_encoder_8
+-- Compiling module tri_state_buf
+-- Compiling module cmux_2
+
+Top level modules:
+	compare_equal
+	compare_to_zero
+	ncompare_to_zero
+	compare_gt_zero
+	compare_lt_zero
+	shift_left_2
+	extend_sign
+	flip_flop
+	flip_flop_enable_clear
+	flip_flop_enable
+	flip_flop_no_reset
+	flip_flop_reset
+	mux_2
+	mux_3
+	mux_4
+	mux_5
+	decoder_2
+	decoder_1
+	and2
+	xor2
+	increment
+	is_zero
+	priority_encoder_8
+	tri_state_buf
+	cmux_2
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/br_control.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/br_control.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module br_control
+
+Top level modules:
+	br_control
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/dec.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/dec.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module dec
+
+Top level modules:
+	dec
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/driver.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/driver.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module driver
+
+Top level modules:
+	driver
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/multdiv.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/multdiv.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module mdunit
+
+Top level modules:
+	mdunit
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/forward.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/forward.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module forward
+
+Top level modules:
+	forward
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/mem.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/mem.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module mem
+
+Top level modules:
+	mem
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/mips.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/mips.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module mips
+
+Top level modules:
+	mips
+
+} {} {}} H:/course/spring2010/ece554-group2/git/mipstest/fetch.v {1 {vlog -work work -vopt -nocovercells H:/course/spring2010/ece554-group2/git/mipstest/fetch.v
+Model Technology ModelSim SE vlog 6.3 Compiler 2007.05 May  4 2007
+-- Compiling module fetch
+
+Top level modules:
+	fetch
+
+} {} {}}
