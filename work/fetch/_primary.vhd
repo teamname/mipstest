@@ -6,7 +6,8 @@ entity fetch is
         INTERRUPT_ADDRESS1: integer := 256;
         INTERRUPT_ADDRESS2: integer := 256;
         INTERRUPT_ADDRESS3: integer := 256;
-        INTERRUPT_ADDRESS4: integer := 256
+        INTERRUPT_ADDRESS4: integer := 256;
+        EXCEPTION_ADDRESS: integer := 256
     );
     port(
         clk             : in     vl_logic;

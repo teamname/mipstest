@@ -25,6 +25,9 @@ entity mips is
         font_addr       : out    vl_logic_vector(10 downto 0);
         font_data       : out    vl_logic_vector(3 downto 0);
         bck             : out    vl_logic_vector(1 downto 0);
-        interrupts      : in     vl_logic_vector(2 downto 0)
+        interrupts      : in     vl_logic_vector(3 downto 0);
+        audioVol        : out    vl_logic_vector(4 downto 0);
+        audioSel        : out    vl_logic_vector(3 downto 0);
+        audioEn         : out    vl_logic
     );
 end mips;

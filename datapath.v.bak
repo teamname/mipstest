@@ -32,7 +32,8 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
   output font_ch_active, font_clr, font_en,
   output [10:0] font_addr,
   output [3:0] font_data,
-  output [1:0] bck);
+  output [1:0] bck, input cnt_int_en, rti, input [2:0] interrupts,
+  output [4:0] audioVol, output [3:0] audioSel, output audioEn, input audioD);
 
 
   wire        forwardaD, forwardbD;
@@ -57,6 +58,7 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
   wire        rseqwrd_E, rteqwrd_E;
   wire [4:0]  rdD;
   
+  wire cnt_int;
   
   cnt_dp cnt_dp(
                       clk, reset,
@@ -95,7 +97,7 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
 
   fetch fetch(
                         clk, reset, stallF, pc_sel_FD, pcnextbrFD,
-                        
+                        {cnt_int,interrupts}, rti,
                         pc_F, pcplus4F);
 
   
@@ -108,11 +110,10 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
                           clk, reset, unsigned_D, 
                           instrD, pcplus4D, resultW, 
                           alu_out_M, rw_W, write_reg_W, forwardaD, forwardbD,
-                          branch_sel_D, randomD, usezeroD,
-                          
+                          branch_sel_D, randomD, usezeroD, audioD,                          
                           opcode_D, function_D, rs_D, rt_D, rdD,
                           srca2D, srcb2D, signimmD, pcnextbrFD,
-                          a_eq_b_D, a_eq_z_D, a_gt_z_D, a_lt_z_D);
+                          a_eq_b_D, a_eq_z_D, a_gt_z_D, a_lt_z_D, audioVol, audioSel, audioEn);
 
   
   flip_flop_enable_clear #(32) r1E(clk,  reset, ~stall_E, flush_E, srca2D, srcaE); 
@@ -144,6 +145,7 @@ module datapath(input         clk, reset, dummyE, spriteE, fontE, backgroundE,po
                           // outputs
                           write_data_M, readdata2M, byte_en_M);
 
+counter counter ( clk, reset, cnt_int_en, srcaE, cnt_int);
  
   flip_flop_enable #(32) r1W(clk,  reset, ~stall_W, alu_out_M, aluoutW);
   flip_flop_enable #(32) r2W(clk,  reset, ~stall_W, readdata2M, readdataW);

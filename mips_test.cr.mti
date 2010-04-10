@@ -1,17 +1,17 @@
-D:/mipstest/r_tb.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/r_tb.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module r_tb
-
-Top level modules:
-	r_tb
-
-} {} {}} D:/mipstest/datapath.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/datapath.v
+D:/mipstest/datapath.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/datapath.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module datapath
 -- Compiling module cnt_dp
 
 Top level modules:
 	datapath
+
+} {} {}} D:/mipstest/r_tb.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/r_tb.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module r_tb
+
+Top level modules:
+	r_tb
 
 } {} {}} D:/mipstest/alu_shift_md.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/alu_shift_md.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
@@ -194,6 +194,13 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 
 Top level modules:
 	mips
+
+} {} {}} D:/mipstest/fetch.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/fetch.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module fetch
+
+Top level modules:
+	fetch
 
 } {} {}} D:/mipstest/shifter.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/shifter.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008

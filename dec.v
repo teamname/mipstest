@@ -5,11 +5,12 @@ module dec(input         clk, reset,  unsignedD,
                    input  [4:0]  write_add,
                    input         forward_a_D, forward_b_D,
                    input  [1:0]  branch_src, 
-                   input randomD, usezeroD,
+                   input randomD, usezeroD, audioD,
                    output [5:0]  opcode_D, function_D,
                    output [4:0]  rs_D, rt_D, rd_D,
                    output [31:0] src_a_D, src_b_D, sign_imm_D, next_br_D,
-                   output        a_eq_b_D, a_eq_z_D, a_gt_z_D, a_lt_z_D);
+                   output        a_eq_b_D, a_eq_z_D, a_gt_z_D, a_lt_z_D,
+                   output [4:0] audioVol, output [3:0] audioSel, output audioEn);
 
   wire [31:0] src_a_1, src_b_1, branch_target, src_a_prerand_D, sign_imm, random_imm_D;
   wire [15:0] random;
@@ -45,5 +46,10 @@ module dec(input         clk, reset,  unsignedD,
   // next branch address
   mux_3 #(32)  branch_mux(branch_target, {PC_plus_4_D[31:28], inst_D[25:0], 2'b00},
                           src_a_D, branch_src, next_br_D);
+
+  //audio registers
+  flip_flop_enable #(5) volume (clk, reset, audioD, inst_D[4:0], audioVol);
+  flip_flop_enable #(4) soundsel (clk, reset, audioD, inst_D[8:5], audioSel);
+  assign audioEn = audioD;
 
 endmodule

@@ -60,6 +60,7 @@ entity controller is
         randomD         : out    vl_logic;
         usezeroD        : out    vl_logic;
         cnt_int         : out    vl_logic;
-        rti             : out    vl_logic
+        rti             : out    vl_logic;
+        audioD          : out    vl_logic
     );
 end controller;

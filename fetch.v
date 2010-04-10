@@ -19,11 +19,12 @@ module fetch(input clk, reset, stall,
   parameter INTERRUPT_ADDRESS2 = 32'h00000100;
   parameter INTERRUPT_ADDRESS3 = 32'h00000100;
   parameter INTERRUPT_ADDRESS4 = 32'h00000100;
+  parameter EXCEPTION_ADDRESS = 32'h00000100;
   
   assign int_en = (|interrupts) & sr;
   
    
-mux_4 #(32) pcmux(RESET_ADDRESS, INTERRUPT_ADDRESS,
+mux_4 #(32) pcmux(RESET_ADDRESS, EXCEPTION_ADDRESS ,
                     pc_plus_4, pc_branch, pc_sel, pcnextF1);
  
 

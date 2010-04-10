@@ -93,7 +93,7 @@ r1
 31
 IkYGhJR6^4L=bUJLXbKYW^3
 R4
-Z8 w1270765363
+Z8 w1270858751
 Z9 8D:/mipstest/datapath.v
 Z10 FD:/mipstest/datapath.v
 Z11 L0 159
@@ -158,19 +158,19 @@ R3
 !s85 0
 !s100 j3dNa?`YDDRN9UQU@HTf03
 vcontroller
-VF7VNo2Ae5eHo<oGoQ=m2i2
+Vg@=_aC9Bh]7]J2cD:;V=H0
 r1
 31
-IXW@TCe2JoNGH9FJ^S=8h<1
+I3H@h5J55B]9_^EUNS2nBj1
 R4
-Z12 w1270767153
+Z12 w1270859739
 Z13 8D:/mipstest/control.v
 Z14 FD:/mipstest/control.v
 L0 2
 R2
 R3
 !s85 0
-!s100 oIk[8WM5E?PD9eIgT:BnV1
+!s100 OUXPdzaJIdX[AaG5^^a>D3
 vcounter
 V;7G_V_LcS:Bh7naS4md:a0
 r1
@@ -186,10 +186,10 @@ R3
 !s85 0
 !s100 ZH:S8S3i[b?l7eIf7a[1D3
 vdatapath
-V]eNBbQhG:CWFL3:NLFb8K3
+VAlIT4X9B2iWUX5I4zK@[R3
 r1
 31
-I<dGiRJJW5kO=HPHOQ4_mM0
+I:mRDo<5>m_1Vj?47eHOW=2
 R4
 R8
 R9
@@ -198,21 +198,21 @@ L0 2
 R2
 R3
 !s85 0
-!s100 Zi2>LFHmYFdbC2I980QI93
+!s100 GOdFblZS38K4=IQ]l`1z]2
 vdec
-Vc<BBdE;ZoXn27_9T@S?ZF2
+VV72TAQ>o0_dcL5^]4mP4_0
 r1
 31
-IVd5EnN5fET@i6Kh6h5TBg0
+IRD0So@DzFLoW^KNLEdhJY0
 R4
-w1270763973
+w1270859314
 8D:/mipstest/dec.v
 FD:/mipstest/dec.v
 L0 2
 R2
 R3
 !s85 0
-!s100 :FdX:A?]]QS^SIcz`ChkY1
+!s100 GFVSGa^D0h:z;PU3G85391
 vdecoder_1
 IzOCOaIFP2IcGD3RE5^?jV0
 Vzh9:V2R1R_b>icgQ=j:Jb1
@@ -242,19 +242,19 @@ R3
 !s85 0
 !s100 Ij]2MCQ0HSiVz:]V`<zCB0
 vdriver
-Vob_Id]>ZhdUloIFEK=1YV1
+VfNFSATzT@V]K8S]llk_`o1
 r1
 31
-IVcVC9^_:23AT1XH`5jG;i3
+Ic5MlgR<U;0icR;WHl4:S[3
 R4
-w1270754896
+w1270862173
 8D:/mipstest/driver.v
 FD:/mipstest/driver.v
 L0 2
 R2
 R3
 !s85 0
-!s100 BJCIn4:D6@P]lMSOFA^XE0
+!s100 T?W97KM8bC;g5MNZg:]oX0
 vexe
 VANI7N6<7?g3Mie9_`g8;S2
 r1
@@ -284,19 +284,19 @@ R3
 !s85 0
 !s100 V:W@5Bz0Q[gAiA@QZG:N82
 vfetch
-VdX]jBg[=OL^7AI8caWXb70
+VUH735mazDm>RiIHRI25Xe3
 r1
 31
-I4BgbUTXKgU9mQF0k4MJ8B3
+IHa@2PEdQgkGjz2:282Qea1
 R4
-w1270767090
+w1270848735
 8D:/mipstest/fetch.v
 FD:/mipstest/fetch.v
 L0 2
 R2
 R3
 !s85 0
-!s100 ?G0JeBjVG5eRTF`M9U^Xg2
+!s100 dO42Ah`HzhhmN[6MMkBR32
 vflip_flop
 Ii8NSEL6YVKm]nF@bJ[mM_3
 VVz<ShH[INg_KDI]6:1XTU1
@@ -362,7 +362,7 @@ R4
 R5
 R6
 R7
-Z15 L0 119
+L0 119
 R2
 R3
 !s85 0
@@ -386,8 +386,8 @@ IWBl3_zBQG9UE^Ac@oY19M3
 VnN]4Gon>inod6>M^M2[SV1
 R4
 R1
-Z16 8D:/mipstest/toplevel_synthesis.v
-Z17 FD:/mipstest/toplevel_synthesis.v
+Z15 8D:/mipstest/toplevel_synthesis.v
+Z16 FD:/mipstest/toplevel_synthesis.v
 L0 32236
 R2
 r1
@@ -466,19 +466,19 @@ R3
 !s85 0
 !s100 ;bfhJBU=@WAoGOHaE:ZkA2
 vmaindec
-V75gCJ@Bak_o?6k^jLZaT>2
+V3GA]CaCL3lT8chbe3[4<T1
 r1
 31
-InHFh3`1L@7XOTaKnGj6z;0
+Ikeh>de0lURa?lE3jHZ@980
 R4
 R12
 R13
 R14
-R15
+L0 120
 R2
 R3
 !s85 0
-!s100 T`4Bf48[oO1QSSSXGHOVH2
+!s100 iT<E@70JfTFojOXV`Mn4k1
 vmdunit
 Vo0kkjW=SbCWgzQl[PO?0b2
 r1
@@ -522,19 +522,19 @@ R2
 R3
 !s100 7CA8Ub43SfL?2SBYALzHG3
 vmips
-VgEz@nCkBo`Pmf_b4B;WO=0
+V;[>7Pgm<nzU61jSGl6^BD1
 r1
 31
-I2U8gNWTXUc4ZkMRIK:Zjk0
+I=LX?SS?70^]o5ciFVPl]G2
 R4
-w1270767181
+w1270858710
 8D:/mipstest/mips.v
 FD:/mipstest/mips.v
 L0 2
 R2
 R3
 !s85 0
-!s100 >A1F9SNQiijSAmY[LZQKi1
+!s100 9cKE8z_aRhFL?O=kogHI`0
 vmux_2
 VVWT`7YfO?Ti5kd_BVHVEi2
 r1
@@ -648,30 +648,30 @@ R3
 !s100 <XV2`R:EeMNNESYAc9RFJ0
 !s85 0
 Erandom
-Z18 w1270753799
-Z19 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z17 w1270753799
+Z18 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
 R4
-Z20 8D:/mipstest/random.vhdl
-Z21 FD:/mipstest/random.vhdl
+Z19 8D:/mipstest/random.vhdl
+Z20 FD:/mipstest/random.vhdl
 l0
 L4
 V2EXDRgeH[DCLF[zfMi^641
-Z22 OE;C;6.4;39
+Z21 OE;C;6.4;39
 32
-Z23 o-work work -2002 -explicit
-Z24 tExplicit 1
+Z22 o-work work -2002 -explicit
+Z23 tExplicit 1
 !s100 [XUb3ndO]>FK55HGePRP@1
 Abehavioral
-R19
+R18
 DEx4 work 6 random 0 22 2EXDRgeH[DCLF[zfMi^641
 l13
 L12
 VA8[05>9i`RQe<[05[k]ES2
-R22
+R21
 32
 Mx1 4 ieee 14 std_logic_1164
+R22
 R23
-R24
 !s100 8;Ji48z^DzSmV4oH?c:Xe1
 vRF
 VdkXBc]4b^C33O9i:6`]BH2
@@ -717,26 +717,26 @@ R3
 !s85 0
 !s100 7eOcaj68`0l7dfZFKBJn?0
 vtoplevel
-V29[GVToF;FmkiobAWPfBC1
+Va8IP5TSk7>g1N^1YTXNS;2
 r1
 31
-IRiP[KQ:>mhCa0]98;3nD<3
+I`CBOO>kAS;W_H`3[M[hN13
 R4
-R1
+w1270858715
 8D:/mipstest/toplevel.v
 FD:/mipstest/toplevel.v
 L0 1
 R2
 R3
 !s85 0
-!s100 <b_>Bjz=GfMf4J;02CzRI2
+!s100 Xa6?Ez^eCz0J9=nSNUjl[3
 vtoplevel_s
 IIgi1h8hA_L;:0eIUij`dd1
 V8Ui>9m;<0I_1>D0;>hgRl0
 R4
 R1
+R15
 R16
-R17
 L0 36
 R2
 r1

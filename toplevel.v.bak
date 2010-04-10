@@ -5,7 +5,8 @@ module toplevel(input clk, reset,
   output font_ch_active, font_clr, font_en,
   output [10:0] font_addr,
   output [3:0] font_data,
-  output [1:0] bck);
+  output [1:0] bck, input [2:0] interrupts,
+  output [4:0] audioVol, output [3:0] audioSel, output audioEn);
   
   parameter D_MEM = "data.txt";
   parameter I_MEM = "fib.txt";
@@ -20,14 +21,6 @@ module toplevel(input clk, reset,
   wire [31:0] wr_data;
   wire [31:0] inst_outer;
   wire [31:0] data_outer;
-  wire [9:0] sprite_x;
-  wire [8:0] sprite_y;
-  wire [4:0] sprite_sel, 
-  wire sprite_attr, sprite_pos, sprite_vis, bck_ch_active;
-  wire font_ch_active, font_clr, font_en;
-  wire [10:0] font_addr;
-  wire [3:0] font_data;
-  wire [1:0] bck; 
   
   mips proc (clk, reset, instr_addr, instr_data, wr_en, mem_addr, wr_data, mem_data, instr_ack, mem_ack,
   sprite_x,  sprite_y, sprite_sel,
@@ -35,7 +28,7 @@ module toplevel(input clk, reset,
    font_ch_active, font_clr, font_en,
     font_addr,
     font_data,
-   bck);
+   bck, interrupts, audioVol, audioSel, audioEn);
   
 
   assign instr_addr_in = instr_addr[9:0];

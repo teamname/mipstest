@@ -2,7 +2,7 @@
 module driver();
   
   parameter D_ME = "data.txt"; //data mem
-  parameter I_ME = "shift"; //instr mem
+  parameter I_ME = "lgtest.txt"; //instr mem
   parameter TEST_FILE = "test.txt"; //address in hex <SPACE> 
   //expected value in decimal
   integer TEST_SZ;
@@ -12,12 +12,15 @@ module driver();
   wire [9:0] spx;
   wire [8:0] spy;
   wire [4:0] spsel;
-  wire spattr, sppos, spvis, bgch, ftch, ftcl, ften;
+  wire spattr, sppos, spvis, bgch, ftch, ftcl, ften, audioEn;
   wire [10:0] ftaddr;
   wire [3:0] ftdat;
   wire [1:0] bg;
   reg clk;
   reg rst;
+  reg [3:0] interrupts;
+  wire [4:0] audioVol;
+  wire [3:0] audioSel;
   
   integer k; //loop
   //test addr array
@@ -31,13 +34,16 @@ module driver();
   integer file_handle, num_bytes_in_line;
 
   toplevel #(D_ME, I_ME, 8, 10) DUT (clk, rst, inst_in, data_in, inst_out, data_out, spx, spy, spsel, spattr,
-                sppos, spvis, bgch, ftch, ftcl, ften, ftaddr, ftdat, bg); //instantiate module
+                sppos, spvis, bgch, ftch, ftcl, ften, ftaddr, ftdat, bg, interrupts, audioVol, audioSel, audioEn); //instantiate module
   
   always
     forever #10 clk = ~clk; //create clock
   initial begin
     //setup test data from file
+    //address in hex!
+    //result expected in decimal!
   clk = 0;
+  interrupts = 0;
   file_handle = $fopen(TEST_FILE,"r");
   TEST_SZ = 0;
     while(!$feof(file_handle)) begin
@@ -58,7 +64,7 @@ module driver();
   
     
     #60 rst = 1'b0;
-    #100000;
+    #1000;
     data_in = 8'h14;
     #10;
     data_in = 8'h01;

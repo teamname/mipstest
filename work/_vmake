@@ -38,14 +38,14 @@ vcontroller
 Z12 !s91 D:/mipstest/control.v
 Z13 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/control.v|
 vcounter
-!s91 D:/mipstest/cnt.v
-!s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/cnt.v|
+Z14 !s91 D:/mipstest/cnt.v
+Z15 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/cnt.v|
 vdatapath
 R10
 R11
 vdec
-Z14 !s91 D:/mipstest/dec.v
-Z15 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/dec.v|
+Z16 !s91 D:/mipstest/dec.v
+Z17 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/dec.v|
 vdecoder_1
 R4
 R5
@@ -53,17 +53,17 @@ vdecoder_2
 R4
 R5
 vdriver
-Z16 !s91 D:/mipstest/driver.v
-Z17 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/driver.v|
+Z18 !s91 D:/mipstest/driver.v
+Z19 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/driver.v|
 vexe
-Z18 !s91 D:/mipstest/exe.v
-Z19 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/exe.v|
+Z20 !s91 D:/mipstest/exe.v
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/exe.v|
 vextend_sign
 R4
 R5
 vfetch
-Z20 !s91 D:/mipstest/fetch.v
-Z21 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/fetch.v|
+Z22 !s91 D:/mipstest/fetch.v
+Z23 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/fetch.v|
 vflip_flop
 R4
 R5
@@ -80,14 +80,14 @@ vflip_flop_reset
 R4
 R5
 vforward
-Z22 !s91 D:/mipstest/forward.v
-Z23 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/forward.v|
+Z24 !s91 D:/mipstest/forward.v
+Z25 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/forward.v|
 vglbl
-Z24 !s91 D:/mipstest/toplevel_synthesis.v
-Z25 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/toplevel_synthesis.v|
+Z26 !s91 D:/mipstest/toplevel_synthesis.v
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/toplevel_synthesis.v|
 vhazard_detection
-Z26 !s91 D:/mipstest/hazard_detection.v
-Z27 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/hazard_detection.v|
+Z28 !s91 D:/mipstest/hazard_detection.v
+Z29 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/hazard_detection.v|
 vincrement
 R4
 R5
@@ -95,26 +95,26 @@ vis_zero
 R4
 R5
 vlfsr
-Z28 !s91 D:/mipstest/lfsr.v
-Z29 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/lfsr.v|
+Z30 !s91 D:/mipstest/lfsr.v
+Z31 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/lfsr.v|
 vlfsr_counter
-Z30 !s91 D:/mipstest/lfsr_counter.v
-Z31 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/lfsr_counter.v|
+Z32 !s91 D:/mipstest/lfsr_counter.v
+Z33 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/lfsr_counter.v|
 vmaindec
 R12
 R13
 vmdunit
-Z32 !s91 D:/mipstest/multdiv.v
-Z33 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/multdiv.v|
+Z34 !s91 D:/mipstest/multdiv.v
+Z35 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/multdiv.v|
 vmem
-Z34 !s91 D:/mipstest/mem.v
-Z35 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mem.v|
+Z36 !s91 D:/mipstest/mem.v
+Z37 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mem.v|
 vmemory
-Z36 !s91 D:/mipstest/memory.v
-Z37 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/memory.v|
+Z38 !s91 D:/mipstest/memory.v
+Z39 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/memory.v|
 vmips
-Z38 !s91 D:/mipstest/mips.v
-Z39 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mips.v|
+Z40 !s91 D:/mipstest/mips.v
+Z41 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/mips.v|
 vmux_2
 R4
 R5
@@ -134,32 +134,32 @@ vpriority_encoder_8
 R4
 R5
 vr_tb
-Z40 !s91 D:/mipstest/r_tb.v
-Z41 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/r_tb.v|
+Z42 !s91 D:/mipstest/r_tb.v
+Z43 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/r_tb.v|
 vramtest
-Z42 !s91 D:/mipstest/memdriver.v
-Z43 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/memdriver.v|
+Z44 !s91 D:/mipstest/memdriver.v
+Z45 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/memdriver.v|
 Erandom
-Z44 !s91 D:/mipstest/random.vhdl
-Z45 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/mipstest/random.vhdl|
+Z46 !s91 D:/mipstest/random.vhdl
+Z47 !s90 -reportprogress|300|-work|work|-2002|-explicit|-vopt|D:/mipstest/random.vhdl|
 Abehavioral
-R44
-R45
+R46
+R47
 vRF
-Z46 !s91 D:/mipstest/RF.v
-Z47 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/RF.v|
+Z48 !s91 D:/mipstest/RF.v
+Z49 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/RF.v|
 vshift_left_2
 R4
 R5
 vshifter
-Z48 !s91 D:/mipstest/shifter.v
-Z49 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/shifter.v|
+Z50 !s91 D:/mipstest/shifter.v
+Z51 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/shifter.v|
 vtoplevel
-Z50 !s91 D:/mipstest/toplevel.v
-Z51 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/toplevel.v|
+Z52 !s91 D:/mipstest/toplevel.v
+Z53 !s90 -reportprogress|300|-work|work|-vopt|-nocovercells|D:/mipstest/toplevel.v|
 vtoplevel_s
-R24
-R25
+R26
+R27
 vtri_state_buf
 R4
 R5

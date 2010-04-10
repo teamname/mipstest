@@ -32,7 +32,7 @@ module controller(input        clk, reset,
                   output [1:0] hilodisableE,
                   output       hiloaccessD, mdstartE, hilosrcE, 
                   output spriteE, fontE, backgroundE, posE, attrE, visiE, //signals for vga instructions
-                  output randomD, usezeroD, cnt_int, rti);  //signals for random, interrupts
+                  output randomD, usezeroD, cnt_int, rti, audioD);  //signals for random, interrupts
 
   wire       alu_or_mem_D, memwriteD, alusrcD, mainrw_, luiD, rtypeD,
              regdstD, rw_D, use_shifter, maindecregdstD, 
@@ -63,10 +63,11 @@ module controller(input        clk, reset,
   assign usezeroD = randomD & functD [0];
 
   maindec md(opD, alu_or_mem_D, memwriteD, byteD, halfwordD, loadsignedD,
-             alusrcD, maindecregdstD, mainrw_, is_unsigned, luiD,
+             alusrcD, maindecregdstD, mainrw_, is_unsigned_D, luiD,
              use_shifter, maindecoverflowableD, alushcontmaindecD,
              rtypeD,
-             no_valid_op_D, dummy, adesableD, adelableD,spriteD, fontD, backgroundD, randomD);
+             no_valid_op_D, dummy, adesableD, adelableD,spriteD, fontD, backgroundD,
+             randomD,  audioD, rti, cnt_int);
 
   
   alu_shift_md  ad(dummy, functD, rtypeD, use_shifter, alushcontmaindecD, 
@@ -120,10 +121,10 @@ module maindec(input  [5:0] op,
                output       alu_or_mem_, memwrite, byte, halfword, loadsignedD,
                output       alusrc,
                output       regdst, rw_, 
-               output       is_unsigned, lui, useshift, overflowable,
+               output       is_unsigned_D, lui, useshift, overflowable,
                output [2:0] alushcontrol, 
                output       rtype, no_valid_op_D, dummy,
-               output       adesableD, adelableD, spriteD, fontD, backgroundD, randomD);
+               output       adesableD, adelableD, spriteD, fontD, backgroundD, randomD, audioD, rti, cnt_int);
 
   reg [19:0] controls;
  
@@ -135,9 +136,10 @@ module maindec(input  [5:0] op,
           alu_or_mem_, byte, halfword, loadsignedD,
           useshift, alushcontrol /* 3 bits */, rtype,
           is_unsigned_D, lui, adesableD, adelableD, dummy, no_valid_op_D} = controls;
- assign spriteD = op[0] & dummy;
- assign backgroundD = op[2] & dummy;
+ assign spriteD = op[0] & ~op[2] & dummy;
+ assign backgroundD = op[2] & ~op[0] & dummy;
  assign fontD = op[1] & dummy;
+ assign audioD = dummy & op[0] & op[2];
  assign randomD = (op[5:3] == 3'b111 && op[1:0] == 2'b11) ? 1'b1 : 1'b0;
  assign rti = op[5] & op[4] & !op[3] & !op[2] & !op[1] & !op[0]; //op: 110000 ret from interrupt
  assign cnt_int =  op[5] & op[4] & !op[3] & !op[2] & !op[1] & op[0]; //op : 110001 counter interrupt
@@ -170,8 +172,9 @@ module maindec(input  [5:0] op,
       6'b000111: controls <= 21'b00000000001100000000; //BGTZ
       6'b111001: controls <= 20'b01000000001011000010; //sprite
       6'b111010: controls <= 20'b01000000001011000010; //font
-      6'b111100: controls <= 20'b01000000000000000010; //bkgnd
+      6'b111100: controls <= 20'b00000000000000000010; //bkgnd
       6'b111011: controls <= 20'b10010000000100000000; //add random number gen 16bits (addiu)
+      6'b111101: controls <= 20'b00000000000000000010; //audio
       default:   controls <= 21'bxxxxxxxxxxxxxxxxxxx1; //??? (exception)
     endcase
 endmodule

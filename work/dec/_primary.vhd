@@ -16,6 +16,7 @@ entity dec is
         branch_src      : in     vl_logic_vector(1 downto 0);
         randomD         : in     vl_logic;
         usezeroD        : in     vl_logic;
+        audioD          : in     vl_logic;
         opcode_D        : out    vl_logic_vector(5 downto 0);
         function_D      : out    vl_logic_vector(5 downto 0);
         rs_D            : out    vl_logic_vector(4 downto 0);
@@ -28,6 +29,9 @@ entity dec is
         a_eq_b_D        : out    vl_logic;
         a_eq_z_D        : out    vl_logic;
         a_gt_z_D        : out    vl_logic;
-        a_lt_z_D        : out    vl_logic
+        a_lt_z_D        : out    vl_logic;
+        audioVol        : out    vl_logic_vector(4 downto 0);
+        audioSel        : out    vl_logic_vector(3 downto 0);
+        audioEn         : out    vl_logic
     );
 end dec;
