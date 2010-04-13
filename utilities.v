@@ -64,11 +64,9 @@ module flip_flop #(parameter WIDTH = 8)
 
   reg [WIDTH-1:0] master;
 
-  always @(clk, reset, clear)
-    if (clk)  master <= reset ? 0 : (clear ? 0 : d);
+  always @(posedge clk)
+    q <= reset ? 0 : (clear ? 0 : d);
 
-  always @(clk, master)
-    if (clk)  q <= master;
 endmodule
 
 module flip_flop_enable_clear #(parameter WIDTH = 32)
@@ -79,11 +77,9 @@ module flip_flop_enable_clear #(parameter WIDTH = 32)
  
   reg [WIDTH-1:0] master;
 
-  always @(clk, reset, en, clear)
-    if (clk)  master <= reset ? 0 : (clear ? 0 : (en ? d : q));
+  always @(posedge clk)
+    q <= reset ? 0 : (clear ? 0 : (en ? d : q));
 
-  always @(clk, master)
-    if (clk)  q <= master;
 endmodule
 
 module flip_flop_enable #(parameter WIDTH = 32)
@@ -94,11 +90,9 @@ module flip_flop_enable #(parameter WIDTH = 32)
  
   reg [WIDTH-1:0] master;
 
-  always @(clk, reset, en)
-    if (clk)  master <= reset ? 0 : (en ? d : q);
+  always @(posedge clk)
+    q <= reset ? 0 : (en ? d : q);
 
-  always @(clk, master)
-    if (clk)  q <= master;
 endmodule
 
 module flip_flop_no_reset #(parameter WIDTH = 32)
@@ -109,11 +103,9 @@ module flip_flop_no_reset #(parameter WIDTH = 32)
  
   reg [WIDTH-1:0] master;
 
-  always @(clk, en)
-    if (clk)  master <= en ? d : q;
+  always @(posedge clk)
+    q <= en ? d : q;
 
-  always @(clk, master)
-    if (clk)  q <= master;
 endmodule
 
 module flip_flop_reset #(parameter WIDTH = 32)
@@ -123,11 +115,9 @@ module flip_flop_reset #(parameter WIDTH = 32)
  
   reg [WIDTH-1:0] master;
 
-  always @(clk, reset)
-    if (clk)  master <= reset ? 0 : d;
+  always @(posedge clk)
+    q <= reset ? 0 : d;
 
-  always @(clk, master)
-    if (clk)  q <= master;
 endmodule
 
 

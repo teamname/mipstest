@@ -15,7 +15,8 @@ module dec(input         clk, reset,  unsignedD,
   wire [31:0] src_a_1, src_b_1, branch_target, src_a_prerand_D, sign_imm, random_imm_D;
   wire [15:0] random;
   
-  assign opcode_D = inst_D[31:26];  assign function_D = inst_D[5:0];
+  assign opcode_D = inst_D[31:26];  
+  assign function_D = inst_D[5:0];
   assign rs_D = inst_D[25:21];
   assign rt_D = inst_D[20:16];
   assign rd_D = inst_D[15:11];
@@ -25,7 +26,7 @@ module dec(input         clk, reset,  unsignedD,
   lfsr_counter randcnt (clk,reset,random);
   
   // register file
-  RF     rf(clk,  rw, rs_D, rt_D, write_add,
+  RF     rf(clk, reset, rw, rs_D, rt_D, write_add,
                  data_in, src_a_1, src_b_1);
   //forward?
   mux_2 #(32)  forward_a_Dmux(src_a_1, alu_out_M, forward_a_D, src_a_prerand_D);
@@ -33,9 +34,9 @@ module dec(input         clk, reset,  unsignedD,
   
   //sign extension and random number code
   extend_sign #(16,32) se(inst_D[15:0], ~unsignedD, sign_imm);
-  mux_2 #(32) random_immed_mux (sign_imm, random_imm_D, randomD, sign_imm_D);
+  mux_2 #(32) random_immed_mux (sign_imm, random_imm_D, randomD, sign_imm_D); //use random or immediate?
   mux_2 #(32) addtozero (src_a_prerand_D, 32'b0, usezeroD, src_a_D);  // branch address
-  assign branch_target = PC_plus_4_D + {2'b00, sign_imm_D[29:0]};
+  assign branch_target = PC_plus_4_D + sign_imm_D-1; //{2'b00, sign_imm_D[29:0]}; was incorrect?
 
   // comparison flags
   compare_equal aeqbcmp(src_a_D, src_b_D, a_eq_b_D);
@@ -44,7 +45,7 @@ module dec(input         clk, reset,  unsignedD,
   compare_lt_zero altzcmp(src_a_D, a_lt_z_D);
   
   // next branch address
-  mux_3 #(32)  branch_mux(branch_target, {PC_plus_4_D[31:28], inst_D[25:0], 2'b00},
+  mux_3 #(32)  branch_mux(branch_target, {PC_plus_4_D[31:26], inst_D[25:0]}, // {PC_plus_4_D[31:28], inst_D[25:0], 2'b00} incorrect?
                           src_a_D, branch_src, next_br_D);
 
   //audio registers

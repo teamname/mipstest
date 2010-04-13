@@ -1,20 +1,4 @@
-# Compile of utilities.v was successful.
-# Compile of alu.v was successful.
-# Compile of alu_shift_md.v was successful.
-# Compile of br_control.v was successful.
-# Compile of utilities.v was successful with warnings.
-# Compile of alu.v was successful.
-# Compile of alu_shift_md.v was successful.
-# Break key hit 
-# Compile of br_control.v failed with 1 errors.
-# Compile canceled.
-# 4 out of 24 compiles, 1 failed with 1 error. 
-# Compile of utilities.v failed with 1 errors.
-# Compile canceled.
-# 1 out of 24 compiles, 1 failed with 1 error. 
-# Compile of branch_dec.v failed with 1 errors.
-# Compile canceled.
-# 5 out of 24 compiles, 1 failed with 1 error. 
+project open D:/mipstest/mips_test
 # Compile of utilities.v was successful.
 # Compile of alu.v was successful.
 # Compile of alu_shift_md.v was successful.
@@ -40,1081 +24,179 @@
 # Compile of toplevel.v was successful.
 # Compile of cnt.v was successful.
 # 24 compiles, 0 failed with no errors. 
-vsim -novopt work.driver
-# vsim -novopt work.driver 
-# Refreshing D:\mipstest\work.driver
-# Loading work.driver
-# Refreshing D:\mipstest\work.toplevel
-# Loading work.toplevel
+vsim -voptargs=+acc work.driver
+# vsim -voptargs=+acc work.driver 
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
 # ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
 #         Region: /driver/DUT
-# Refreshing D:\mipstest\work.mips
-# Loading work.mips
-# Refreshing D:\mipstest\work.controller
-# Loading work.controller
-# Refreshing D:\mipstest\work.maindec
-# Loading work.maindec
-# Refreshing D:\mipstest\work.alu_shift_md
-# Loading work.alu_shift_md
-# Refreshing D:\mipstest\work.mux_2
-# Loading work.mux_2
-# Refreshing D:\mipstest\work.branch_dec
-# Loading work.branch_dec
-# Refreshing D:\mipstest\work.br_control
-# Loading work.br_control
-# Refreshing D:\mipstest\work.flip_flop_enable
-# Loading work.flip_flop_enable
-# Refreshing D:\mipstest\work.flip_flop_enable_clear
-# Loading work.flip_flop_enable_clear
-# Refreshing D:\mipstest\work.datapath
-# Loading work.datapath
-# Refreshing D:\mipstest\work.cnt_dp
-# Loading work.cnt_dp
-# Refreshing D:\mipstest\work.ncompare_to_zero
-# Loading work.ncompare_to_zero
-# Refreshing D:\mipstest\work.compare_equal
-# Loading work.compare_equal
-# Refreshing D:\mipstest\work.forward
-# Loading work.forward
-# Refreshing D:\mipstest\work.hazard_detection
-# Loading work.hazard_detection
-# Refreshing D:\mipstest\work.flip_flop_reset
-# Loading work.flip_flop_reset
-# Refreshing D:\mipstest\work.fetch
-# Loading work.fetch
-# Refreshing D:\mipstest\work.mux_4
-# Loading work.mux_4
-# Refreshing D:\mipstest\work.dec
-# Loading work.dec
-# Refreshing D:\mipstest\work.lfsr_counter
-# Loading work.lfsr_counter
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
 # ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
 #         Region: /driver/DUT/proc/dp/dec/randcnt
-# Refreshing D:\mipstest\work.RF
-# Loading work.RF
-# Refreshing D:\mipstest\work.extend_sign
-# Loading work.extend_sign
-# Refreshing D:\mipstest\work.compare_to_zero
-# Loading work.compare_to_zero
-# Refreshing D:\mipstest\work.compare_gt_zero
-# Loading work.compare_gt_zero
-# Refreshing D:\mipstest\work.compare_lt_zero
-# Loading work.compare_lt_zero
-# Refreshing D:\mipstest\work.mux_3
-# Loading work.mux_3
-# Refreshing D:\mipstest\work.exe
-# Loading work.exe
-# Refreshing D:\mipstest\work.alu
-# Loading work.alu
-# Refreshing D:\mipstest\work.shifter
-# Loading work.shifter
-# Refreshing D:\mipstest\work.mdunit
-# Loading work.mdunit
-# Refreshing D:\mipstest\work.mem
-# Loading work.mem
-# Refreshing D:\mipstest\work.decoder_2
-# Loading work.decoder_2
-# Refreshing D:\mipstest\work.counter
-# Loading work.counter
-# Refreshing D:\mipstest\work.memory
-# Loading work.memory
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
 # ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
 #         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
 # ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
 #         Region: /driver/DUT/proc/cont/ad/alu_mux
 # ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
 #         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
 #         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
 #         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
 #         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
 #         Region: /driver/DUT/proc/dp/fetch
-# Compile of utilities.v was successful.
-# Compile of alu.v was successful.
-# Compile of alu_shift_md.v was successful.
-# Compile of br_control.v was successful.
-# Compile of branch_dec.v was successful.
-# Compile of control.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dec.v was successful.
-# Compile of driver.v was successful.
-# Compile of exe.v was successful.
-# Compile of fetch.v was successful.
-# Compile of forward.v was successful.
-# Compile of hazard_detection.v was successful.
-# Compile of lfsr_counter.v was successful.
-# Compile of mem.v was successful.
-# Compile of memdriver.v was successful.
-# Compile of memory.v was successful.
-# Compile of mips.v was successful.
-# Compile of multdiv.v was successful.
-# Compile of r_tb.v was successful.
-# Compile of RF.v was successful.
-# Compile of shifter.v was successful.
-# Compile of toplevel.v was successful.
-# Compile of cnt.v was successful.
-# 24 compiles, 0 failed with no errors. 
-restart
-# Refreshing D:\mipstest\work.driver
-# Loading work.driver
-# Refreshing D:\mipstest\work.toplevel
-# Loading work.toplevel
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# Refreshing D:\mipstest\work.mips
-# Loading work.mips
-# Refreshing D:\mipstest\work.controller
-# Loading work.controller
-# Refreshing D:\mipstest\work.maindec
-# Loading work.maindec
-# Refreshing D:\mipstest\work.alu_shift_md
-# Loading work.alu_shift_md
-# Refreshing D:\mipstest\work.mux_2
-# Loading work.mux_2
-# Refreshing D:\mipstest\work.branch_dec
-# Loading work.branch_dec
-# Refreshing D:\mipstest\work.br_control
-# Loading work.br_control
-# Refreshing D:\mipstest\work.flip_flop_enable
-# Loading work.flip_flop_enable
-# Refreshing D:\mipstest\work.flip_flop_enable_clear
-# Loading work.flip_flop_enable_clear
-# Refreshing D:\mipstest\work.datapath
-# Loading work.datapath
-# Refreshing D:\mipstest\work.cnt_dp
-# Loading work.cnt_dp
-# Refreshing D:\mipstest\work.ncompare_to_zero
-# Loading work.ncompare_to_zero
-# Refreshing D:\mipstest\work.compare_equal
-# Loading work.compare_equal
-# Refreshing D:\mipstest\work.forward
-# Loading work.forward
-# Refreshing D:\mipstest\work.hazard_detection
-# Loading work.hazard_detection
-# Refreshing D:\mipstest\work.flip_flop_reset
-# Loading work.flip_flop_reset
-# Refreshing D:\mipstest\work.fetch
-# Loading work.fetch
-# Refreshing D:\mipstest\work.mux_4
-# Loading work.mux_4
-# Refreshing D:\mipstest\work.dec
-# Loading work.dec
-# Refreshing D:\mipstest\work.lfsr_counter
-# Loading work.lfsr_counter
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# Refreshing D:\mipstest\work.RF
-# Loading work.RF
-# Refreshing D:\mipstest\work.extend_sign
-# Loading work.extend_sign
-# Refreshing D:\mipstest\work.compare_to_zero
-# Loading work.compare_to_zero
-# Refreshing D:\mipstest\work.compare_gt_zero
-# Loading work.compare_gt_zero
-# Refreshing D:\mipstest\work.compare_lt_zero
-# Loading work.compare_lt_zero
-# Refreshing D:\mipstest\work.mux_3
-# Loading work.mux_3
-# Refreshing D:\mipstest\work.exe
-# Loading work.exe
-# Refreshing D:\mipstest\work.alu
-# Loading work.alu
-# Refreshing D:\mipstest\work.shifter
-# Loading work.shifter
-# Refreshing D:\mipstest\work.mdunit
-# Loading work.mdunit
-# Refreshing D:\mipstest\work.mem
-# Loading work.mem
-# Refreshing D:\mipstest\work.decoder_2
-# Loading work.decoder_2
-# Refreshing D:\mipstest\work.counter
-# Loading work.counter
-# Refreshing D:\mipstest\work.memory
-# Loading work.memory
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-add wave sim:/driver/DUT/*
-add wave sim:/driver/DUT/proc/dp/fetch/*
-run -all
-# using file data.txt
-# using file audio.txt
-# Unexpected output for k =           0, addr: 00, expected:          0, got :          1
-# Unexpected output for k =           1, addr: 14, expected:         21, got :          1
-# Unexpected output for k =           2, addr: 00, expected:         55, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 80
-# Compile of utilities.v was successful.
-# Compile of alu.v was successful.
-# Compile of alu_shift_md.v was successful.
-# Compile of br_control.v was successful.
-# Compile of branch_dec.v was successful.
-# Compile of control.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dec.v was successful.
-# Compile of driver.v was successful.
-# Compile of exe.v was successful.
-# Compile of fetch.v was successful.
-# Compile of forward.v was successful.
-# Compile of hazard_detection.v was successful.
-# Compile of lfsr_counter.v was successful.
-# Compile of mem.v was successful.
-# Compile of memdriver.v was successful.
-# Compile of memory.v was successful.
-# Compile of mips.v was successful.
-# Compile of multdiv.v was successful.
-# Compile of r_tb.v was successful.
-# Compile of RF.v was successful.
-# Compile of shifter.v was successful.
-# Compile of toplevel.v was successful.
-# Compile of cnt.v was successful.
-# 24 compiles, 0 failed with no errors. 
-restart
-# Refreshing D:\mipstest\work.driver
-# Loading work.driver
-# Refreshing D:\mipstest\work.toplevel
-# Loading work.toplevel
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# Refreshing D:\mipstest\work.mips
-# Loading work.mips
-# Refreshing D:\mipstest\work.controller
-# Loading work.controller
-# Refreshing D:\mipstest\work.maindec
-# Loading work.maindec
-# Refreshing D:\mipstest\work.alu_shift_md
-# Loading work.alu_shift_md
-# Refreshing D:\mipstest\work.mux_2
-# Loading work.mux_2
-# Refreshing D:\mipstest\work.branch_dec
-# Loading work.branch_dec
-# Refreshing D:\mipstest\work.br_control
-# Loading work.br_control
-# Refreshing D:\mipstest\work.flip_flop_enable
-# Loading work.flip_flop_enable
-# Refreshing D:\mipstest\work.flip_flop_enable_clear
-# Loading work.flip_flop_enable_clear
-# Refreshing D:\mipstest\work.datapath
-# Loading work.datapath
-# Refreshing D:\mipstest\work.cnt_dp
-# Loading work.cnt_dp
-# Refreshing D:\mipstest\work.ncompare_to_zero
-# Loading work.ncompare_to_zero
-# Refreshing D:\mipstest\work.compare_equal
-# Loading work.compare_equal
-# Refreshing D:\mipstest\work.forward
-# Loading work.forward
-# Refreshing D:\mipstest\work.hazard_detection
-# Loading work.hazard_detection
-# Refreshing D:\mipstest\work.flip_flop_reset
-# Loading work.flip_flop_reset
-# Refreshing D:\mipstest\work.fetch
-# Loading work.fetch
-# Refreshing D:\mipstest\work.mux_4
-# Loading work.mux_4
-# Refreshing D:\mipstest\work.dec
-# Loading work.dec
-# Refreshing D:\mipstest\work.lfsr_counter
-# Loading work.lfsr_counter
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# Refreshing D:\mipstest\work.RF
-# Loading work.RF
-# Refreshing D:\mipstest\work.extend_sign
-# Loading work.extend_sign
-# Refreshing D:\mipstest\work.compare_to_zero
-# Loading work.compare_to_zero
-# Refreshing D:\mipstest\work.compare_gt_zero
-# Loading work.compare_gt_zero
-# Refreshing D:\mipstest\work.compare_lt_zero
-# Loading work.compare_lt_zero
-# Refreshing D:\mipstest\work.mux_3
-# Loading work.mux_3
-# Refreshing D:\mipstest\work.exe
-# Loading work.exe
-# Refreshing D:\mipstest\work.alu
-# Loading work.alu
-# Refreshing D:\mipstest\work.shifter
-# Loading work.shifter
-# Refreshing D:\mipstest\work.mdunit
-# Loading work.mdunit
-# Refreshing D:\mipstest\work.mem
-# Loading work.mem
-# Refreshing D:\mipstest\work.decoder_2
-# Loading work.decoder_2
-# Refreshing D:\mipstest\work.counter
-# Loading work.counter
-# Refreshing D:\mipstest\work.memory
-# Loading work.memory
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-run -all
-# using file data.txt
-# using file audio.txt
-# Unexpected output for k =           0, addr: 00, expected:          0, got :          1
-# Unexpected output for k =           1, addr: 14, expected:         21, got :          1
-# Unexpected output for k =           2, addr: 00, expected:         55, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 80
-add wave sim:/driver/DUT/proc/dp/exe/*
-restart
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-run -all
-# using file data.txt
-# using file audio.txt
-# Unexpected output for k =           0, addr: 00, expected:          0, got :          1
-# Unexpected output for k =           1, addr: 14, expected:         21, got :          1
-# Unexpected output for k =           2, addr: 00, expected:         55, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 80
-add wave sim:/driver/DUT/proc/dp/dec/*
-restart
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-run -all
-# using file data.txt
-# using file audio.txt
-# Unexpected output for k =           0, addr: 00, expected:          0, got :          1
-# Unexpected output for k =           1, addr: 14, expected:         21, got :          1
-# Unexpected output for k =           2, addr: 00, expected:         55, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 80
-# Compile of utilities.v was successful.
-# Compile of alu.v was successful.
-# Compile of alu_shift_md.v was successful.
-# Compile of br_control.v was successful.
-# Compile of branch_dec.v was successful.
-# Compile of control.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dec.v was successful.
-# Compile of driver.v was successful.
-# Compile of exe.v was successful.
-# Compile of fetch.v was successful.
-# Compile of forward.v was successful.
-# Compile of hazard_detection.v was successful.
-# Compile of lfsr_counter.v was successful.
-# Compile of mem.v was successful.
-# Compile of memdriver.v was successful.
-# Compile of memory.v was successful.
-# Compile of mips.v was successful.
-# Compile of multdiv.v was successful.
-# Compile of r_tb.v was successful.
-# Compile of RF.v was successful.
-# Compile of shifter.v was successful.
-# Compile of toplevel.v was successful.
-# Compile of cnt.v was successful.
-# 24 compiles, 0 failed with no errors. 
-restart
-# Refreshing D:\mipstest\work.driver
-# Loading work.driver
-# Refreshing D:\mipstest\work.toplevel
-# Loading work.toplevel
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# Refreshing D:\mipstest\work.mips
-# Loading work.mips
-# Refreshing D:\mipstest\work.controller
-# Loading work.controller
-# Refreshing D:\mipstest\work.maindec
-# Loading work.maindec
-# Refreshing D:\mipstest\work.alu_shift_md
-# Loading work.alu_shift_md
-# Refreshing D:\mipstest\work.mux_2
-# Loading work.mux_2
-# Refreshing D:\mipstest\work.branch_dec
-# Loading work.branch_dec
-# Refreshing D:\mipstest\work.br_control
-# Loading work.br_control
-# Refreshing D:\mipstest\work.flip_flop_enable
-# Loading work.flip_flop_enable
-# Refreshing D:\mipstest\work.flip_flop_enable_clear
-# Loading work.flip_flop_enable_clear
-# Refreshing D:\mipstest\work.datapath
-# Loading work.datapath
-# Refreshing D:\mipstest\work.cnt_dp
-# Loading work.cnt_dp
-# Refreshing D:\mipstest\work.ncompare_to_zero
-# Loading work.ncompare_to_zero
-# Refreshing D:\mipstest\work.compare_equal
-# Loading work.compare_equal
-# Refreshing D:\mipstest\work.forward
-# Loading work.forward
-# Refreshing D:\mipstest\work.hazard_detection
-# Loading work.hazard_detection
-# Refreshing D:\mipstest\work.flip_flop_reset
-# Loading work.flip_flop_reset
-# Refreshing D:\mipstest\work.fetch
-# Loading work.fetch
-# Refreshing D:\mipstest\work.mux_4
-# Loading work.mux_4
-# Refreshing D:\mipstest\work.dec
-# Loading work.dec
-# Refreshing D:\mipstest\work.lfsr_counter
-# Loading work.lfsr_counter
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# Refreshing D:\mipstest\work.RF
-# Loading work.RF
-# Refreshing D:\mipstest\work.extend_sign
-# Loading work.extend_sign
-# Refreshing D:\mipstest\work.compare_to_zero
-# Loading work.compare_to_zero
-# Refreshing D:\mipstest\work.compare_gt_zero
-# Loading work.compare_gt_zero
-# Refreshing D:\mipstest\work.compare_lt_zero
-# Loading work.compare_lt_zero
-# Refreshing D:\mipstest\work.mux_3
-# Loading work.mux_3
-# Refreshing D:\mipstest\work.exe
-# Loading work.exe
-# Refreshing D:\mipstest\work.alu
-# Loading work.alu
-# Refreshing D:\mipstest\work.shifter
-# Loading work.shifter
-# Refreshing D:\mipstest\work.mdunit
-# Loading work.mdunit
-# Refreshing D:\mipstest\work.mem
-# Loading work.mem
-# Refreshing D:\mipstest\work.decoder_2
-# Loading work.decoder_2
-# Refreshing D:\mipstest\work.counter
-# Loading work.counter
-# Refreshing D:\mipstest\work.memory
-# Loading work.memory
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-# Warning in wave window restart: (vish-4014) No objects found matching '/driver/DUT/proc/dp/dec/audioE'. 
-run -all
-# using file data.txt
-# using file audio.txt
-# Unexpected output for k =           0, addr: 00, expected:          0, got :          1
-# Unexpected output for k =           1, addr: 14, expected:         21, got :          1
-# Unexpected output for k =           2, addr: 00, expected:         55, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 80
-quit -sim
-vsim -novopt work.driver
-# vsim -novopt work.driver 
-# Loading work.driver
-# Loading work.toplevel
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# Loading work.mips
-# Loading work.controller
-# Loading work.maindec
-# Loading work.alu_shift_md
-# Loading work.mux_2
-# Loading work.branch_dec
-# Loading work.br_control
-# Loading work.flip_flop_enable
-# Loading work.flip_flop_enable_clear
-# Loading work.datapath
-# Loading work.cnt_dp
-# Loading work.ncompare_to_zero
-# Loading work.compare_equal
-# Loading work.forward
-# Loading work.hazard_detection
-# Loading work.flip_flop_reset
-# Loading work.fetch
-# Loading work.mux_4
-# Loading work.dec
-# Loading work.lfsr_counter
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# Loading work.RF
-# Loading work.extend_sign
-# Loading work.compare_to_zero
-# Loading work.compare_gt_zero
-# Loading work.compare_lt_zero
-# Loading work.mux_3
-# Loading work.exe
-# Loading work.alu
-# Loading work.shifter
-# Loading work.mdunit
-# Loading work.mem
-# Loading work.decoder_2
-# Loading work.counter
-# Loading work.memory
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-add wave \
-{sim:/driver/DUT/proc/is_unsigned } 
-add wave \
-{sim:/driver/DUT/proc/cont/is_unsigned_D } 
-add wave \
-{sim:/driver/DUT/proc/cont/md/is_unsigned } 
-add wave sim:/driver/DUT/proc/*
-env ..
-# sim:/driver/DUT
-restart
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-run -all
-# using file data.txt
-# using file audio.txt
-# Unexpected output for k =           0, addr: 00, expected:          0, got :          1
-# Unexpected output for k =           1, addr: 14, expected:         21, got :          1
-# Unexpected output for k =           2, addr: 00, expected:         55, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 80
-# Compile of utilities.v was successful.
-# Compile of alu.v was successful.
-# Compile of alu_shift_md.v was successful.
-# Compile of br_control.v was successful.
-# Compile of branch_dec.v was successful.
-# Compile of control.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dec.v was successful.
-# Compile of driver.v was successful.
-# Compile of exe.v was successful.
-# Compile of fetch.v was successful.
-# Compile of forward.v was successful.
-# Compile of hazard_detection.v was successful.
-# Compile of lfsr_counter.v was successful.
-# Compile of mem.v was successful.
-# Compile of memdriver.v was successful.
-# Compile of memory.v was successful.
-# Compile of mips.v was successful.
-# Compile of multdiv.v was successful.
-# Compile of r_tb.v was successful.
-# Compile of RF.v was successful.
-# Compile of shifter.v was successful.
-# Compile of toplevel.v was successful.
-# Compile of cnt.v was successful.
-# 24 compiles, 0 failed with no errors. 
-restart
-# Refreshing D:\mipstest\work.driver
-# Loading work.driver
-# Refreshing D:\mipstest\work.toplevel
-# Loading work.toplevel
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# Refreshing D:\mipstest\work.mips
-# Loading work.mips
-# Refreshing D:\mipstest\work.controller
-# Loading work.controller
-# Refreshing D:\mipstest\work.maindec
-# Loading work.maindec
-# Refreshing D:\mipstest\work.alu_shift_md
-# Loading work.alu_shift_md
-# Refreshing D:\mipstest\work.mux_2
-# Loading work.mux_2
-# Refreshing D:\mipstest\work.branch_dec
-# Loading work.branch_dec
-# Refreshing D:\mipstest\work.br_control
-# Loading work.br_control
-# Refreshing D:\mipstest\work.flip_flop_enable
-# Loading work.flip_flop_enable
-# Refreshing D:\mipstest\work.flip_flop_enable_clear
-# Loading work.flip_flop_enable_clear
-# Refreshing D:\mipstest\work.datapath
-# Loading work.datapath
-# Refreshing D:\mipstest\work.cnt_dp
-# Loading work.cnt_dp
-# Refreshing D:\mipstest\work.ncompare_to_zero
-# Loading work.ncompare_to_zero
-# Refreshing D:\mipstest\work.compare_equal
-# Loading work.compare_equal
-# Refreshing D:\mipstest\work.forward
-# Loading work.forward
-# Refreshing D:\mipstest\work.hazard_detection
-# Loading work.hazard_detection
-# Refreshing D:\mipstest\work.flip_flop_reset
-# Loading work.flip_flop_reset
-# Refreshing D:\mipstest\work.fetch
-# Loading work.fetch
-# Refreshing D:\mipstest\work.mux_4
-# Loading work.mux_4
-# Refreshing D:\mipstest\work.dec
-# Loading work.dec
-# Refreshing D:\mipstest\work.lfsr_counter
-# Loading work.lfsr_counter
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# Refreshing D:\mipstest\work.RF
-# Loading work.RF
-# Refreshing D:\mipstest\work.extend_sign
-# Loading work.extend_sign
-# Refreshing D:\mipstest\work.compare_to_zero
-# Loading work.compare_to_zero
-# Refreshing D:\mipstest\work.compare_gt_zero
-# Loading work.compare_gt_zero
-# Refreshing D:\mipstest\work.compare_lt_zero
-# Loading work.compare_lt_zero
-# Refreshing D:\mipstest\work.mux_3
-# Loading work.mux_3
-# Refreshing D:\mipstest\work.exe
-# Loading work.exe
-# Refreshing D:\mipstest\work.alu
-# Loading work.alu
-# Refreshing D:\mipstest\work.shifter
-# Loading work.shifter
-# Refreshing D:\mipstest\work.mdunit
-# Loading work.mdunit
-# Refreshing D:\mipstest\work.mem
-# Loading work.mem
-# Refreshing D:\mipstest\work.decoder_2
-# Loading work.decoder_2
-# Refreshing D:\mipstest\work.counter
-# Loading work.counter
-# Refreshing D:\mipstest\work.memory
-# Loading work.memory
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-# Warning in wave window restart: (vish-4014) No objects found matching '/driver/DUT/proc/cont/md/is_unsigned'. 
-run -all
-# using file data.txt
-# using file audio.txt
-# Unexpected output for k =           0, addr: 00, expected:          0, got :          1
-# Unexpected output for k =           1, addr: 14, expected:         21, got :          1
-# Unexpected output for k =           2, addr: 00, expected:         55, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 80
-quit -sim
-# Compile of utilities.v was successful.
-# Compile of alu.v was successful.
-# Compile of alu_shift_md.v was successful.
-# Compile of br_control.v was successful.
-# Compile of branch_dec.v was successful.
-# Compile of control.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dec.v was successful.
-# Compile of driver.v was successful.
-# Compile of exe.v was successful.
-# Compile of fetch.v was successful.
-# Compile of forward.v was successful.
-# Compile of hazard_detection.v was successful.
-# Compile of lfsr_counter.v was successful.
-# Compile of mem.v was successful.
-# Compile of memdriver.v was successful.
-# Compile of memory.v was successful.
-# Compile of mips.v was successful.
-# Compile of multdiv.v was successful.
-# Compile of r_tb.v was successful.
-# Compile of RF.v was successful.
-# Compile of shifter.v was successful.
-# Compile of toplevel.v was successful.
-# Compile of cnt.v was successful.
-# 24 compiles, 0 failed with no errors. 
-vsim -novopt work.driver
-# vsim -novopt work.driver 
-# Refreshing D:\mipstest\work.driver
-# Loading work.driver
-# Refreshing D:\mipstest\work.toplevel
-# Loading work.toplevel
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# Refreshing D:\mipstest\work.mips
-# Loading work.mips
-# Refreshing D:\mipstest\work.controller
-# Loading work.controller
-# Refreshing D:\mipstest\work.maindec
-# Loading work.maindec
-# Refreshing D:\mipstest\work.alu_shift_md
-# Loading work.alu_shift_md
-# Refreshing D:\mipstest\work.mux_2
-# Loading work.mux_2
-# Refreshing D:\mipstest\work.branch_dec
-# Loading work.branch_dec
-# Refreshing D:\mipstest\work.br_control
-# Loading work.br_control
-# Refreshing D:\mipstest\work.flip_flop_enable
-# Loading work.flip_flop_enable
-# Refreshing D:\mipstest\work.flip_flop_enable_clear
-# Loading work.flip_flop_enable_clear
-# Refreshing D:\mipstest\work.datapath
-# Loading work.datapath
-# Refreshing D:\mipstest\work.cnt_dp
-# Loading work.cnt_dp
-# Refreshing D:\mipstest\work.ncompare_to_zero
-# Loading work.ncompare_to_zero
-# Refreshing D:\mipstest\work.compare_equal
-# Loading work.compare_equal
-# Refreshing D:\mipstest\work.forward
-# Loading work.forward
-# Refreshing D:\mipstest\work.hazard_detection
-# Loading work.hazard_detection
-# Refreshing D:\mipstest\work.flip_flop_reset
-# Loading work.flip_flop_reset
-# Refreshing D:\mipstest\work.fetch
-# Loading work.fetch
-# Refreshing D:\mipstest\work.mux_4
-# Loading work.mux_4
-# Refreshing D:\mipstest\work.dec
-# Loading work.dec
-# Refreshing D:\mipstest\work.lfsr_counter
-# Loading work.lfsr_counter
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# Refreshing D:\mipstest\work.RF
-# Loading work.RF
-# Refreshing D:\mipstest\work.extend_sign
-# Loading work.extend_sign
-# Refreshing D:\mipstest\work.compare_to_zero
-# Loading work.compare_to_zero
-# Refreshing D:\mipstest\work.compare_gt_zero
-# Loading work.compare_gt_zero
-# Refreshing D:\mipstest\work.compare_lt_zero
-# Loading work.compare_lt_zero
-# Refreshing D:\mipstest\work.mux_3
-# Loading work.mux_3
-# Refreshing D:\mipstest\work.exe
-# Loading work.exe
-# Refreshing D:\mipstest\work.alu
-# Loading work.alu
-# Refreshing D:\mipstest\work.shifter
-# Loading work.shifter
-# Refreshing D:\mipstest\work.mdunit
-# Loading work.mdunit
-# Refreshing D:\mipstest\work.mem
-# Loading work.mem
-# Refreshing D:\mipstest\work.decoder_2
-# Loading work.decoder_2
-# Refreshing D:\mipstest\work.counter
-# Loading work.counter
-# Refreshing D:\mipstest\work.memory
-# Loading work.memory
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-run -all
-# using file data.txt
-# using file lgtest.txt
-# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 82
-add wave sim:/driver/DUT/*
-restart
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-run -all
-# using file data.txt
-# using file lgtest.txt
-# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 82
 add wave sim:/driver/DUT/proc/dp/dec/rf/*
-restart
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
 run -all
 # using file data.txt
-# using file lgtest.txt
+# using file test_002.dat
 # Unexpected output for k =           0, addr: 54, expected:          7, got :          1
 # Break in Module driver at D:/mipstest/driver.v line 82
+view list
+# .main_pane.mdi.interior.cs.vm.paneset.cli_2.wf.clip.cs
+add wave \
+{sim:/driver/DUT/proc/mem_write_M } \
+{sim:/driver/DUT/proc/alu_out_M } \
+{sim:/driver/DUT/proc/write_data_M } 
 restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
 # ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
 #         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
 # ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
 #         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
 # ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
 #         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
 # ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
 #         Region: /driver/DUT/proc/cont/ad/alu_mux
 # ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
 #         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
 #         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
 #         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
 #         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
 #         Region: /driver/DUT/proc/dp/fetch
 run -all
 # using file data.txt
-# using file lgtest.txt
-# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 82
-add wave sim:/driver/DUT/proc/dp/fetch/*
-restart
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-run -all
-# using file data.txt
-# using file lgtest.txt
-# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
-# Break in Module driver at D:/mipstest/driver.v line 82
-# Compile of utilities.v was successful.
-# Compile of alu.v was successful.
-# Compile of alu_shift_md.v was successful.
-# Compile of br_control.v was successful.
-# Compile of branch_dec.v was successful.
-# Compile of control.v was successful.
-# Compile of datapath.v was successful.
-# Compile of dec.v was successful.
-# Compile of driver.v was successful.
-# Compile of exe.v was successful.
-# Compile of fetch.v was successful.
-# Compile of forward.v was successful.
-# Compile of hazard_detection.v was successful.
-# Compile of lfsr_counter.v was successful.
-# Compile of mem.v was successful.
-# Compile of memdriver.v was successful.
-# Compile of memory.v was successful.
-# Compile of mips.v was successful.
-# Compile of multdiv.v was successful.
-# Compile of r_tb.v was successful.
-# Compile of RF.v was successful.
-# Compile of shifter.v was successful.
-# Compile of toplevel.v was successful.
-# Compile of cnt.v was successful.
-# 24 compiles, 0 failed with no errors. 
-restart
-# Refreshing D:\mipstest\work.driver
-# Loading work.driver
-# Refreshing D:\mipstest\work.toplevel
-# Loading work.toplevel
-# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT
-# Refreshing D:\mipstest\work.mips
-# Loading work.mips
-# Refreshing D:\mipstest\work.controller
-# Loading work.controller
-# Refreshing D:\mipstest\work.maindec
-# Loading work.maindec
-# Refreshing D:\mipstest\work.alu_shift_md
-# Loading work.alu_shift_md
-# Refreshing D:\mipstest\work.mux_2
-# Loading work.mux_2
-# Refreshing D:\mipstest\work.branch_dec
-# Loading work.branch_dec
-# Refreshing D:\mipstest\work.br_control
-# Loading work.br_control
-# Refreshing D:\mipstest\work.flip_flop_enable
-# Loading work.flip_flop_enable
-# Refreshing D:\mipstest\work.flip_flop_enable_clear
-# Loading work.flip_flop_enable_clear
-# Refreshing D:\mipstest\work.datapath
-# Loading work.datapath
-# Refreshing D:\mipstest\work.cnt_dp
-# Loading work.cnt_dp
-# Refreshing D:\mipstest\work.ncompare_to_zero
-# Loading work.ncompare_to_zero
-# Refreshing D:\mipstest\work.compare_equal
-# Loading work.compare_equal
-# Refreshing D:\mipstest\work.forward
-# Loading work.forward
-# Refreshing D:\mipstest\work.hazard_detection
-# Loading work.hazard_detection
-# Refreshing D:\mipstest\work.flip_flop_reset
-# Loading work.flip_flop_reset
-# Refreshing D:\mipstest\work.fetch
-# Loading work.fetch
-# Refreshing D:\mipstest\work.mux_4
-# Loading work.mux_4
-# Refreshing D:\mipstest\work.dec
-# Loading work.dec
-# Refreshing D:\mipstest\work.lfsr_counter
-# Loading work.lfsr_counter
-# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/proc/dp/dec/randcnt
-# Refreshing D:\mipstest\work.RF
-# Loading work.RF
-# Refreshing D:\mipstest\work.extend_sign
-# Loading work.extend_sign
-# Refreshing D:\mipstest\work.compare_to_zero
-# Loading work.compare_to_zero
-# Refreshing D:\mipstest\work.compare_gt_zero
-# Loading work.compare_gt_zero
-# Refreshing D:\mipstest\work.compare_lt_zero
-# Loading work.compare_lt_zero
-# Refreshing D:\mipstest\work.mux_3
-# Loading work.mux_3
-# Refreshing D:\mipstest\work.exe
-# Loading work.exe
-# Refreshing D:\mipstest\work.alu
-# Loading work.alu
-# Refreshing D:\mipstest\work.shifter
-# Loading work.shifter
-# Refreshing D:\mipstest\work.mdunit
-# Loading work.mdunit
-# Refreshing D:\mipstest\work.mem
-# Loading work.mem
-# Refreshing D:\mipstest\work.decoder_2
-# Loading work.decoder_2
-# Refreshing D:\mipstest\work.counter
-# Loading work.counter
-# Refreshing D:\mipstest\work.memory
-# Loading work.memory
-# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
-#         Region: /driver/DUT/data
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
-#         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
-#         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
-#         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
-#         Region: /driver/DUT/proc/dp/fetch
-run -all
-# using file data.txt
-# using file lgtest.txt
+# using file test_002.dat
 # Unexpected output for k =           0, addr: 54, expected:          7, got :          1
 # Break in Module driver at D:/mipstest/driver.v line 82
 # Compile of utilities.v was successful.
@@ -1143,98 +225,2231 @@ run -all
 # Compile of cnt.v was successful.
 # 24 compiles, 0 failed with no errors. 
 restart
-# Refreshing D:\mipstest\work.driver
-# Loading work.driver
-# Refreshing D:\mipstest\work.toplevel
-# Loading work.toplevel
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
 # ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
 #         Region: /driver/DUT
-# Refreshing D:\mipstest\work.mips
-# Loading work.mips
-# Refreshing D:\mipstest\work.controller
-# Loading work.controller
-# Refreshing D:\mipstest\work.maindec
-# Loading work.maindec
-# Refreshing D:\mipstest\work.alu_shift_md
-# Loading work.alu_shift_md
-# Refreshing D:\mipstest\work.mux_2
-# Loading work.mux_2
-# Refreshing D:\mipstest\work.branch_dec
-# Loading work.branch_dec
-# Refreshing D:\mipstest\work.br_control
-# Loading work.br_control
-# Refreshing D:\mipstest\work.flip_flop_enable
-# Loading work.flip_flop_enable
-# Refreshing D:\mipstest\work.flip_flop_enable_clear
-# Loading work.flip_flop_enable_clear
-# Refreshing D:\mipstest\work.datapath
-# Loading work.datapath
-# Refreshing D:\mipstest\work.cnt_dp
-# Loading work.cnt_dp
-# Refreshing D:\mipstest\work.ncompare_to_zero
-# Loading work.ncompare_to_zero
-# Refreshing D:\mipstest\work.compare_equal
-# Loading work.compare_equal
-# Refreshing D:\mipstest\work.forward
-# Loading work.forward
-# Refreshing D:\mipstest\work.hazard_detection
-# Loading work.hazard_detection
-# Refreshing D:\mipstest\work.flip_flop_reset
-# Loading work.flip_flop_reset
-# Refreshing D:\mipstest\work.fetch
-# Loading work.fetch
-# Refreshing D:\mipstest\work.mux_4
-# Loading work.mux_4
-# Refreshing D:\mipstest\work.dec
-# Loading work.dec
-# Refreshing D:\mipstest\work.lfsr_counter
-# Loading work.lfsr_counter
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
 # ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
 #         Region: /driver/DUT/proc/dp/dec/randcnt
-# Refreshing D:\mipstest\work.RF
-# Loading work.RF
-# Refreshing D:\mipstest\work.extend_sign
-# Loading work.extend_sign
-# Refreshing D:\mipstest\work.compare_to_zero
-# Loading work.compare_to_zero
-# Refreshing D:\mipstest\work.compare_gt_zero
-# Loading work.compare_gt_zero
-# Refreshing D:\mipstest\work.compare_lt_zero
-# Loading work.compare_lt_zero
-# Refreshing D:\mipstest\work.mux_3
-# Loading work.mux_3
-# Refreshing D:\mipstest\work.exe
-# Loading work.exe
-# Refreshing D:\mipstest\work.alu
-# Loading work.alu
-# Refreshing D:\mipstest\work.shifter
-# Loading work.shifter
-# Refreshing D:\mipstest\work.mdunit
-# Loading work.mdunit
-# Refreshing D:\mipstest\work.mem
-# Loading work.mem
-# Refreshing D:\mipstest\work.decoder_2
-# Loading work.decoder_2
-# Refreshing D:\mipstest\work.counter
-# Loading work.counter
-# Refreshing D:\mipstest\work.memory
-# Loading work.memory
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
 # ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
 #         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
 # ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
 #         Region: /driver/DUT/proc/cont/ad/alu_mux
 # ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
 #         Region: /driver/DUT/proc/cont/ad/alu_mux
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
 #         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/control.v(109): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
 #         Region: /driver/DUT/proc/cont/regE
-# ** Warning: (vsim-3015) D:/mipstest/mips.v(109): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
 #         Region: /driver/DUT/proc/dp
-# ** Warning: (vsim-3015) D:/mipstest/datapath.v(101): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
 #         Region: /driver/DUT/proc/dp/fetch
 run -all
 # using file data.txt
-# using file lgtest.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+add wave \
+{sim:/driver/DUT/proc/dp/branch_stall_F } 
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+add wave \
+{sim:/driver/DUT/proc/dp/stall_D } 
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+add wave \
+{sim:/driver/DUT/proc/dp/flushD } 
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+add wave \
+{sim:/driver/DUT/proc/pc_F } 
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+add wave \
+{sim:/driver/DUT/proc/dp/inst_F } 
+add wave \
+{sim:/driver/DUT/proc/dp/instrD } 
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+add wave \
+{sim:/driver/DUT/proc/dp/hazard/branchstallD } 
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+add wave \
+{sim:/driver/DUT/proc/dp/stallF } 
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+add wave \
+{sim:/driver/DUT/instr_addr } 
+add wave \
+{sim:/driver/DUT/instr_data } 
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v was successful.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 0 failed with no errors. 
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run
+# using file data.txt
+# using file test_003.dat
+run -all
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+add wave \
+{sim:/driver/DUT/instr/addr } 
+restart
+add wave \
+{sim:/driver/DUT/instr/addrmem } 
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v was successful.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 0 failed with no errors. 
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v failed with 1 errors.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 1 failed with 1 error. 
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v failed with 1 errors.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 1 failed with 1 error. 
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v was successful.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 0 failed with no errors. 
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+# Warning in wave window restart: (vish-4014) No objects found matching '/driver/DUT/instr/addrmem'. 
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v was successful.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 0 failed with no errors. 
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v was successful.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 0 failed with no errors. 
+restart
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v was successful.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 0 failed with no errors. 
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+add wave \
+{sim:/driver/DUT/instr/clk } \
+{sim:/driver/DUT/instr/wr_en } \
+{sim:/driver/DUT/instr/addr } \
+{sim:/driver/DUT/instr/data_in } \
+{sim:/driver/DUT/instr/out } \
+{sim:/driver/DUT/instr/rd_ack } \
+{sim:/driver/DUT/instr/test_in } \
+{sim:/driver/DUT/instr/test_out } \
+{sim:/driver/DUT/instr/ram } \
+{sim:/driver/DUT/instr/mem_out } \
+{sim:/driver/DUT/instr/addrin } 
+restart
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v was successful.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 0 failed with no errors. 
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Unexpected output for k =           0, addr: 54, expected:          7, got :          1
+# Break in Module driver at D:/mipstest/driver.v line 82
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v was successful.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 0 failed with no errors. 
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(115): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(104): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+run -all
+# using file data.txt
+# using file test_003.dat
+# Output for k =           0 was okay!addr: 54, val:          x
+# Break in Module driver at D:/mipstest/driver.v line 82
+# Compile of utilities.v was successful.
+# Compile of alu.v was successful.
+# Compile of alu_shift_md.v was successful.
+# Compile of br_control.v was successful.
+# Compile of branch_dec.v was successful.
+# Compile of control.v was successful.
+# Compile of datapath.v was successful.
+# Compile of dec.v was successful.
+# Compile of driver.v was successful.
+# Compile of exe.v was successful.
+# Compile of fetch.v was successful.
+# Compile of forward.v was successful.
+# Compile of hazard_detection.v was successful.
+# Compile of lfsr_counter.v was successful.
+# Compile of mem.v was successful.
+# Compile of memdriver.v was successful.
+# Compile of memory.v was successful.
+# Compile of mips.v was successful.
+# Compile of multdiv.v was successful.
+# Compile of r_tb.v was successful.
+# Compile of RF.v was successful.
+# Compile of shifter.v was successful.
+# Compile of toplevel.v was successful.
+# Compile of cnt.v was successful.
+# 24 compiles, 0 failed with no errors. 
+restart
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.driver(fast)
+# Loading work.toplevel(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'toplevel' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT
+# Loading work.mips(fast)
+# Loading work.controller(fast)
+# Loading work.maindec(fast)
+# Loading work.alu_shift_md(fast)
+# Loading work.mux_2(fast)
+# Loading work.mux_2(fast__1)
+# Loading work.branch_dec(fast)
+# Loading work.br_control(fast)
+# Loading work.flip_flop_enable(fast)
+# Loading work.flip_flop_enable_clear(fast)
+# Loading work.flip_flop_enable_clear(fast__1)
+# Loading work.datapath(fast)
+# Loading work.cnt_dp(fast)
+# Loading work.ncompare_to_zero(fast)
+# Loading work.compare_equal(fast)
+# Loading work.mux_2(fast__2)
+# Loading work.flip_flop_enable_clear(fast__2)
+# Loading work.flip_flop_enable(fast__1)
+# Loading work.forward(fast)
+# Loading work.hazard_detection(fast)
+# Loading work.flip_flop_reset(fast)
+# Loading work.fetch(fast)
+# Loading work.mux_4(fast)
+# Loading work.flip_flop_enable(fast__2)
+# Loading work.flip_flop_enable_clear(fast__3)
+# Loading work.dec(fast)
+# Loading work.lfsr_counter(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'lfsr_counter' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/proc/dp/dec/randcnt
+# Loading work.RF(fast)
+# Loading work.mux_2(fast__3)
+# Loading work.extend_sign(fast)
+# Loading work.compare_equal(fast__1)
+# Loading work.compare_to_zero(fast)
+# Loading work.compare_gt_zero(fast)
+# Loading work.compare_lt_zero(fast)
+# Loading work.mux_3(fast)
+# Loading work.flip_flop_enable(fast__3)
+# Loading work.exe(fast)
+# Loading work.alu(fast)
+# Loading work.shifter(fast)
+# Loading work.mux_3(fast__1)
+# Loading work.mdunit(fast)
+# Loading work.flip_flop_enable(fast__4)
+# Loading work.flip_flop_enable(fast__5)
+# Loading work.flip_flop_enable(fast__6)
+# Loading work.flip_flop_enable(fast__7)
+# Loading work.mem(fast)
+# Loading work.decoder_2(fast)
+# Loading work.mux_2(fast__4)
+# Loading work.mux_3(fast__2)
+# Loading work.mux_4(fast__1)
+# Loading work.mux_2(fast__5)
+# Loading work.extend_sign(fast__1)
+# Loading work.counter(fast)
+# Loading work.memory(fast)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/data
+# Loading work.memory(fast__1)
+# ** Warning: (vsim-3009) [TSCALE] - Module 'memory' does not have a `timescale directive in effect, but previous modules do.
+#         Region: /driver/DUT/instr
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd0'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/alu_shift_md.v(21): [PCDPC] - Port size (11 or 11) does not match connection size (13) for port 'd1'.
+#         Region: /driver/DUT/proc/cont/ad/alu_mux
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'd'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/control.v(113): [PCDPC] - Port size (36 or 36) does not match connection size (31) for port 'q'.
+#         Region: /driver/DUT/proc/cont/regE
+# ** Warning: (vsim-3015) D:/mipstest/mips.v(116): [PCDPC] - Port size (4 or 4) does not match connection size (1) for port 'byte_en_M'.
+#         Region: /driver/DUT/proc/dp
+# ** Warning: (vsim-3015) D:/mipstest/datapath.v(106): [PCDPC] - Port size (4 or 4) does not match connection size (5) for port 'interrupts'.
+#         Region: /driver/DUT/proc/dp/fetch
+# Warning in wave window restart: (vish-4014) No objects found matching '/driver/DUT/instr/out'. 
+run -all
+# using file data.txt
+# using file test_003.dat
 # Unexpected output for k =           0, addr: 54, expected:          7, got :          1
 # Break in Module driver at D:/mipstest/driver.v line 82

@@ -49,13 +49,12 @@ module hazard_detection(input            clk, reset,
 
 
   
-  assign  activeexception =  memstallexception & 
-                              brstallexception;
+  assign  activeexception =  1'b0;
 
   assign  stallD = lwstallD | branchstallD | datamissM | multdivDE
                      | instrmissF; 
 
-  assign  stallF =  stallD;     
+  assign  stallF =  stallD ;     
 
   
   assign  stallE = datamissM | memstallexception; 

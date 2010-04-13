@@ -20,7 +20,7 @@ module shifter(input signed [31:0] a, b,
                       5'b10000,   
                       {lui, control[2]}, shift_amount);
 
-  mux_3 #(32) sh_res_mux(right_logical, right_arith, left_logical, {control[1], control[0]},
+  mux_3 #(32) sh_res_mux(right_logical, left_logical, right_arith, control[1],
                       result);
 endmodule
 

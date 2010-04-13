@@ -14,8 +14,9 @@ module mips(input         clk, reset,
   output font_ch_active, font_clr, font_en,
   output [10:0] font_addr,
   output [3:0] font_data,
-  output [1:0] bck, input [2:0] interrupts,
-  output [4:0] audioVol, output [3:0] audioSel, output audioEn); 
+  output [1:0] bck, input [3:0] interrupts,
+  output [4:0] audioVol, output [3:0] audioSel, output audioEn,
+  output stall_mem  ); 
 
   wire [5:0]  opcode_D, function_D;
   wire [4:0]  rs_D, rt_D, rd_E; // source & destination addresses
@@ -57,10 +58,13 @@ module mips(input         clk, reset,
 
   wire        activeexception; //exception
   wire cnt_int, rti;
-   
+  wire is_nop;
+  wire branch_stall_F, branch_stall_D;
+  
    // controller
   controller cont(
-                 clk, reset, 
+                 clk, reset,
+                 is_nop, 
               
                  opcode_D, function_D, rs_D, rt_D, 
                  stall_D, stall_E, stall_M, stall_W,
@@ -79,10 +83,13 @@ module mips(input         clk, reset,
                  no_valid_op_E, dummyE,
                  halfword_E,
                  hilodisableE,
-                 hiloaccessD, md_start_E, hilosrcE, spriteE, fontE, backgroundE, posE, attrE, visiE, randomD, usezeroD, cnt_int, rti, audioD);
+                 hiloaccessD, md_start_E, hilosrcE, spriteE, fontE, backgroundE, posE, attrE, visiE, randomD, usezeroD, cnt_int, rti, audioD,
+                 branch_stall_F, branch_stall_D);
 // data path
   datapath dp(
-                clk, reset, dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, randomD, usezeroD,
+                clk, reset, 
+                branch_stall_F, branch_stall_D,
+                dummyE, spriteE, fontE, backgroundE, posE, attrE, visiE, randomD, usezeroD,
                 inst_F, 
                 
                 read_data_M, inst_mem_ack_F, data_mem_ack_M, 
@@ -106,7 +113,7 @@ module mips(input         clk, reset,
                 sprite_attr, sprite_pos, sprite_vis, bck_ch_active,
                 font_ch_active, font_clr, font_en,
                 font_addr, font_data, bck,  cnt_int, rti, interrupts,
-                audioVol, audioSel, audioEn, audioD);
+                audioVol, audioSel, audioEn, audioD, is_nop);
 
 endmodule
 

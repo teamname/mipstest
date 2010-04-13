@@ -2,7 +2,7 @@
 module driver();
   
   parameter D_ME = "data.txt"; //data mem
-  parameter I_ME = "lgtest.txt"; //instr mem
+  parameter I_ME = "test_002.dat"; //instr mem
   parameter TEST_FILE = "test.txt"; //address in hex <SPACE> 
   //expected value in decimal
   integer TEST_SZ;
@@ -63,8 +63,8 @@ module driver();
     #10 data_in = 8'h00;
   
     
-    #60 rst = 1'b0;
-    #1000;
+    #55 rst = 1'b0;
+    #8000;
     data_in = 8'h14;
     #10;
     data_in = 8'h01;

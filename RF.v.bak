@@ -8,7 +8,7 @@ module RF(input         clk, reset,
   reg [31:0] regFile[31:0];
 
 integer k;
-initial begin
+always@(posedge reset) begin
   for(k = 0; k < 32; k = k+1)
     regFile[k] <= 0;
   end

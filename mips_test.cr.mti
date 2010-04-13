@@ -1,12 +1,4 @@
-D:/mipstest/datapath.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/datapath.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module datapath
--- Compiling module cnt_dp
-
-Top level modules:
-	datapath
-
-} {} {}} D:/mipstest/r_tb.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/r_tb.v
+D:/mipstest/r_tb.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/r_tb.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module r_tb
 
@@ -42,13 +34,6 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	controller
 
-} {} {}} D:/mipstest/memory.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/memory.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module memory
-
-Top level modules:
-	memory
-
 } {} {}} D:/mipstest/branch_dec.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/branch_dec.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module branch_dec
@@ -70,13 +55,6 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	alu
 
-} {} {}} D:/mipstest/toplevel.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/toplevel.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module toplevel
-
-Top level modules:
-	toplevel
-
 } {} {}} D:/mipstest/memdriver.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/memdriver.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module ramtest
@@ -90,13 +68,6 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 
 Top level modules:
 	driver
-
-} {} {}} D:/mipstest/br_control.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/br_control.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module br_control
-
-Top level modules:
-	br_control
 
 } {} {}} D:/mipstest/utilities.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/utilities.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
@@ -153,26 +124,19 @@ Top level modules:
 	tri_state_buf
 	cmux_2
 
+} {} {}} D:/mipstest/br_control.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/br_control.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module br_control
+
+Top level modules:
+	br_control
+
 } {} {}} D:/mipstest/dec.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/dec.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module dec
 
 Top level modules:
 	dec
-
-} {} {}} D:/mipstest/multdiv.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/multdiv.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module mdunit
-
-Top level modules:
-	mdunit
-
-} {} {}} D:/mipstest/forward.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/forward.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module forward
-
-Top level modules:
-	forward
 
 } {} {}} D:/mipstest/cnt.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/cnt.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
@@ -181,19 +145,26 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	counter
 
+} {} {}} D:/mipstest/forward.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/forward.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module forward
+
+Top level modules:
+	forward
+
+} {} {}} D:/mipstest/multdiv.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/multdiv.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module mdunit
+
+Top level modules:
+	mdunit
+
 } {} {}} D:/mipstest/mem.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/mem.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module mem
 
 Top level modules:
 	mem
-
-} {} {}} D:/mipstest/mips.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/mips.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module mips
-
-Top level modules:
-	mips
 
 } {} {}} D:/mipstest/fetch.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/fetch.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008

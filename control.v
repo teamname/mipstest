@@ -1,5 +1,6 @@
 `timescale 1 ns / 1 ps
 module controller(input        clk, reset, 
+                  input        is_nop,
                   input  [5:0] opD, // opcode
                                functD, // function
                   input  [4:0] rsD, rtD, // source registers
@@ -32,7 +33,7 @@ module controller(input        clk, reset,
                   output [1:0] hilodisableE,
                   output       hiloaccessD, mdstartE, hilosrcE, 
                   output spriteE, fontE, backgroundE, posE, attrE, visiE, //signals for vga instructions
-                  output randomD, usezeroD, cnt_int, rti, audioD);  //signals for random, interrupts
+                  output randomD, usezeroD, cnt_int, rti, audioD, branch_stall_F, branch_stall_D);  //signals for random, interrupts
 
   wire       alu_or_mem_D, memwriteD, alusrcD, mainrw_, luiD, rtypeD,
              regdstD, rw_D, use_shifter, maindecregdstD, 
@@ -50,19 +51,20 @@ module controller(input        clk, reset,
   wire       memwriteE;
   wire       is_branch_or_jmp_F, is_branch_or_jmp_D;
   wire       posD, attrD, visiD;
+  
 
   assign  rw_D = mainrw_ | linkD ;
   assign  regdstD = maindecregdstD;
   assign  overflowableD = maindecoverflowableD | alu_shift_mdoverflowableD;
   assign  is_branch_or_jmp_F = is_branch | is_jump;
-  
+  assign  branch_stall_F = ((is_branch & pc_src[1] &pc_src[0]) | is_jump)&(~stallD);
   assign  hiloaccessD = mdstartD | hiloreadD;
   assign  posD = dummy & functD [2];
   assign attrD = dummy & functD [1];
   assign visiD = dummy & functD [0]; //used for sprites
   assign usezeroD = randomD & functD [0];
 
-  maindec md(opD, alu_or_mem_D, memwriteD, byteD, halfwordD, loadsignedD,
+  maindec md(is_nop, opD, alu_or_mem_D, memwriteD, byteD, halfwordD, loadsignedD,
              alusrcD, maindecregdstD, mainrw_, is_unsigned_D, luiD,
              use_shifter, maindecoverflowableD, alushcontmaindecD,
              rtypeD,
@@ -93,7 +95,9 @@ module controller(input        clk, reset,
   assign  aluoutsrcD = {linkD | hiloreadD,
                           useshifterD | hiloreadD};
 
-  flip_flop_enable #(1) regD(clk, reset, ~stallD, {is_branch_or_jmp_F}, {is_branch_or_jmp_D});
+  flip_flop_enable #(2) regD(clk, reset, ~stallD, {is_branch_or_jmp_F,branch_stall_F}, {is_branch_or_jmp_D,branch_stall_D});
+
+  
   flip_flop_enable_clear #(36) regE(clk, reset, ~stallE, flushE,
                   {alu_or_mem_D, memwriteD, alusrcD, regdstD, rw_D, 
                   aluoutsrcD, alushcontrolD, loadsignedD, luiD,
@@ -117,7 +121,7 @@ module controller(input        clk, reset,
                   {alu_or_mem_W, rw_W});
 endmodule
 
-module maindec(input  [5:0] op,
+module maindec(input is_nop, input  [5:0] op,
                output       alu_or_mem_, memwrite, byte, halfword, loadsignedD,
                output       alusrc,
                output       regdst, rw_, 
@@ -135,7 +139,7 @@ module maindec(input  [5:0] op,
           memwrite,
           alu_or_mem_, byte, halfword, loadsignedD,
           useshift, alushcontrol /* 3 bits */, rtype,
-          is_unsigned_D, lui, adesableD, adelableD, dummy, no_valid_op_D} = controls;
+          is_unsigned_D, lui, adesableD, adelableD, dummy, no_valid_op_D} = (is_nop ? 20'b00000000000000000000 : controls);
  assign spriteD = op[0] & ~op[2] & dummy;
  assign backgroundD = op[2] & ~op[0] & dummy;
  assign fontD = op[1] & dummy;
@@ -145,36 +149,36 @@ module maindec(input  [5:0] op,
  assign cnt_int =  op[5] & op[4] & !op[3] & !op[2] & !op[1] & op[0]; //op : 110001 counter interrupt
   always @ ( * )
     case(op)
-      6'b000000: controls <= 21'b11000000001011000000; //R-type
-      6'b110001: controls <= 21'b00000000001011000000; //counter interrupt
-      6'b000001: controls <= 21'b01000000000100000000; //Opcode 1 (branches)
-      6'b100000: controls <= 21'b10010110100100000000; //LB (assume big endian)
-      6'b100001: controls <= 21'b10010101100100000100; //LH
-      6'b100011: controls <= 21'b10010100100100000100; //LW
-      6'b100100: controls <= 21'b10010110000100100000; //LBU
-      6'b100101: controls <= 21'b10010101000100100000; //LHU
-      6'b101000: controls <= 21'b00011010000100000000; //SB
-      6'b101001: controls <= 21'b00011001000100001000; //SH
-      6'b101011: controls <= 21'b00011000000100001000; //SW
-      6'b001000: controls <= 21'b10110000000100000000; //ADDI
-      6'b001001: controls <= 21'b10010000000100000000; //ADDIU
-      6'b001010: controls <= 21'b10010000001110000000; //SLTI
-      6'b001011: controls <= 21'b10010000000110000000; //SLTIU 
-      6'b001100: controls <= 21'b10010000000000100000; //ANDI
-      6'b001101: controls <= 21'b10010000000010100000; //ORI
-      6'b001110: controls <= 21'b10010000001000100000; //XORI
-      6'b001111: controls <= 21'b10010000010100110000; //LUI
-      6'b000010: controls <= 21'b00000000000100000000; //J
-      6'b000011: controls <= 21'b11000000000100000000; //JAL
-      6'b000100: controls <= 21'b00000000001100000000; //BEQ
-      6'b000101: controls <= 21'b00000000001100000000; //BNE
-      6'b000110: controls <= 21'b00000000001100000000; //BLEZ
-      6'b000111: controls <= 21'b00000000001100000000; //BGTZ
+      6'b000000: controls <= 20'b11000000001011000000; //R-type
+      6'b110001: controls <= 20'b00000000001011000000; //counter interrupt
+      6'b000001: controls <= 20'b01000000000100000000; //Opcode 1 (branches)
+      6'b100000: controls <= 20'b10010110100100000000; //LB (assume big endian)
+      6'b100001: controls <= 20'b10010101100100000100; //LH
+      6'b100011: controls <= 20'b10010100100100000100; //LW
+      6'b100100: controls <= 20'b10010110000100100000; //LBU
+      6'b100101: controls <= 20'b10010101000100100000; //LHU
+      6'b101000: controls <= 20'b00011010000100000000; //SB
+      6'b101001: controls <= 20'b00011001000100001000; //SH
+      6'b101011: controls <= 20'b00011000000100001000; //SW
+      6'b001000: controls <= 20'b10110000000100000000; //ADDI
+      6'b001001: controls <= 20'b10010000000100000000; //ADDIU
+      6'b001010: controls <= 20'b10010000001110000000; //SLTI
+      6'b001011: controls <= 20'b10010000000110000000; //SLTIU 
+      6'b001100: controls <= 20'b10010000000000100000; //ANDI
+      6'b001101: controls <= 20'b10010000000010100000; //ORI
+      6'b001110: controls <= 20'b10010000001000100000; //XORI
+      6'b001111: controls <= 20'b10010000010100110000; //LUI
+      6'b000010: controls <= 20'b00000000000100000000; //J
+      6'b000011: controls <= 20'b11000000000100000000; //JAL
+      6'b000100: controls <= 20'b00000000001100000000; //BEQ
+      6'b000101: controls <= 20'b00000000001100000000; //BNE
+      6'b000110: controls <= 20'b00000000001100000000; //BLEZ
+      6'b000111: controls <= 20'b00000000001100000000; //BGTZ
       6'b111001: controls <= 20'b01000000001011000010; //sprite
       6'b111010: controls <= 20'b01000000001011000010; //font
       6'b111100: controls <= 20'b00000000000000000010; //bkgnd
       6'b111011: controls <= 20'b10010000000100000000; //add random number gen 16bits (addiu)
       6'b111101: controls <= 20'b00000000000000000010; //audio
-      default:   controls <= 21'bxxxxxxxxxxxxxxxxxxx1; //??? (exception)
+      default:   controls <= 20'bxxxxxxxxxxxxxxxxxxx1; //??? (exception)
     endcase
 endmodule
