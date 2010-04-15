@@ -63,6 +63,9 @@ module datapath(input         clk, reset,
   
   wire cnt_int;
   wire tmp;
+  wire [31:0] cnt_val;
+  
+  assign cnt_val = reset ?  32'hffffffff : srca2D;
   assign stall_mem = stallF;
   
   cnt_dp cnt_dp(
@@ -102,7 +105,7 @@ module datapath(input         clk, reset,
 
   fetch fetch(
                         clk, reset, stallF, pc_sel_FD, pcnextbrFD,
-                        {cnt_int,interrupts}, rti,
+                        {cnt_int,interrupts[2:0]}, rti,
                         pc_F, pcplus4F);
 
   
@@ -151,7 +154,7 @@ module datapath(input         clk, reset,
                           // outputs
                           write_data_M, readdata2M, byte_en_M);
 
-counter counter ( clk, reset, cnt_int_en, srcaE, cnt_int);
+counter counter ( clk, reset, cnt_int_en, cnt_val, cnt_int);
  
   flip_flop_enable #(32) r1W(clk,  reset, ~stall_W, alu_out_M, aluoutW);
   flip_flop_enable #(32) r2W(clk,  reset, ~stall_W, readdata2M, readdataW);

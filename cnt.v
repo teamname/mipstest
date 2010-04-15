@@ -8,7 +8,7 @@ reg [3:0] tmp;
 reg [31:0] val;
 
 always @(posedge clk)
-  if(set)
+  if(set | reset)
     val <= val1;
   else
     val <= val;

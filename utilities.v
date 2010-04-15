@@ -120,13 +120,22 @@ module flip_flop_reset #(parameter WIDTH = 32)
 
 endmodule
 
-
 module mux_2 #(parameter WIDTH = 32)
              (input  [WIDTH-1:0] d0, d1, 
               input              s, 
               output [WIDTH-1:0] y);
 
   assign  y = s ? d1 : d0; 
+endmodule
+
+module intlatch (q, interrupt, reset);
+
+    output q;
+    
+    input interrupt, reset;
+
+    assign q = interrupt ? 1 : reset ? 0 : q;
+
 endmodule
 
 module mux_3 #(parameter WIDTH = 32)
