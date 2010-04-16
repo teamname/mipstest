@@ -16,7 +16,7 @@ module mips(input         clk, reset,
   output [3:0] font_data,
   output [1:0] bck, input [3:0] interrupts,
   output [4:0] audioVol, output [3:0] audioSel, output audioEn,
-  output stall_mem  ); 
+  output stall_mem, input gun_data, input [7:0] controller_data); 
 
   wire [5:0]  opcode_D, function_D;
   wire [4:0]  rs_D, rt_D, rd_E; // source & destination addresses
@@ -84,7 +84,7 @@ module mips(input         clk, reset,
                  halfword_E,
                  hilodisableE,
                  hiloaccessD, md_start_E, hilosrcE, spriteE, fontE, backgroundE, posE, attrE, visiE, randomD, usezeroD, cnt_int, rti, audioD,
-                 branch_stall_F, branch_stall_D);
+                 branch_stall_F, branch_stall_D, gunD, ldGunD);
 // data path
   datapath dp(
                 clk, reset, 
@@ -113,7 +113,8 @@ module mips(input         clk, reset,
                 sprite_attr, sprite_pos, sprite_vis, bck_ch_active,
                 font_ch_active, font_clr, font_en,
                 font_addr, font_data, bck,  cnt_int, rti, interrupts,
-                audioVol, audioSel, audioEn, audioD, is_nop, stall_mem);
+                audioVol, audioSel, audioEn, audioD, is_nop, stall_mem, 
+                gunD, ldGunD, gun_data, controller_data);
 
 endmodule
 

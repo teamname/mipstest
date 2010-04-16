@@ -6,7 +6,8 @@ module toplevel(input clk, reset,
   output [10:0] font_addr,
   output [3:0] font_data,
   output [1:0] bck, input [3:0] interrupts,
-  output [4:0] audioVol, output [3:0] audioSel, output audioEn);
+  output [4:0] audioVol, output [3:0] audioSel, output audioEn,
+  input gun_data, input [7:0] controller_data);
   
   parameter D_MEM = "data.txt";
   parameter I_MEM = "fib.txt";
@@ -29,7 +30,8 @@ module toplevel(input clk, reset,
    font_ch_active, font_clr, font_en,
     font_addr,
     font_data,
-   bck, interrupts, audioVol, audioSel, audioEn, stall_mem);
+   bck, interrupts, audioVol, audioSel, 
+   audioEn, stall_mem, gun_data, controller_data);
   
 
   assign instr_addr_in = instr_addr[9:0];

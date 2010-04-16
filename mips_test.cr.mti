@@ -62,6 +62,13 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	ramtest
 
+} {} {}} D:/mipstest/dec.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/dec.v
+Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
+-- Compiling module dec
+
+Top level modules:
+	dec
+
 } {} {}} D:/mipstest/driver.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/driver.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 -- Compiling module driver
@@ -131,19 +138,12 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	br_control
 
-} {} {}} D:/mipstest/dec.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/dec.v
+} {} {}} D:/mipstest/multdiv.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/multdiv.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module dec
+-- Compiling module mdunit
 
 Top level modules:
-	dec
-
-} {} {}} D:/mipstest/cnt.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/cnt.v
-Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module counter
-
-Top level modules:
-	counter
+	mdunit
 
 } {} {}} D:/mipstest/forward.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/forward.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
@@ -152,12 +152,12 @@ Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
 Top level modules:
 	forward
 
-} {} {}} D:/mipstest/multdiv.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/multdiv.v
+} {} {}} D:/mipstest/cnt.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/cnt.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008
--- Compiling module mdunit
+-- Compiling module counter
 
 Top level modules:
-	mdunit
+	counter
 
 } {} {}} D:/mipstest/mem.v {1 {vlog -work work -vopt -nocovercells D:/mipstest/mem.v
 Model Technology ModelSim SE vlog 6.4 Compiler 2008.06 Jun 18 2008

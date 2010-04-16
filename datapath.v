@@ -36,7 +36,7 @@ module datapath(input         clk, reset,
   output [3:0] font_data,
   output [1:0] bck, input cnt_int_en, rti, input [3:0] interrupts,
   output [4:0] audioVol, output [3:0] audioSel, output audioEn, input audioD, output is_nop,
-  output stall_mem);
+  output stall_mem, input gunD, input ldGunD, input gun_data, input [7:0] controller_data);
 
 
   wire        forwardaD, forwardbD;
@@ -122,7 +122,8 @@ module datapath(input         clk, reset,
                           branch_sel_D, randomD, usezeroD, audioD,                          
                           opcode_D, function_D, rs_D, rt_D, rdD,
                           srca2D, srcb2D, signimmD, pcnextbrFD,
-                          a_eq_b_D, a_eq_z_D, a_gt_z_D, a_lt_z_D, audioVol, audioSel, audioEn);
+                          a_eq_b_D, a_eq_z_D, a_gt_z_D, a_lt_z_D, audioVol, audioSel, audioEn,
+                          gunD, ldGunD, gun_data, controller_data);
 
   
   flip_flop_enable_clear #(32) r1E(clk,  reset, ~stall_E, flush_E, srca2D, srcaE); 
